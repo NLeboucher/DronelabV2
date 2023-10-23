@@ -1,0 +1,48 @@
+[2023-10-23 14:42:26] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
+[2023-10-23 14:42:27] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 14:43:28] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
+[2023-10-23 14:43:29] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 15:20:22] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:22] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:22] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:30] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:30] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:30] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:39] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:39] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:39] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:49] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:49] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:20:49] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:21:09] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:21:09] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:21:09] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:21:59] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:21:59] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:21:59] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:22:37] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:22:37] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:22:37] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:23:10] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:23:10] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:23:10] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:24:34] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:24:34] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:24:34] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'syncCrazyflie' is not defined
+[2023-10-23 15:25:31] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 15:26:12] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 15:28:27] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:28:27] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:28:27] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:28:43] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 15:43:45] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:43:45] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:43:45] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:44:31] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:44:31] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:44:31] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to name 'SyncCrazyflie' is not defined
+[2023-10-23 15:45:36] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 15:56:02] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 16:02:30] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 16:02:52] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
+[2023-10-23 16:02:57] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
