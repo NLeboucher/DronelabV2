@@ -67,6 +67,9 @@ params = {
     URI3: [params3],
 }
 
+def logpos(cf):
+    current_position = cf.param.get_value('kalman.stateX')  # Assuming 'kalman.stateX' represents the position
+    print(f"Drone position during circle movement: {current_position}")
 
 def poshold(cf, t, z):
     steps = t * 10
@@ -97,6 +100,7 @@ def run_sequence(scf, params):
     ramp = fs * 2
     for r in range(ramp):
         cf.commander.send_hover_setpoint(0, 0, 0, base + r * (z - base) / ramp)
+        
         time.sleep(fsi)
 
     poshold(cf, 2, z)
@@ -110,6 +114,7 @@ def run_sequence(scf, params):
             cf.commander.send_hover_setpoint(d * comp * math.pi / circle_time,
                                              0, 360.0 / circle_time, z)
             time.sleep(fsi)
+            logpos(cf)
 
     poshold(cf, 2, z)
 
@@ -117,7 +122,7 @@ def run_sequence(scf, params):
         cf.commander.send_hover_setpoint(0, 0, 0,
                                          base + (ramp - r) * (z - base) / ramp)
         time.sleep(fsi)
-
+        logpos(cf)
     poshold(cf, 1, base)
 
     cf.commander.send_stop_setpoint()
