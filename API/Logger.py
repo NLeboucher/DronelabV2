@@ -3,9 +3,13 @@ from datetime import datetime
 class Logger:
     def __init__(self, filename):
         self.filename = filename
+        with open(self.filename, 'a+') as f:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            log_message = f"[{timestamp}] [init] Started Logger\n"
+            f.write(log_message)
 
     def log(self, level, message):
-        with open(self.filename, 'a') as f:
+        with open(self.filename, 'a+') as f:
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             log_message = f"[{timestamp}] [{level}] {message}\n"
             f.write(log_message)
