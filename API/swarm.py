@@ -161,26 +161,3 @@ def land_droneALT(uri):
     cf.commander.send_stop_setpoint()
     # Hand control over to the high level commander to avoid timeout and locking of the Crazyflie
     cf.commander.send_notify_setpoint_stop()
-
-def poshold(cf, t, x, y, z):
-    steps = t * 10
-
-    for r in range(steps):
-        cf.commander.send_position_setpoint(x, y, 0, z)
-        time.sleep(0.1)
-
-
-def run_sequence(scf, positions):
-    cf = scf.cf
-
-    # Number of setpoints sent per second
-    fs = 4
-    fsi = 1.0 / fs
-
-    for pos in positions:
-        x, y, z = pos
-        poshold(cf, 2, x, y, z)
-
-    cf.commander.send_stop_setpoint()
-    # Hand control over to the high level commander to avoid timeout and locking of the Crazyflie
-    cf.commander.send_notify_setpoint_stop()
