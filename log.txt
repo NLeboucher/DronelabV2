@@ -1,156 +1,45 @@
-[2023-11-06 10:50:05] [init] Started Logger
-[2023-11-06 10:50:05] [INFO] API is UP
-[2023-11-06 10:50:07] [init] Started Logger
-[2023-11-06 10:50:07] [INFO] API is UP
-[2023-11-06 10:50:26] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 10:50:27] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 10:50:27] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Too many packets lost
-[2023-11-06 10:50:45] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 10:50:45] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 10:51:12] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 10:51:12] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 10:53:19] [init] Started Logger
-[2023-11-06 10:53:34] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 10:53:34] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 10:54:48] [init] Started Logger
-[2023-11-06 10:55:02] [init] Started Logger
-[2023-11-06 10:55:02] [INFO] API is UP
-[2023-11-06 10:55:14] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 10:55:14] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 10:56:07] [init] Started Logger
-[2023-11-06 10:56:11] [INFO] scf opening links with ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-06 10:56:28] [init] Started Logger
-[2023-11-06 10:56:32] [INFO] scf opening links with []
-[2023-11-06 10:56:45] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 10:56:46] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 10:56:57] [INFO] scf opening links with []
-[2023-11-06 10:57:26] [init] Started Logger
-[2023-11-06 10:57:31] [init] Started Logger
-[2023-11-06 10:57:31] [INFO] API is UP
-[2023-11-06 10:57:42] [init] Started Logger
-[2023-11-06 10:57:42] [INFO] API is UP
-[2023-11-06 10:57:47] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 10:57:48] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 10:57:55] [INFO] scf opening links with []
-[2023-11-06 11:02:10] [init] Started Logger
-[2023-11-06 11:05:14] [init] Started Logger
-[2023-11-06 11:05:18] [init] Started Logger
-[2023-11-06 11:05:18] [INFO] API is UP
-[2023-11-06 11:05:32] [init] Started Logger
-[2023-11-06 11:05:32] [INFO] API is UP
-[2023-11-06 11:05:39] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:05:40] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:07:13] [init] Started Logger
-[2023-11-06 11:07:21] [init] Started Logger
-[2023-11-06 11:07:21] [INFO] API is UP
-[2023-11-06 11:07:24] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:07:25] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:07:32] [INFO] scf opening links with []
-[2023-11-06 11:07:44] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:07:45] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:07:53] [INFO] scf opening links with []
-[2023-11-06 11:08:35] [init] Started Logger
-[2023-11-06 11:08:46] [init] Started Logger
-[2023-11-06 11:08:46] [INFO] API is UP
-[2023-11-06 11:08:47] [init] Started Logger
-[2023-11-06 11:08:47] [INFO] API is UP
-[2023-11-06 11:08:53] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:08:54] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:09:00] [INFO] scf opening links with []
-[2023-11-06 11:09:09] [INFO] scf opening links with []
-[2023-11-06 11:12:20] [init] Started Logger
-[2023-11-06 11:12:22] [init] Started Logger
-[2023-11-06 11:12:22] [INFO] API is UP
-[2023-11-06 11:12:27] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:12:28] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:12:29] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:12:32] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:12:32] [INFO] scf opening link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:12:33] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Link already open
-[2023-11-06 11:13:46] [init] Started Logger
-[2023-11-06 11:13:50] [INFO] scf opening links with []
-[2023-11-06 11:14:07] [init] Started Logger
-[2023-11-06 11:14:07] [INFO] API is UP
-[2023-11-06 11:14:10] [WARNING] Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:14:11] [WARNING] Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:14:12] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:23:27] [init] Started Logger
-[2023-11-06 11:24:14] [init] Started Logger
-[2023-11-06 11:24:14] [INFO] API is UP
-[2023-11-06 11:24:22] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:24:22] [WARNING] getavailabledrones | Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:24:23] [INFO] getavailabledrones | ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:24:29] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:24:29] [INFO] scf opening link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:24:29] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Crazyflie.open_link() missing 1 required positional argument: 'link_uri'
-[2023-11-06 11:25:56] [init] Started Logger
-[2023-11-06 11:26:09] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:26:10] [WARNING] getavailabledrones | Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:26:11] [INFO] getavailabledrones | ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:26:15] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:26:15] [INFO] scf opening link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:26:15] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:26:15] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Crazyflie.open_link() missing 1 required positional argument: 'link_uri'
-[2023-11-06 11:26:17] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:26:17] [INFO] scf opening link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:26:17] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:26:17] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Crazyflie.open_link() missing 1 required positional argument: 'link_uri'
-[2023-11-06 11:26:27] [init] Started Logger
-[2023-11-06 11:26:35] [INFO] scf opening links with []
-[2023-11-06 11:26:44] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:26:45] [WARNING] getavailabledrones | Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:26:46] [INFO] getavailabledrones | ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:26:50] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:26:50] [INFO] scf opening link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:26:50] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:26:50] [WARNING] Failed to connect to radio://0/28/2M/E7E7E7E703 due to Crazyflie.open_link() missing 1 required positional argument: 'link_uri'
-[2023-11-06 11:30:06] [init] Started Logger
-[2023-11-06 11:30:14] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:30:15] [WARNING] getavailabledrones | Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:30:16] [INFO] getavailabledrones | ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:30:18] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:30:18] [INFO] scf opening link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:30:18] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:30:18] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:31:41] [init] Started Logger
-[2023-11-06 11:31:48] [init] Started Logger
-[2023-11-06 11:31:48] [INFO] API is UP
-[2023-11-06 11:31:51] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:31:52] [WARNING] getavailabledrones | Failed to connect to radio://0/27/2M/E7E7E7E702 due to Too many packets lost
-[2023-11-06 11:31:53] [INFO] getavailabledrones | ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:31:55] [INFO] scf opening links with ['radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:31:55] [INFO] scf opening link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:31:55] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:31:56] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:32:57] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:32:58] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702']
-[2023-11-06 11:32:59] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:33:08] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:33:09] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702']
-[2023-11-06 11:33:10] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:33:40] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:33:41] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702']
-[2023-11-06 11:33:42] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:33:52] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:33:52] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702']
-[2023-11-06 11:33:54] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:35:29] [WARNING] getavailabledrones | Failed to connect to radio://0/80/2M/E7E7E7E701 due to Too many packets lost
-[2023-11-06 11:35:30] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702']
-[2023-11-06 11:35:31] [INFO] getavailabledrones | ['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:46:51] [INFO] getavailabledrones | ['radio://0/80/2M/E7E7E7E701']
-[2023-11-06 11:46:52] [INFO] getavailabledrones | ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702']
-[2023-11-06 11:46:53] [INFO] getavailabledrones | ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:46:57] [INFO] scf opening links with ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-06 11:46:57] [INFO] scf opening link with radio://0/80/2M/E7E7E7E701
-[2023-11-06 11:46:57] [INFO] scf opened link with radio://0/80/2M/E7E7E7E701
-[2023-11-06 11:46:57] [INFO] scf opened link with radio://0/80/2M/E7E7E7E701
-[2023-11-06 11:46:57] [INFO] scf opening link with radio://0/27/2M/E7E7E7E702
-[2023-11-06 11:46:57] [INFO] scf opened link with radio://0/27/2M/E7E7E7E702
-[2023-11-06 11:46:57] [INFO] scf opened link with radio://0/27/2M/E7E7E7E702
-[2023-11-06 11:46:57] [INFO] scf opening link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:46:57] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:46:58] [INFO] scf opened link with radio://0/28/2M/E7E7E7E703
-[2023-11-06 11:47:54] [init] Started Logger
-[2023-11-06 11:48:35] [init] Started Logger
-[2023-11-06 14:37:37] [init] Started Logger
-[2023-11-06 14:48:08] [init] Started Logger
+[2023-11-16 12:13:08] [init] Started Logger
+[2023-11-16 12:13:14] [INFO] Parallelize | ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
+[2023-11-16 12:13:14] [INFO] Parallelize | radio://0/80/2M/E7E7E7E701
+[2023-11-16 12:13:14] [INFO] Parallelize | <Thread(Thread-1 (UpdateConnection), started 140358562424384)> started with UpdateConnection (radio://0/80/2M/E7E7E7E701)
+[2023-11-16 12:13:14] [INFO] Parallelize | radio://0/27/2M/E7E7E7E702
+[2023-11-16 12:13:14] [INFO] Parallelize | <Thread(Thread-2 (UpdateConnection), started 140358554031680)> started with UpdateConnection (radio://0/27/2M/E7E7E7E702)
+[2023-11-16 12:13:14] [INFO] Parallelize | radio://0/28/2M/E7E7E7E703
+[2023-11-16 12:13:14] [INFO] Parallelize | <Thread(Thread-3 (UpdateConnection), started 140358554031680)> started with UpdateConnection (radio://0/28/2M/E7E7E7E703)
+[2023-11-16 12:13:54] [init] Started Logger
+[2023-11-16 12:13:57] [INFO] Parallelize | ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
+[2023-11-16 12:13:57] [INFO] Parallelize with arguments: radio://0/80/2M/E7E7E7E701
+[2023-11-16 12:13:57] [INFO] Parallelize | <Thread(Thread-1 (UpdateConnection), started 139785248253504)> started with UpdateConnection (radio://0/80/2M/E7E7E7E701)
+[2023-11-16 12:13:57] [INFO] Parallelize with arguments: radio://0/27/2M/E7E7E7E702
+[2023-11-16 12:13:57] [INFO] Parallelize | <Thread(Thread-2 (UpdateConnection), started 139785239860800)> started with UpdateConnection (radio://0/27/2M/E7E7E7E702)
+[2023-11-16 12:13:57] [INFO] Parallelize with arguments: radio://0/28/2M/E7E7E7E703
+[2023-11-16 12:13:57] [INFO] Parallelize | <Thread(Thread-3 (UpdateConnection), started 139785248253504)> started with UpdateConnection (radio://0/28/2M/E7E7E7E703)
+[2023-11-16 12:16:34] [init] Started Logger
+[2023-11-16 12:16:49] [INFO] Parallelize | ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
+[2023-11-16 12:16:49] [INFO] Parallelize with arguments: radio://0/80/2M/E7E7E7E701
+[2023-11-16 12:16:49] [INFO] Parallelize | <Thread(Thread-1 (UpdateConnection), started 140264519837248)> started with UpdateConnection (radio://0/80/2M/E7E7E7E701)
+[2023-11-16 12:16:49] [INFO] Parallelize with arguments: radio://0/27/2M/E7E7E7E702
+[2023-11-16 12:16:49] [INFO] Parallelize | <Thread(Thread-2 (UpdateConnection), started 140264437970496)> started with UpdateConnection (radio://0/27/2M/E7E7E7E702)
+[2023-11-16 12:16:49] [INFO] Parallelize with arguments: radio://0/28/2M/E7E7E7E703
+[2023-11-16 12:16:49] [INFO] Parallelize | <Thread(Thread-3 (UpdateConnection), started 140264437970496)> started with UpdateConnection (radio://0/28/2M/E7E7E7E703)
+[2023-11-16 12:19:10] [init] Started Logger
+[2023-11-16 12:19:52] [init] Started Logger
+[2023-11-16 12:20:13] [init] Started Logger
+[2023-11-16 12:24:36] [init] Started Logger
+[2023-11-16 12:24:55] [init] Started Logger
+[2023-11-16 12:25:58] [init] Started Logger
+[2023-11-16 17:06:35] [init] Started Logger
+[2023-11-16 17:06:37] [init] Started Logger
+[2023-11-16 17:06:37] [INFO] API is UP
+[2023-11-16 17:08:34] [init] Started Logger
+[2023-11-16 17:08:34] [INFO] API is UP
+[2023-11-16 17:09:01] [init] Started Logger
+[2023-11-16 17:09:12] [init] Started Logger
+[2023-11-16 17:09:39] [init] Started Logger
+[2023-11-16 17:10:01] [init] Started Logger
+[2023-11-16 17:10:18] [init] Started Logger
+[2023-11-16 17:23:32] [init] Started Logger
+[2023-11-16 17:25:31] [init] Started Logger
+[2023-11-16 17:25:39] [init] Started Logger
+[2023-11-16 17:27:29] [init] Started Logger
+[2023-11-16 18:54:28] [init] Started Logger
