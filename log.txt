@@ -1,45 +1,14 @@
-[2023-11-16 12:13:08] [init] Started Logger
-[2023-11-16 12:13:14] [INFO] Parallelize | ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-16 12:13:14] [INFO] Parallelize | radio://0/80/2M/E7E7E7E701
-[2023-11-16 12:13:14] [INFO] Parallelize | <Thread(Thread-1 (UpdateConnection), started 140358562424384)> started with UpdateConnection (radio://0/80/2M/E7E7E7E701)
-[2023-11-16 12:13:14] [INFO] Parallelize | radio://0/27/2M/E7E7E7E702
-[2023-11-16 12:13:14] [INFO] Parallelize | <Thread(Thread-2 (UpdateConnection), started 140358554031680)> started with UpdateConnection (radio://0/27/2M/E7E7E7E702)
-[2023-11-16 12:13:14] [INFO] Parallelize | radio://0/28/2M/E7E7E7E703
-[2023-11-16 12:13:14] [INFO] Parallelize | <Thread(Thread-3 (UpdateConnection), started 140358554031680)> started with UpdateConnection (radio://0/28/2M/E7E7E7E703)
-[2023-11-16 12:13:54] [init] Started Logger
-[2023-11-16 12:13:57] [INFO] Parallelize | ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-16 12:13:57] [INFO] Parallelize with arguments: radio://0/80/2M/E7E7E7E701
-[2023-11-16 12:13:57] [INFO] Parallelize | <Thread(Thread-1 (UpdateConnection), started 139785248253504)> started with UpdateConnection (radio://0/80/2M/E7E7E7E701)
-[2023-11-16 12:13:57] [INFO] Parallelize with arguments: radio://0/27/2M/E7E7E7E702
-[2023-11-16 12:13:57] [INFO] Parallelize | <Thread(Thread-2 (UpdateConnection), started 139785239860800)> started with UpdateConnection (radio://0/27/2M/E7E7E7E702)
-[2023-11-16 12:13:57] [INFO] Parallelize with arguments: radio://0/28/2M/E7E7E7E703
-[2023-11-16 12:13:57] [INFO] Parallelize | <Thread(Thread-3 (UpdateConnection), started 139785248253504)> started with UpdateConnection (radio://0/28/2M/E7E7E7E703)
-[2023-11-16 12:16:34] [init] Started Logger
-[2023-11-16 12:16:49] [INFO] Parallelize | ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
-[2023-11-16 12:16:49] [INFO] Parallelize with arguments: radio://0/80/2M/E7E7E7E701
-[2023-11-16 12:16:49] [INFO] Parallelize | <Thread(Thread-1 (UpdateConnection), started 140264519837248)> started with UpdateConnection (radio://0/80/2M/E7E7E7E701)
-[2023-11-16 12:16:49] [INFO] Parallelize with arguments: radio://0/27/2M/E7E7E7E702
-[2023-11-16 12:16:49] [INFO] Parallelize | <Thread(Thread-2 (UpdateConnection), started 140264437970496)> started with UpdateConnection (radio://0/27/2M/E7E7E7E702)
-[2023-11-16 12:16:49] [INFO] Parallelize with arguments: radio://0/28/2M/E7E7E7E703
-[2023-11-16 12:16:49] [INFO] Parallelize | <Thread(Thread-3 (UpdateConnection), started 140264437970496)> started with UpdateConnection (radio://0/28/2M/E7E7E7E703)
-[2023-11-16 12:19:10] [init] Started Logger
-[2023-11-16 12:19:52] [init] Started Logger
-[2023-11-16 12:20:13] [init] Started Logger
-[2023-11-16 12:24:36] [init] Started Logger
-[2023-11-16 12:24:55] [init] Started Logger
-[2023-11-16 12:25:58] [init] Started Logger
-[2023-11-16 17:06:35] [init] Started Logger
-[2023-11-16 17:06:37] [init] Started Logger
-[2023-11-16 17:06:37] [INFO] API is UP
-[2023-11-16 17:08:34] [init] Started Logger
-[2023-11-16 17:08:34] [INFO] API is UP
-[2023-11-16 17:09:01] [init] Started Logger
-[2023-11-16 17:09:12] [init] Started Logger
-[2023-11-16 17:09:39] [init] Started Logger
-[2023-11-16 17:10:01] [init] Started Logger
-[2023-11-16 17:10:18] [init] Started Logger
-[2023-11-16 17:23:32] [init] Started Logger
-[2023-11-16 17:25:31] [init] Started Logger
-[2023-11-16 17:25:39] [init] Started Logger
-[2023-11-16 17:27:29] [init] Started Logger
-[2023-11-16 18:54:28] [init] Started Logger
+[2023-11-20 03:35:39] [init] Started Logger
+[2023-11-20 03:35:39] [init] Started Logger
+[2023-11-20 03:35:43] [INFO] API is UP
+[2023-11-20 03:36:21] [INFO] getavailableURIS START
+[2023-11-20 03:36:21] [INFO] []
+[2023-11-20 03:36:21] [INFO] Parallelize looking for URIS : radio://0/80/2M/E7E7E7E701;radio://0/27/2M/E7E7E7E702;radio://0/28/2M/E7E7E7E703
+[2023-11-20 03:40:58] [init] Started Logger
+[2023-11-20 03:40:58] [init] Started Logger
+[2023-11-20 03:41:02] [INFO] API is UP
+[2023-11-20 03:41:16] [INFO] getavailableURIS START
+[2023-11-20 03:41:16] [INFO] []
+[2023-11-20 03:41:16] [INFO] Parallelize looking for URIS : radio://0/80/2M/E7E7E7E701;radio://0/27/2M/E7E7E7E702;radio://0/28/2M/E7E7E7E703
+[2023-11-20 03:42:35] [init] Started Logger
+[2023-11-20 03:42:35] [init] Started Logger
