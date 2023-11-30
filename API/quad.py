@@ -1,4 +1,11 @@
-from API.Logger import Logger
+import os
+path = os.getcwd()
+path = path.split("/")[::-1][0]
+print(path)
+if(path == "API"):
+    from logger import Logger
+else:
+    from API.logger import Logger
 logger = Logger("log.txt")
 
 class Quad:

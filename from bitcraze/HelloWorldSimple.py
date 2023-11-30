@@ -11,21 +11,15 @@ logging.basicConfig(level=logging.ERROR)
 # Function to connect to the Crazyflie and perform some basic operations
 def connect_to_crazyflie(uri):
     # Create a SyncCrazyflie instance
-    with SyncCrazyflie(uri) as scf:
+    scf= SyncCrazyflie(uri)
         # Access the Crazyflie API through the SyncCrazyflie instance (scf.cf)
-        cf = scf.cf
+    scf.open_link()
 
         # Start communication with the Crazyflie
-        print(f"Connection link is open: {scf.is_link_open()}")
+    print(f"Connection link is open: {scf.is_link_open()}")
         #cf.open_link()
 
-        # Your code to interact with the Crazyflie goes here
-
-        # For example, print the Crazyflie firmware version
-        
-
-        # Stop communication with the Crazyflie
-        cf.close_link()
+    scf.close_link()
 
 if __name__ == "__main__":
     # Initialize the Crazyflie SDK
