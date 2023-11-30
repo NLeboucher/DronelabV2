@@ -1,3 +1,7 @@
+import os
+path = os.getcwd()
+path = path.split("/")[::-1][0]
+print(path)
 from fastapi import FastAPI
 
 import math
@@ -5,20 +9,26 @@ import time
 import json 
 import cflib
 from cflib.crazyflie import Crazyflie, syncCrazyflie
-from cflib.crazyflie.swarm import Swarm
+from cflib.crazyflie.swarm import Swarm, CachedCfFactory
 from datetime import datetime
-from API.Logger import Logger
-from API.Move import Move
-from API.outputdict import OutputDict
-from API.enums.option import Option   
-from API.Param import ParamExample
+if(path == "API"):
+    from logger import Logger
+    from move import Move
+    from outputdict import OutputDict
+    from enums.option import Option   
+    from quad import Quad
+else:
+    from API.logger import Logger
+    from API.move import Move
+    from API.outputdict import OutputDict
+    from API.enums.option import Option   
+    from API.quad import Quad
 from cflib.positioning.motion_commander import MotionCommander as Driver
 from cflib.positioning.position_hl_commander import PositionHlCommander as PositionHlCommander
 from cflib.crazyflie.param import Param
 from cflib.crazyflie.localization import Localization
-from API.quad import Quad
 import threading
-from typing import List
+# from typing import List
 
 app = FastAPI()
 
@@ -40,9 +50,10 @@ async def read_root():
 def getavailableURIS():
         # Initialize the drivers
     logger.info(f"{getavailableURIS.__name__} START")
-
+    logger.info(f"{getavailableURIS.__name__} | Swarm is connected : {Crazyswarm._is_open}")
     Parallelize(getavailableuri)
-    logger.info(f"{getavailableURIS.__name__} | Quad : {Quad.quads}")
+    logger.info(f"{getavailableURIS.__name__} | Swarm is connected : {Crazyswarm._is_open}")
+    logger.info(f"{getavailableURIS.__name__} | Quads : {Quad.quads}")
 
     ret = [a.id for a in Quad.quads]
     logger.info(f"{getavailableURIS.__name__} | Quads : {ret}")
@@ -52,18 +63,22 @@ def getavailableURIS():
 def getavailableuri(scf):
     logger.info(f"{getavailableuri.__name__} START")
     try:
-        #scf.open_link()
-        if(scf.is_link_open()):
-            logger.info(f"{getavailableuri.__name__} connected to {scf._link_uri}")
-            scf.close_link()
-            logger.info(f"{getavailableuri.__name__} stopped connection to {scf._link_uri}")
+        logger.info(f"{getavailableuri.__name__} | {scf._link_uri} | {scf.is_link_open()}")
+        # logger.info(f"{getavailableuri.__name__} | {scf._link_uri}")
+        # if(not scf.is_link_open()):
+        #     scf.open_link()
+        # logger.info(f"{getavailableuri.__name__} | {scf.is_link_open()}")
+        # if(scf.is_link_open()):
+        #     logger.info(f"{getavailableuri.__name__} connected to {scf._link_uri}")
+        #     #scf.close_link()
+        #     logger.info(f"{getavailableuri.__name__} stopped connection to {scf._link_uri}")
     
-            temp = Quad(str(scf._link_uri),False)
+        #     temp = Quad(str(scf._link_uri),False)
 
-            logger.info(f"{getavailableuri.__name__} | temp created")
-            logger.info(f"{getavailableuri.__name__} | {Quad.quads}")
-        else:
-            logger.info(f"{getavailableuri.__name__} |  {scf._link_uri} | {False}")
+        #     logger.info(f"{getavailableuri.__name__} | temp created")
+        #     logger.info(f"{getavailableuri.__name__} | {Quad.quads}")
+        # else:
+        #     logger.info(f"{getavailableuri.__name__} |  {scf._link_uri} | {False}")
         
 
     except Exception as e:
@@ -124,14 +139,49 @@ def SendEmergencyStop(uri: str):
 def Parallelize(func,arguments:dict = {}):
     global uris
     global Crazyswarm
+    logger.info(f"Parallelize START")
     logger.info(Quad.activeURIS)
+    factory = CachedCfFactory(rw_cache='./cache')
     if(Quad.activeURIS!=[]):
+        Crazyswarm = Swarm(uris=Quad.activeURIS,factory=factory)
+
+        Crazyswarm.open_links()
         Crazyswarm.parallel_safe(func = func,args_dict=arguments)
     else:
-        logger.info(f"Parallelize looking for URIS : {uris}")
+        logger.info(f"Parallelize default behavior :\n looking for URIS : {uris.split(';')}")
+        Crazyswarm = Swarm(uris=uris.split(";"),factory=factory)
+        logger.info(f"Crazyswarm : {Crazyswarm}")
+        Crazyswarm.open_links()
+        logger.info(f"Crazyswarm opened links: {Crazyswarm._is_open}")
+        logger.info(f"Crazyswarm positions: {Crazyswarm.get_estimated_positions()}")
+        Crazyswarm.reset_estimators(    )
+        logger.info(f"Crazyswarm positions: {Crazyswarm._positions}")
         Crazyswarm.reset_estimators()
-        Crazyswarm.parallel_safe(func = getavailableuri,args_dict=arguments)
+        Crazyswarm.parallel(func = getavailableuri,args_dict=arguments)
+        
 
+# def Parallelize(func,arguments:dict = {}):
+#     global uris
+#     global Crazyswarm
+#     logger.info(f"Parallelize START")
+#     logger.info(Quad.activeURIS)
+#     factory = CachedCfFactory(rw_cache='./cache')
+#     if(Quad.activeURIS!=[]):
+#         Crazyswarm = Swarm(uris=Quad.activeURIS,factory=factory)
+        
+#         Crazyswarm.open_links()
+#         Crazyswarm.parallel_safe(func = func,args_dict=arguments)
+#     else:
+#         logger.info(f"Parallelize default behavior :\n looking for URIS : {uris}")
+#         Crazyswarm = Swarm(uris=Quad.activeURIS,factory=factory)
+#         logger.info(f"Crazyswarm : {Crazyswarm}")
+#         Crazyswarm.open_links()
+#         logger.info(f"Crazyswarm opened links: {Crazyswarm._is_open}")
+#         logger.info(f"Crazyswarm positions: {Crazyswarm.get_estimated_positions()}")
+#         Crazyswarm.reset_estimators(    )
+#         logger.info(f"Crazyswarm positions: {Crazyswarm._positions}")
+#         Crazyswarm.reset_estimators()
+#         Crazyswarm.parallel_safe(func = getavailableuri,args_dict=arguments)
 
 def _RightURIs(uri:str):
     u = uri.split(";")

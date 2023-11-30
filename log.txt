@@ -1,14 +1,465 @@
-[2023-11-20 03:35:39] [init] Started Logger
-[2023-11-20 03:35:39] [init] Started Logger
-[2023-11-20 03:35:43] [INFO] API is UP
-[2023-11-20 03:36:21] [INFO] getavailableURIS START
-[2023-11-20 03:36:21] [INFO] []
-[2023-11-20 03:36:21] [INFO] Parallelize looking for URIS : radio://0/80/2M/E7E7E7E701;radio://0/27/2M/E7E7E7E702;radio://0/28/2M/E7E7E7E703
-[2023-11-20 03:40:58] [init] Started Logger
-[2023-11-20 03:40:58] [init] Started Logger
-[2023-11-20 03:41:02] [INFO] API is UP
-[2023-11-20 03:41:16] [INFO] getavailableURIS START
-[2023-11-20 03:41:16] [INFO] []
-[2023-11-20 03:41:16] [INFO] Parallelize looking for URIS : radio://0/80/2M/E7E7E7E701;radio://0/27/2M/E7E7E7E702;radio://0/28/2M/E7E7E7E703
-[2023-11-20 03:42:35] [init] Started Logger
-[2023-11-20 03:42:35] [init] Started Logger
+[2023-11-23 00:58:11] [init] Started Logger
+[2023-11-23 00:58:11] [init] Started Logger
+[2023-11-23 00:58:14] [INFO] API is UP
+[2023-11-23 00:58:19] [INFO] API is UP
+[2023-11-23 00:58:22] [INFO] API is UP
+[2023-11-23 00:59:02] [INFO] API is UP
+[2023-11-23 00:59:09] [INFO] Connected : True drones
+[2023-11-23 00:59:09] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'])
+[2023-11-23 00:59:09] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 00:59:09] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-23 00:59:09] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:00:28] [init] Started Logger
+[2023-11-23 01:00:29] [init] Started Logger
+[2023-11-23 01:00:32] [INFO] API is UP
+[2023-11-23 01:00:37] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-23 01:00:37] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:00:37] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:00:37] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:01:16] [init] Started Logger
+[2023-11-23 01:01:17] [init] Started Logger
+[2023-11-23 01:01:19] [INFO] API is UP
+[2023-11-23 01:01:25] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-23 01:01:25] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:01:25] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:01:25] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:01:29] [INFO] Connected : False drones
+[2023-11-23 01:01:29] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-23 01:01:29] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:01:29] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:01:29] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:01:33] [INFO] Connected : False drones
+[2023-11-23 01:01:33] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-23 01:01:33] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:01:33] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:01:33] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:02:37] [init] Started Logger
+[2023-11-23 01:02:37] [init] Started Logger
+[2023-11-23 01:02:39] [INFO] API is UP
+[2023-11-23 01:02:50] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'])
+[2023-11-23 01:02:50] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:02:50] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:02:50] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:02:55] [INFO] Connected : False drones
+[2023-11-23 01:02:55] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'])
+[2023-11-23 01:02:55] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:02:55] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:02:55] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:06:50] [init] Started Logger
+[2023-11-23 01:06:51] [init] Started Logger
+[2023-11-23 01:06:54] [INFO] API is UP
+[2023-11-23 01:07:06] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-23 01:07:06] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:07:06] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:07:06] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:08:27] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-23 01:08:27] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:08:27] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:08:27] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:08:33] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-23 01:08:33] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:08:33] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:08:33] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-23 01:08:36] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-23 01:08:36] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 01:08:36] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-23 01:08:36] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-23 23:45:05] [init] Started Logger
+[2023-11-23 23:45:06] [init] Started Logger
+[2023-11-23 23:45:23] [INFO] API is UP
+[2023-11-23 23:45:38] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-23 23:45:38] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 23:45:38] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 23:46:51] [init] Started Logger
+[2023-11-23 23:46:51] [init] Started Logger
+[2023-11-23 23:47:00] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-23 23:47:00] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 23:47:00] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-23 23:47:00] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2023-11-23 23:47:13] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-23 23:47:13] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 23:47:13] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-23 23:47:13] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-23 23:47:14] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-23 23:47:14] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-23 23:47:14] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-23 23:47:14] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:11:58] [init] Started Logger
+[2023-11-24 01:11:58] [init] Started Logger
+[2023-11-24 01:12:03] [INFO] API is UP
+[2023-11-24 01:12:15] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-24 01:12:15] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:12:15] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:12:15] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:17:41] [init] Started Logger
+[2023-11-24 01:17:41] [init] Started Logger
+[2023-11-24 01:17:44] [INFO] API is UP
+[2023-11-24 01:17:54] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-24 01:17:54] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:18:52] [init] Started Logger
+[2023-11-24 01:18:52] [init] Started Logger
+[2023-11-24 01:19:04] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:19:15] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:19:15] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:19:15] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:19:15] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:19:18] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:19:18] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:19:18] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:19:18] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:19:25] [INFO] API is UP
+[2023-11-24 01:20:24] [init] Started Logger
+[2023-11-24 01:20:24] [init] Started Logger
+[2023-11-24 01:20:30] [INFO] API is UP
+[2023-11-24 01:20:32] [INFO] API is UP
+[2023-11-24 01:20:38] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:20:43] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:20:43] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:20:43] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:20:43] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:20:50] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:20:56] [INFO] Land START
+[2023-11-24 01:20:56] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:22:51] [init] Started Logger
+[2023-11-24 01:22:51] [init] Started Logger
+[2023-11-24 01:22:58] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:23:17] [init] Started Logger
+[2023-11-24 01:23:17] [init] Started Logger
+[2023-11-24 01:23:29] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-24 01:23:31] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-24 01:23:31] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:23:31] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:23:31] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:23:36] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-24 01:23:39] [INFO] Land START
+[2023-11-24 01:23:39] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:26:24] [init] Started Logger
+[2023-11-24 01:26:24] [init] Started Logger
+[2023-11-24 01:26:59] [init] Started Logger
+[2023-11-24 01:26:59] [init] Started Logger
+[2023-11-24 01:27:18] [init] Started Logger
+[2023-11-24 01:27:18] [init] Started Logger
+[2023-11-24 01:27:27] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-24 01:27:32] [INFO] TakeOff START
+[2023-11-24 01:27:32] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:28:32] [INFO] TakeOff STOP
+[2023-11-24 01:28:32] [INFO] Land START
+[2023-11-24 01:28:32] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:30:20] [init] Started Logger
+[2023-11-24 01:30:20] [init] Started Logger
+[2023-11-24 01:30:34] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:30:48] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:30:48] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:30:48] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:30:48] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:32:27] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:33:01] [init] Started Logger
+[2023-11-24 01:33:02] [init] Started Logger
+[2023-11-24 01:33:09] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:33:09] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:33:29] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:33:29] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:33:29] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:33:29] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:36:19] [init] Started Logger
+[2023-11-24 01:36:20] [init] Started Logger
+[2023-11-24 01:36:31] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:36:31] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:36:50] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:36:50] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:36:50] [INFO] Disconnected to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:36:50] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:39:16] [init] Started Logger
+[2023-11-24 01:39:16] [init] Started Logger
+[2023-11-24 01:42:31] [init] Started Logger
+[2023-11-24 01:42:31] [init] Started Logger
+[2023-11-24 01:42:44] [init] Started Logger
+[2023-11-24 01:42:44] [init] Started Logger
+[2023-11-24 01:42:48] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:42:48] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:42:56] [INFO] TakeOff START
+[2023-11-24 01:42:56] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703']
+[2023-11-24 01:43:56] [INFO] TakeOff STOP
+[2023-11-24 01:44:03] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:44:03] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:44:25] [init] Started Logger
+[2023-11-24 01:44:25] [init] Started Logger
+[2023-11-24 01:44:37] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:44:37] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'])
+[2023-11-24 01:47:10] [init] Started Logger
+[2023-11-24 01:47:10] [init] Started Logger
+[2023-11-24 01:47:19] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:47:19] [INFO] dict_keys(['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:47:55] [init] Started Logger
+[2023-11-24 01:47:55] [init] Started Logger
+[2023-11-24 01:47:59] [INFO] API is UP
+[2023-11-24 01:48:14] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-24 01:48:14] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'])
+[2023-11-24 01:48:47] [init] Started Logger
+[2023-11-24 01:48:47] [init] Started Logger
+[2023-11-24 01:49:01] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:49:01] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'}
+[2023-11-24 01:49:01] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:49:01] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:49:01] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 01:49:06] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:49:22] [INFO] TakeOff START
+[2023-11-24 01:49:22] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:49:25] [INFO] TakeOff STOP
+[2023-11-24 01:49:32] [INFO] Land START
+[2023-11-24 01:49:32] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:49:33] [INFO] Land START
+[2023-11-24 01:49:33] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:49:49] [INFO] Land START
+[2023-11-24 01:49:49] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:53:18] [init] Started Logger
+[2023-11-24 01:53:19] [init] Started Logger
+[2023-11-24 01:53:34] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:53:34] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 01:53:34] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'}
+[2023-11-24 01:53:34] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 01:53:34] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 01:53:39] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:53:47] [INFO] TakeOff START
+[2023-11-24 01:53:47] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:53:49] [INFO] TakeOff STOP
+[2023-11-24 01:53:53] [INFO] Land START
+[2023-11-24 01:53:53] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:53:53] [INFO] Land STOP
+[2023-11-24 01:54:10] [INFO] Land START
+[2023-11-24 01:54:10] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 01:54:10] [INFO] Land STOP
+[2023-11-24 01:54:17] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:54:17] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:54:19] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 01:54:19] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 01:57:02] [init] Started Logger
+[2023-11-24 01:57:02] [init] Started Logger
+[2023-11-24 01:57:52] [init] Started Logger
+[2023-11-24 01:57:53] [init] Started Logger
+[2023-11-24 01:58:36] [init] Started Logger
+[2023-11-24 01:58:37] [init] Started Logger
+[2023-11-24 01:59:20] [init] Started Logger
+[2023-11-24 01:59:20] [init] Started Logger
+[2023-11-24 02:01:28] [init] Started Logger
+[2023-11-24 02:01:28] [init] Started Logger
+[2023-11-24 02:01:45] [init] Started Logger
+[2023-11-24 02:01:45] [init] Started Logger
+[2023-11-24 02:03:37] [init] Started Logger
+[2023-11-24 02:03:37] [init] Started Logger
+[2023-11-24 02:03:51] [init] Started Logger
+[2023-11-24 02:03:51] [init] Started Logger
+[2023-11-24 02:04:12] [init] Started Logger
+[2023-11-24 02:04:13] [init] Started Logger
+[2023-11-24 02:04:34] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 02:04:34] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 02:04:34] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 02:04:34] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 02:04:34] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 02:04:38] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 02:04:41] [INFO] GetEstimatedPosition START
+[2023-11-24 02:04:41] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 02:04:41] [INFO] GetEstimatedPosition STOP
+[2023-11-24 02:04:45] [INFO] GetEstimatedPosition START
+[2023-11-24 02:04:45] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 02:04:45] [INFO] GetEstimatedPosition STOP
+[2023-11-24 02:04:51] [INFO] TakeOff START
+[2023-11-24 02:04:51] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 02:04:53] [INFO] TakeOff STOP
+[2023-11-24 02:04:55] [INFO] GetEstimatedPosition START
+[2023-11-24 02:04:55] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 02:04:55] [INFO] GetEstimatedPosition STOP
+[2023-11-24 02:04:56] [INFO] GetEstimatedPosition START
+[2023-11-24 02:04:56] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 02:04:56] [INFO] GetEstimatedPosition STOP
+[2023-11-24 02:05:00] [INFO] Land START
+[2023-11-24 02:05:00] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 02:05:00] [INFO] Land STOP
+[2023-11-24 02:05:03] [INFO] Land START
+[2023-11-24 02:05:03] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 02:05:03] [INFO] Land STOP
+[2023-11-24 02:10:47] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 02:10:47] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 02:10:55] [INFO] GetEstimatedPosition START
+[2023-11-24 02:10:55] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 02:10:55] [INFO] GetEstimatedPosition STOP
+[2023-11-24 02:57:10] [init] Started Logger
+[2023-11-24 02:57:10] [init] Started Logger
+[2023-11-24 02:57:29] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 02:57:29] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 02:57:29] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 02:57:29] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 02:57:29] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 02:59:30] [init] Started Logger
+[2023-11-24 02:59:30] [init] Started Logger
+[2023-11-24 02:59:38] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 02:59:38] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 02:59:38] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 02:59:38] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 02:59:38] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 03:02:26] [init] Started Logger
+[2023-11-24 03:02:26] [init] Started Logger
+[2023-11-24 03:02:42] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 03:02:42] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'}
+[2023-11-24 03:02:42] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 03:02:42] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 03:02:42] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 03:02:46] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:02:52] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 03:02:52] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 03:03:01] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 03:03:01] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:16] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:16] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:16] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:24] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:24] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:24] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:25] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:25] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:25] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:25] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:25] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:25] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:26] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:26] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:26] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:27] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:27] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:27] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:35] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:35] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:35] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:37] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:37] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:37] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:38] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:38] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:38] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:40] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:40] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:40] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:44] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:44] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:44] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:44] [INFO] GetEstimatedPosition START
+[2023-11-24 03:03:44] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:44] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:03:55] [INFO] TakeOff START
+[2023-11-24 03:03:55] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:03:57] [INFO] TakeOff STOP
+[2023-11-24 03:04:02] [INFO] Land START
+[2023-11-24 03:04:02] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:04:02] [INFO] Land STOP
+[2023-11-24 03:04:05] [INFO] Land START
+[2023-11-24 03:04:05] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:04:05] [INFO] Land STOP
+[2023-11-24 03:04:09] [INFO] GetEstimatedPosition START
+[2023-11-24 03:04:09] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:04:09] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:04:11] [INFO] GetEstimatedPosition START
+[2023-11-24 03:04:11] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:04:11] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:04:25] [INFO] GetEstimatedPosition START
+[2023-11-24 03:04:25] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:04:25] [INFO] GetEstimatedPosition STOP
+[2023-11-24 03:04:27] [INFO] GetEstimatedPosition START
+[2023-11-24 03:04:27] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 03:04:27] [INFO] GetEstimatedPosition STOP
+[2023-11-24 08:52:10] [init] Started Logger
+[2023-11-24 08:52:10] [init] Started Logger
+[2023-11-24 08:52:19] [INFO] API is UP
+[2023-11-24 08:53:00] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 08:53:00] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 08:53:00] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 08:53:00] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 08:53:00] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 08:53:04] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:53:20] [INFO] GetEstimatedPosition START
+[2023-11-24 08:53:20] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:53:20] [INFO] GetEstimatedPosition STOP
+[2023-11-24 08:53:39] [INFO] TakeOff START
+[2023-11-24 08:53:39] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:53:43] [INFO] TakeOff STOP
+[2023-11-24 08:53:47] [INFO] GetEstimatedPosition START
+[2023-11-24 08:53:47] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:53:47] [INFO] GetEstimatedPosition STOP
+[2023-11-24 08:53:56] [INFO] Land START
+[2023-11-24 08:53:56] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:53:56] [INFO] Land STOP
+[2023-11-24 08:53:57] [INFO] Land START
+[2023-11-24 08:53:57] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:53:57] [INFO] Land STOP
+[2023-11-24 08:57:42] [init] Started Logger
+[2023-11-24 08:57:43] [init] Started Logger
+[2023-11-24 08:57:56] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 08:57:56] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'}
+[2023-11-24 08:57:56] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 08:57:56] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 08:57:56] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 08:58:00] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:09] [INFO] TakeOff START
+[2023-11-24 08:58:09] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:12] [INFO] TakeOff STOP
+[2023-11-24 08:58:16] [INFO] Land START
+[2023-11-24 08:58:16] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:18] [INFO] Land STOP
+[2023-11-24 08:58:24] [INFO] TakeOff START
+[2023-11-24 08:58:24] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:27] [INFO] TakeOff STOP
+[2023-11-24 08:58:32] [INFO] Land START
+[2023-11-24 08:58:32] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:34] [INFO] Land STOP
+[2023-11-24 08:58:38] [INFO] TakeOff START
+[2023-11-24 08:58:38] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:42] [INFO] TakeOff STOP
+[2023-11-24 08:58:47] [INFO] GetEstimatedPosition START
+[2023-11-24 08:58:47] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:47] [INFO] GetEstimatedPosition STOP
+[2023-11-24 08:58:49] [INFO] GetEstimatedPosition START
+[2023-11-24 08:58:49] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:49] [INFO] GetEstimatedPosition STOP
+[2023-11-24 08:58:53] [INFO] Land START
+[2023-11-24 08:58:53] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:58:54] [INFO] Land STOP
+[2023-11-24 08:59:03] [INFO] GetEstimatedPosition START
+[2023-11-24 08:59:03] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 08:59:03] [INFO] GetEstimatedPosition STOP
+[2023-11-24 08:59:14] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 08:59:14] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 13:22:22] [init] Started Logger
+[2023-11-24 13:22:22] [init] Started Logger
+[2023-11-24 13:22:59] [INFO] API is UP
+[2023-11-24 13:23:13] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-24 13:23:13] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 13:23:13] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-24 13:23:13] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-24 13:23:13] [INFO] Connected to radio://0/27/2M/E7E7E7E702
+[2023-11-24 13:23:16] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 13:23:24] [INFO] GetEstimatedPosition START
+[2023-11-24 13:23:24] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2023-11-24 13:23:24] [INFO] GetEstimatedPosition STOP
+[2023-11-24 13:25:44] [INFO] dict_keys(['radio://0/27/2M/E7E7E7E702'])
+[2023-11-24 13:25:44] [INFO] Disconnected to radio://0/27/2M/E7E7E7E702
+[2023-11-27 16:51:58] [init] Started Logger
+[2023-11-27 16:51:58] [init] Started Logger
+[2023-11-27 16:52:01] [INFO] API is UP
+[2023-11-27 16:54:12] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2023-11-27 16:54:12] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'}
+[2023-11-27 16:54:12] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2023-11-27 16:54:12] [INFO] {'radio://0/27/2M/E7E7E7E702'}
+[2023-11-27 16:54:12] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2023-11-27 16:54:12] [INFO] set()
+[2023-11-27 16:54:12] [INFO] []
+[2023-11-30 11:37:17] [init] Started Logger
+[2023-11-30 11:37:17] [init] Started Logger
+[2023-11-30 11:38:28] [init] Started Logger
+[2023-11-30 11:38:28] [init] Started Logger
+[2023-11-30 11:38:44] [init] Started Logger
+[2023-11-30 11:38:44] [init] Started Logger
+[2023-11-30 11:38:53] [init] Started Logger
+[2023-11-30 11:38:53] [init] Started Logger
+[2023-11-30 11:39:04] [init] Started Logger
+[2023-11-30 11:39:04] [init] Started Logger
+[2023-11-30 14:55:07] [init] Started Logger
+[2023-11-30 14:55:07] [init] Started Logger

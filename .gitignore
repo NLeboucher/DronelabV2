@@ -1,1 +1,5 @@
 cache/
+Tutorials/
+API/temp/
+enums/__pycache__/
+API/__pycache__/
