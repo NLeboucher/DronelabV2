@@ -31,7 +31,13 @@ async def Land():
 async def GetEstimatedPositions():
     return swarm.All_GetEstimatedPositions()
 
+@app.post("/All_StartLinearMotion")
+async def All_StartLinearMotion(args_arr : List[Move]):
+    return swarm.All_StartLinearMotion(args_arr)
 
+@app.post("/All_MoveDistance")
+async def All_MoveDistance(args_arr : List[Move]):
+    return swarm.All_MoveDistance(args_arr)
 
 
 
