@@ -2,7 +2,6 @@
 
 """
 import functools
-import operator
 
 from numpy.core.numeric import (
     asanyarray, arange, zeros, greater_equal, multiply, ones,
@@ -68,7 +67,7 @@ def fliplr(m):
     See Also
     --------
     flipud : Flip array in the up/down direction.
-    flip : Flip array in one or more dimensions.
+    flip : Flip array in one or more dimesions.
     rot90 : Rotate array counterclockwise.
 
     Notes
@@ -121,7 +120,7 @@ def flipud(m):
     See Also
     --------
     fliplr : Flip array in the left/right direction.
-    flip : Flip array in one or more dimensions.
+    flip : Flip array in one or more dimesions.
     rot90 : Rotate array counterclockwise.
 
     Notes
@@ -215,11 +214,6 @@ def eye(N, M=None, k=0, dtype=float, order='C', *, like=None):
     m = zeros((N, M), dtype=dtype, order=order)
     if k >= M:
         return m
-    # Ensure M and k are integers, so we don't get any surprise casting
-    # results in the expressions `M-k` and `M+1` used below.  This avoids
-    # a problem with inputs with type (for example) np.uint64.
-    M = operator.index(M)
-    k = operator.index(k)
     if k >= 0:
         i = k
     else:
@@ -229,7 +223,7 @@ def eye(N, M=None, k=0, dtype=float, order='C', *, like=None):
 
 
 _eye_with_like = array_function_dispatch(
-    _eye_dispatcher, use_like=True
+    _eye_dispatcher
 )(eye)
 
 
@@ -431,7 +425,7 @@ def tri(N, M=None, k=0, dtype=float, *, like=None):
 
 
 _tri_with_like = array_function_dispatch(
-    _tri_dispatcher, use_like=True
+    _tri_dispatcher
 )(tri)
 
 
@@ -445,12 +439,10 @@ def tril(m, k=0):
     Lower triangle of an array.
 
     Return a copy of an array with elements above the `k`-th diagonal zeroed.
-    For arrays with ``ndim`` exceeding 2, `tril` will apply to the final two
-    axes.
 
     Parameters
     ----------
-    m : array_like, shape (..., M, N)
+    m : array_like, shape (M, N)
         Input array.
     k : int, optional
         Diagonal above which to zero elements.  `k = 0` (the default) is the
@@ -458,7 +450,7 @@ def tril(m, k=0):
 
     Returns
     -------
-    tril : ndarray, shape (..., M, N)
+    tril : ndarray, shape (M, N)
         Lower triangle of `m`, of same shape and data-type as `m`.
 
     See Also
@@ -473,20 +465,6 @@ def tril(m, k=0):
            [ 7,  8,  0],
            [10, 11, 12]])
 
-    >>> np.tril(np.arange(3*4*5).reshape(3, 4, 5))
-    array([[[ 0,  0,  0,  0,  0],
-            [ 5,  6,  0,  0,  0],
-            [10, 11, 12,  0,  0],
-            [15, 16, 17, 18,  0]],
-           [[20,  0,  0,  0,  0],
-            [25, 26,  0,  0,  0],
-            [30, 31, 32,  0,  0],
-            [35, 36, 37, 38,  0]],
-           [[40,  0,  0,  0,  0],
-            [45, 46,  0,  0,  0],
-            [50, 51, 52,  0,  0],
-            [55, 56, 57, 58,  0]]])
-
     """
     m = asanyarray(m)
     mask = tri(*m.shape[-2:], k=k, dtype=bool)
@@ -500,8 +478,7 @@ def triu(m, k=0):
     Upper triangle of an array.
 
     Return a copy of an array with the elements below the `k`-th diagonal
-    zeroed. For arrays with ``ndim`` exceeding 2, `triu` will apply to the
-    final two axes.
+    zeroed.
 
     Please refer to the documentation for `tril` for further details.
 
@@ -516,20 +493,6 @@ def triu(m, k=0):
            [ 4,  5,  6],
            [ 0,  8,  9],
            [ 0,  0, 12]])
-
-    >>> np.triu(np.arange(3*4*5).reshape(3, 4, 5))
-    array([[[ 0,  1,  2,  3,  4],
-            [ 0,  6,  7,  8,  9],
-            [ 0,  0, 12, 13, 14],
-            [ 0,  0,  0, 18, 19]],
-           [[20, 21, 22, 23, 24],
-            [ 0, 26, 27, 28, 29],
-            [ 0,  0, 32, 33, 34],
-            [ 0,  0,  0, 38, 39]],
-           [[40, 41, 42, 43, 44],
-            [ 0, 46, 47, 48, 49],
-            [ 0,  0, 52, 53, 54],
-            [ 0,  0,  0, 58, 59]]])
 
     """
     m = asanyarray(m)
@@ -634,8 +597,8 @@ def vander(x, N=None, increasing=False):
     return v
 
 
-def _histogram2d_dispatcher(x, y, bins=None, range=None, density=None,
-                            weights=None):
+def _histogram2d_dispatcher(x, y, bins=None, range=None, normed=None,
+                            weights=None, density=None):
     yield x
     yield y
 
@@ -653,7 +616,8 @@ def _histogram2d_dispatcher(x, y, bins=None, range=None, density=None,
 
 
 @array_function_dispatch(_histogram2d_dispatcher)
-def histogram2d(x, y, bins=10, range=None, density=None, weights=None):
+def histogram2d(x, y, bins=10, range=None, normed=None, weights=None,
+                density=None):
     """
     Compute the bi-dimensional histogram of two data samples.
 
@@ -687,9 +651,13 @@ def histogram2d(x, y, bins=10, range=None, density=None, weights=None):
         If False, the default, returns the number of samples in each bin.
         If True, returns the probability *density* function at the bin,
         ``bin_count / sample_count / bin_area``.
+    normed : bool, optional
+        An alias for the density argument that behaves identically. To avoid
+        confusion with the broken normed argument to `histogram`, `density`
+        should be preferred.
     weights : array_like, shape(N,), optional
         An array of values ``w_i`` weighing each sample ``(x_i, y_i)``.
-        Weights are normalized to 1 if `density` is True. If `density` is
+        Weights are normalized to 1 if `normed` is True. If `normed` is
         False, the values of the returned histogram are equal to the sum of
         the weights belonging to the samples falling into each bin.
 
@@ -711,7 +679,7 @@ def histogram2d(x, y, bins=10, range=None, density=None, weights=None):
 
     Notes
     -----
-    When `density` is True, then the returned histogram is the sample
+    When `normed` is True, then the returned histogram is the sample
     density, defined such that the sum over bins of the product
     ``bin_value * bin_area`` is 1.
 
@@ -766,48 +734,11 @@ def histogram2d(x, y, bins=10, range=None, density=None, weights=None):
     >>> xcenters = (xedges[:-1] + xedges[1:]) / 2
     >>> ycenters = (yedges[:-1] + yedges[1:]) / 2
     >>> im.set_data(xcenters, ycenters, H)
-    >>> ax.add_image(im)
+    >>> ax.images.append(im)
     >>> plt.show()
 
-    It is also possible to construct a 2-D histogram without specifying bin
-    edges:
-
-    >>> # Generate non-symmetric test data
-    >>> n = 10000
-    >>> x = np.linspace(1, 100, n)
-    >>> y = 2*np.log(x) + np.random.rand(n) - 0.5
-    >>> # Compute 2d histogram. Note the order of x/y and xedges/yedges
-    >>> H, yedges, xedges = np.histogram2d(y, x, bins=20)
-
-    Now we can plot the histogram using
-    :func:`pcolormesh <matplotlib.pyplot.pcolormesh>`, and a
-    :func:`hexbin <matplotlib.pyplot.hexbin>` for comparison.
-
-    >>> # Plot histogram using pcolormesh
-    >>> fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
-    >>> ax1.pcolormesh(xedges, yedges, H, cmap='rainbow')
-    >>> ax1.plot(x, 2*np.log(x), 'k-')
-    >>> ax1.set_xlim(x.min(), x.max())
-    >>> ax1.set_ylim(y.min(), y.max())
-    >>> ax1.set_xlabel('x')
-    >>> ax1.set_ylabel('y')
-    >>> ax1.set_title('histogram2d')
-    >>> ax1.grid()
-
-    >>> # Create hexbin plot for comparison
-    >>> ax2.hexbin(x, y, gridsize=20, cmap='rainbow')
-    >>> ax2.plot(x, 2*np.log(x), 'k-')
-    >>> ax2.set_title('hexbin')
-    >>> ax2.set_xlim(x.min(), x.max())
-    >>> ax2.set_xlabel('x')
-    >>> ax2.grid()
-
-    >>> plt.show()
     """
     from numpy import histogramdd
-
-    if len(x) != len(y):
-        raise ValueError('x and y must have the same length.')
 
     try:
         N = len(bins)
@@ -817,7 +748,7 @@ def histogram2d(x, y, bins=10, range=None, density=None, weights=None):
     if N != 1 and N != 2:
         xedges = yedges = asarray(bins)
         bins = [xedges, yedges]
-    hist, edges = histogramdd([x, y], bins, range, density, weights)
+    hist, edges = histogramdd([x, y], bins, range, normed, weights, density)
     return hist, edges[0], edges[1]
 
 

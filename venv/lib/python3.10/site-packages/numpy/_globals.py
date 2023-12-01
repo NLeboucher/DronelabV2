@@ -15,11 +15,8 @@ That was not the case when the singleton classes were defined in the numpy
 motivated this module.
 
 """
-import enum
-
 __ALL__ = [
-    'ModuleDeprecationWarning', 'VisibleDeprecationWarning',
-    '_NoValue', '_CopyMode'
+    'ModuleDeprecationWarning', 'VisibleDeprecationWarning', '_NoValue'
     ]
 
 
@@ -83,43 +80,12 @@ class _NoValueType:
             cls.__instance = super().__new__(cls)
         return cls.__instance
 
+    # needed for python 2 to preserve identity through a pickle
+    def __reduce__(self):
+        return (self.__class__, ())
+
     def __repr__(self):
         return "<no value>"
 
 
 _NoValue = _NoValueType()
-
-
-class _CopyMode(enum.Enum):
-    """
-    An enumeration for the copy modes supported
-    by numpy.copy() and numpy.array(). The following three modes are supported,
-
-    - ALWAYS: This means that a deep copy of the input
-              array will always be taken.
-    - IF_NEEDED: This means that a deep copy of the input
-                 array will be taken only if necessary.
-    - NEVER: This means that the deep copy will never be taken.
-             If a copy cannot be avoided then a `ValueError` will be
-             raised.
-
-    Note that the buffer-protocol could in theory do copies.  NumPy currently
-    assumes an object exporting the buffer protocol will never do this.
-    """
-
-    ALWAYS = True
-    IF_NEEDED = False
-    NEVER = 2
-
-    def __bool__(self):
-        # For backwards compatibility
-        if self == _CopyMode.ALWAYS:
-            return True
-
-        if self == _CopyMode.IF_NEEDED:
-            return False
-
-        raise ValueError(f"{self} is neither True nor False.")
-
-
-_CopyMode.__module__ = 'numpy'

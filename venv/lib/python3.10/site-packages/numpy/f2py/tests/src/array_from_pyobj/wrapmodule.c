@@ -9,9 +9,7 @@ extern "C" {
 #endif
 
 /*********************** See f2py2e/cfuncs.py: includes ***********************/
-
-#define PY_SSIZE_T_CLEAN
-#include <Python.h>
+#include "Python.h"
 #include "fortranobject.h"
 #include <math.h>
 
@@ -33,7 +31,6 @@ static PyObject *f2py_rout_wrap_call(PyObject *capi_self,
                                      PyObject *capi_args) {
   PyObject * volatile capi_buildvalue = NULL;
   int type_num = 0;
-  int elsize = 0;
   npy_intp *dims = NULL;
   PyObject *dims_capi = Py_None;
   int rank = 0;
@@ -42,8 +39,8 @@ static PyObject *f2py_rout_wrap_call(PyObject *capi_self,
   PyObject *arr_capi = Py_None;
   int i;
 
-  if (!PyArg_ParseTuple(capi_args,"iiOiO|:wrap.call",\
-                        &type_num,&elsize,&dims_capi,&intent,&arr_capi))
+  if (!PyArg_ParseTuple(capi_args,"iOiO|:wrap.call",\
+                        &type_num,&dims_capi,&intent,&arr_capi))
     return NULL;
   rank = PySequence_Length(dims_capi);
   dims = malloc(rank*sizeof(npy_intp));
@@ -59,7 +56,7 @@ static PyObject *f2py_rout_wrap_call(PyObject *capi_self,
         goto fail;
     }
   }
-  capi_arr_tmp = ndarray_from_pyobj(type_num,elsize,dims,rank,intent|F2PY_INTENT_OUT,arr_capi,"wrap.call failed");
+  capi_arr_tmp = array_from_pyobj(type_num,dims,rank,intent|F2PY_INTENT_OUT,arr_capi);
   if (capi_arr_tmp == NULL) {
     free(dims);
     return NULL;
@@ -96,7 +93,7 @@ static PyObject *f2py_rout_wrap_attrs(PyObject *capi_self,
   PyObject *strides = NULL;
   char s[100];
   int i;
-  memset(s,0,100);
+  memset(s,0,100*sizeof(char));
   if (!PyArg_ParseTuple(capi_args,"O!|:wrap.attrs",
                         &PyArray_Type,&arr_capi))
     return NULL;
@@ -203,6 +200,7 @@ PyMODINIT_FUNC PyInit_test_array_from_pyobj_ext(void) {
   ADDCONST("ENSUREARRAY", NPY_ARRAY_ENSUREARRAY);
   ADDCONST("ALIGNED", NPY_ARRAY_ALIGNED);
   ADDCONST("WRITEABLE", NPY_ARRAY_WRITEABLE);
+  ADDCONST("UPDATEIFCOPY", NPY_ARRAY_UPDATEIFCOPY);
   ADDCONST("WRITEBACKIFCOPY", NPY_ARRAY_WRITEBACKIFCOPY);
 
   ADDCONST("BEHAVED", NPY_ARRAY_BEHAVED);

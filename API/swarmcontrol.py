@@ -7,10 +7,18 @@ from cflib.crazyflie.swarm import CachedCfFactory
 from cflib.crazyflie.swarm import Swarm
 from cflib.positioning.motion_commander import MotionCommander
 from cflib.positioning.position_hl_commander import PositionHlCommander
-from API.Logger import Logger
-from API.move import Move
-from API.outputdict import OutputDict
-from API.enums.option import Option   
+if(path == "API"):
+    from logger import Logger
+    from move import Move
+    from outputdict import OutputDict
+    from enums.option import Option   
+    from quad import Quad
+else:
+    from API.logger import Logger
+    from API.move import Move
+    from API.outputdict import OutputDict
+    from API.enums.option import Option   
+    from API.quad import Quad 
 from typing import List
 
 
@@ -180,9 +188,9 @@ class SwarmControl:
             # SWARM.close_links()
         return OutputDict(True,"OK").dict
 
-    def start_linear_motion(scf, args_dict:Move):
+    def start_linear_motion(scf, args:Move):
         commander = MotionCommander(scf,default_height=DefaultHeight)
-        commander.start_linear_motion( velocity_x_m=args_dict.x, velocity_y_m=args_dict.y, velocity_z_m= args_dict.mz,rate_yaw=args_dict.yaw_rate)
+        commander.start_linear_motion( velocity_x_m=args.x, velocity_y_m=args.y, velocity_z_m= args.mz,rate_yaw=args.yaw_rate)
 
     def move_distance(scf, args_dict:Move):
         commander = MotionCommander(scf,default_height=DefaultHeight)

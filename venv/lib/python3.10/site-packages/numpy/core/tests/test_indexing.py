@@ -10,7 +10,7 @@ from numpy.core._multiarray_tests import array_indexing
 from itertools import product
 from numpy.testing import (
     assert_, assert_equal, assert_raises, assert_raises_regex,
-    assert_array_equal, assert_warns, HAS_REFCOUNT, IS_WASM
+    assert_array_equal, assert_warns, HAS_REFCOUNT,
     )
 
 
@@ -563,7 +563,6 @@ class TestIndexing:
         with pytest.raises(IndexError):
             arr[(index,) * num] = 1.
 
-    @pytest.mark.skipif(IS_WASM, reason="no threading")
     def test_structured_advanced_indexing(self):
         # Test that copyswap(n) used by integer array indexing is threadsafe
         # for structured datatypes, see gh-15387. This test can behave randomly.
@@ -587,12 +586,6 @@ class TestIndexing:
             f.result()
 
         assert arr.dtype is dt
-
-    def test_nontuple_ndindex(self):
-        a = np.arange(25).reshape((5, 5))
-        assert_equal(a[[0, 1]], np.array([a[0], a[1]]))
-        assert_equal(a[[0, 1], [0, 1]], np.array([0, 6]))
-        assert_raises(IndexError, a.__getitem__, [slice(None)])
 
 
 class TestFieldIndexing:
@@ -827,7 +820,7 @@ class TestMultiIndexingAutomated:
 
     """
 
-    def setup_method(self):
+    def setup(self):
         self.a = np.arange(np.prod([3, 1, 5, 6])).reshape(3, 1, 5, 6)
         self.b = np.empty((3, 0, 5, 6))
         self.complex_indices = ['skip', Ellipsis,
@@ -1298,9 +1291,10 @@ class TestBooleanIndexing:
     def test_boolean_indexing_weirdness(self):
         # Weird boolean indexing things
         a = np.ones((2, 3, 4))
-        assert a[False, True, ...].shape == (0, 2, 3, 4)
-        assert a[True, [0, 1], True, True, [1], [[2]]].shape == (1, 2)
+        a[False, True, ...].shape == (0, 2, 3, 4)
+        a[True, [0, 1], True, True, [1], [[2]]] == (1, 2)
         assert_raises(IndexError, lambda: a[False, [0, 1], ...])
+
 
     def test_boolean_indexing_fast_path(self):
         # These used to either give the wrong error, or incorrectly give no
@@ -1338,7 +1332,7 @@ class TestBooleanIndexing:
 
 
 class TestArrayToIndexDeprecation:
-    """Creating an index from array not 0-D is an error.
+    """Creating an an index from array not 0-D is an error.
 
     """
     def test_array_to_index_error(self):

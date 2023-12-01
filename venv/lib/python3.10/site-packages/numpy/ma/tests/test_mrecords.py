@@ -348,7 +348,7 @@ class TestMRecords:
 
 class TestView:
 
-    def setup_method(self):
+    def setup(self):
         (a, b) = (np.arange(10), np.random.rand(10))
         ndtype = [('a', float), ('b', float)]
         arr = np.array(list(zip(a, b)), dtype=ndtype)
@@ -468,7 +468,7 @@ class TestMRecordsImport:
         with temppath() as path:
             with open(path, 'w') as f:
                 f.write(fcontent)
-            mrectxt = fromtextfile(path, delimiter=',', varnames='ABCDEFG')
+            mrectxt = fromtextfile(path, delimitor=',', varnames='ABCDEFG')
         assert_(isinstance(mrectxt, MaskedRecords))
         assert_equal(mrectxt.F, [1, 1, 1, 1])
         assert_equal(mrectxt.E._mask, [1, 1, 1, 1])

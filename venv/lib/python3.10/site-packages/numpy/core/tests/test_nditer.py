@@ -9,7 +9,7 @@ import numpy.core._multiarray_tests as _multiarray_tests
 from numpy import array, arange, nditer, all
 from numpy.testing import (
     assert_, assert_equal, assert_array_equal, assert_raises,
-    IS_WASM, HAS_REFCOUNT, suppress_warnings, break_cycles
+    HAS_REFCOUNT, suppress_warnings
     )
 
 
@@ -828,7 +828,7 @@ def test_iter_nbo_align_contig():
                         casting='equiv',
                         op_dtypes=[np.dtype('f4')])
     with i:
-        # context manager triggers WRITEBACKIFCOPY on i at exit
+        # context manager triggers UPDATEIFCOPY on i at exit
         assert_equal(i.dtypes[0].byteorder, a.dtype.byteorder)
         assert_equal(i.operands[0].dtype.byteorder, a.dtype.byteorder)
         assert_equal(i.operands[0], a)
@@ -1594,12 +1594,11 @@ def test_iter_allocate_output_errors():
     # Allocated output can't have buffering without delayed bufalloc
     assert_raises(ValueError, nditer, [a, None], ['buffered'],
                                             ['allocate', 'readwrite'])
-    # Must specify dtype if there are no inputs (cannot promote existing ones;
-    # maybe this should use the 'f4' here, but it does not historically.)
-    assert_raises(TypeError, nditer, [None, None], [],
+    # Must specify at least one input
+    assert_raises(ValueError, nditer, [None, None], [],
                         [['writeonly', 'allocate'],
                          ['writeonly', 'allocate']],
-                        op_dtypes=[None, np.dtype('f4')])
+                        op_dtypes=[np.dtype('f4'), np.dtype('f4')])
     # If using op_axes, must specify all the axes
     a = arange(24, dtype='i4').reshape(2, 3, 4)
     assert_raises(ValueError, nditer, [a, None], [],
@@ -1623,15 +1622,6 @@ def test_iter_allocate_output_errors():
                         [['readonly'], ['readwrite', 'allocate']],
                         op_dtypes=[None, np.dtype('f4')],
                         op_axes=[None, [0, np.newaxis, 2]])
-
-def test_all_allocated():
-    # When no output and no shape is given, `()` is used as shape.
-    i = np.nditer([None], op_dtypes=["int64"])
-    assert i.operands[0].shape == ()
-    assert i.dtypes == (np.dtype("int64"),)
-
-    i = np.nditer([None], op_dtypes=["int64"], itershape=(2, 3, 4))
-    assert i.operands[0].shape == (2, 3, 4)
 
 def test_iter_remove_axis():
     a = arange(24).reshape(2, 3, 4)
@@ -2000,13 +1990,13 @@ def test_iter_buffered_cast_structured_type_failure_with_cleanup():
     a = np.array([(1, 2, 3), (4, 5, 6)], dtype=sdt1)
 
     for intent in ["readwrite", "readonly", "writeonly"]:
-        # This test was initially designed to test an error at a different
-        # place, but will now raise earlier to to the cast not being possible:
-        # `assert np.can_cast(a.dtype, sdt2, casting="unsafe")` fails.
-        # Without a faulty DType, there is probably no reliable
-        # way to get the initial tested behaviour.
+        # If the following assert fails, the place where the error is raised
+        # within nditer may change. That is fine, but it may make sense for
+        # a new (hard to design) test to replace it. The `simple_arr` is
+        # designed to require a multi-step cast (due to having fields).
+        assert np.can_cast(a.dtype, sdt2, casting="unsafe")
         simple_arr = np.array([1, 2], dtype="i,i")  # requires clean up
-        with pytest.raises(TypeError):
+        with pytest.raises(ValueError):
             nditer((simple_arr, a), ['buffered', 'refs_ok'], [intent, intent],
                    casting='unsafe', op_dtypes=["f,f", sdt2])
 
@@ -2025,7 +2015,6 @@ def test_buffered_cast_error_paths():
             buf = next(it)
             buf[...] = "a"  # cannot be converted to int.
 
-@pytest.mark.skipif(IS_WASM, reason="Cannot start subprocess")
 @pytest.mark.skipif(not HAS_REFCOUNT, reason="PyPy seems to not hit this.")
 def test_buffered_cast_error_paths_unraisable():
     # The following gives an unraisable error. Pytest sometimes captures that
@@ -2262,7 +2251,7 @@ def test_iter_buffering_string():
     assert_raises(TypeError, nditer, a, ['buffered'], ['readonly'],
                     op_dtypes='U2')
     i = nditer(a, ['buffered'], ['readonly'], op_dtypes='U6')
-    assert_equal(i[0], 'abc')
+    assert_equal(i[0], u'abc')
     assert_equal(i[0].dtype, np.dtype('U6'))
 
 def test_iter_buffering_growinner():
@@ -2739,7 +2728,6 @@ def test_iter_writemasked_badinput():
                     op_dtypes=['f4', None],
                     casting='same_kind')
 
-
 def _is_buffered(iterator):
     try:
         iterator.itviews
@@ -2815,34 +2803,6 @@ def test_iter_writemasked(a):
     # were copied back
     assert_equal(a, np.broadcast_to([3, 3, 2.5] * reps, shape))
 
-
-@pytest.mark.parametrize(["mask", "mask_axes"], [
-        # Allocated operand (only broadcasts with -1)
-        (None, [-1, 0]),
-        # Reduction along the first dimension (with and without op_axes)
-        (np.zeros((1, 4), dtype="bool"), [0, 1]),
-        (np.zeros((1, 4), dtype="bool"), None),
-        # Test 0-D and -1 op_axes
-        (np.zeros(4, dtype="bool"), [-1, 0]),
-        (np.zeros((), dtype="bool"), [-1, -1]),
-        (np.zeros((), dtype="bool"), None)])
-def test_iter_writemasked_broadcast_error(mask, mask_axes):
-    # This assumes that a readwrite mask makes sense. This is likely not the
-    # case and should simply be deprecated.
-    arr = np.zeros((3, 4))
-    itflags = ["reduce_ok"]
-    mask_flags = ["arraymask", "readwrite", "allocate"]
-    a_flags = ["writeonly", "writemasked"]
-    if mask_axes is None:
-        op_axes = None
-    else:
-        op_axes = [mask_axes, [0, 1]]
-
-    with assert_raises(ValueError):
-        np.nditer((mask, arr), flags=itflags, op_flags=[mask_flags, a_flags],
-                  op_axes=op_axes)
-
-
 def test_iter_writemasked_decref():
     # force casting (to make it interesting) by using a structured dtype.
     arr = np.arange(10000).astype(">i,O")
@@ -2859,7 +2819,7 @@ def test_iter_writemasked_decref():
     for buf, mask_buf in it:
         buf[...] = (3, singleton)
 
-    del buf, mask_buf, it   # delete everything to ensure correct cleanup
+    del buf, mask_buf, it   # delete everything to ensure corrrect cleanup
 
     if HAS_REFCOUNT:
         # The buffer would have included additional items, they must be
@@ -3168,8 +3128,7 @@ def test_warn_noclose():
         assert len(sup.log) == 1
 
 
-@pytest.mark.skipif(sys.version_info[:2] == (3, 9) and sys.platform == "win32",
-                    reason="Errors with Python 3.9 on Windows")
+@pytest.mark.skipif(not HAS_REFCOUNT, reason="Python lacks refcounts")
 @pytest.mark.parametrize(["in_dtype", "buf_dtype"],
         [("i", "O"), ("O", "i"),  # most simple cases
          ("i,O", "O,O"),  # structured partially only copying O
@@ -3177,14 +3136,9 @@ def test_warn_noclose():
          ])
 @pytest.mark.parametrize("steps", [1, 2, 3])
 def test_partial_iteration_cleanup(in_dtype, buf_dtype, steps):
-    """
-    Checks for reference counting leaks during cleanup.  Using explicit
-    reference counts lead to occasional false positives (at least in parallel
-    test setups).  This test now should still test leaks correctly when
-    run e.g. with pytest-valgrind or pytest-leaks
-    """
-    value = 2**30 + 1  # just a random value that Python won't intern
+    value = 123  # relies on python cache (leak-check will still find it)
     arr = np.full(int(np.BUFSIZE * 2.5), value).astype(in_dtype)
+    count = sys.getrefcount(value)
 
     it = np.nditer(arr, op_dtypes=[np.dtype(buf_dtype)],
             flags=["buffered", "external_loop", "refs_ok"], casting="unsafe")
@@ -3192,7 +3146,9 @@ def test_partial_iteration_cleanup(in_dtype, buf_dtype, steps):
         # The iteration finishes in 3 steps, the first two are partial
         next(it)
 
-    del it  # not necessary, but we test the cleanup
+    # Note that resetting does not free references
+    del it
+    assert count == sys.getrefcount(value)
 
     # Repeat the test with `iternext`
     it = np.nditer(arr, op_dtypes=[np.dtype(buf_dtype)],
@@ -3200,7 +3156,9 @@ def test_partial_iteration_cleanup(in_dtype, buf_dtype, steps):
     for step in range(steps):
         it.iternext()
 
-    del it  # not necessary, but we test the cleanup
+    del it  # should ensure cleanup
+    assert count == sys.getrefcount(value)
+
 
 @pytest.mark.skipif(not HAS_REFCOUNT, reason="Python lacks refcounts")
 @pytest.mark.parametrize(["in_dtype", "buf_dtype"],
@@ -3244,7 +3202,7 @@ def test_debug_print(capfd):
     Currently uses a subprocess to avoid dealing with the C level `printf`s.
     """
     # the expected output with all addresses and sizes stripped (they vary
-    # and/or are platform dependent).
+    # and/or are platform dependend).
     expected = """
     ------ BEGIN ITERATOR DUMP ------
     | Iterator Address:
