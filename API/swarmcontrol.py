@@ -7,6 +7,11 @@ from cflib.crazyflie.swarm import CachedCfFactory
 from cflib.crazyflie.swarm import Swarm
 from cflib.positioning.motion_commander import MotionCommander
 from cflib.positioning.position_hl_commander import PositionHlCommander
+from typing import List
+import os
+path = os.getcwd()
+path = path.split("/")[::-1][0]
+print(path)
 if(path == "API"):
     from logger import Logger
     from move import Move
