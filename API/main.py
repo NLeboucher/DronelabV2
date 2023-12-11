@@ -25,7 +25,7 @@ class Item(BaseModel):
 
 @app.get("/")
 async def read_root():
-
+    s = SwarmControl()
     logger.info("API is UP")
     return {"message": "Welcome to the Drone Control API"}
 

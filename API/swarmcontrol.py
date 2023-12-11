@@ -26,17 +26,17 @@ else:
     from API.quad import Quad 
 from typing import List
 
-
-#
 debug = True
 logger = Logger("log.txt",debug)
+#
 URIS = {
     'radio://0/28/2M/E7E7E7E703',
     'radio://0/80/2M/E7E7E7E701',
     'radio://0/27/2M/E7E7E7E702',
+    'radio://0/29/2M/E7E7E7E704',
     # Add more URIs if you want more copters in the swarm
 }
-DRONES = {}
+DRONES = []
 SWARM = None
 factory = None
 commander = None
@@ -45,11 +45,20 @@ DefaultHeight = 0.3
 positions = dict()
 class SwarmControl:
 
+    def __init__(self, default_height=0.3, default_z_speed=0.2):
+        DRONES = []
+        SWARM = None
+        factory = None
+        commander = None
+        DefaultZSpeed = default_height
+        DefaultHeight = default_z_speed
+        positions = dict()
     def OpenLinks():
-        global DRONES, URIS, factory, SWARM
+        global SWARM, URIS, factory, DRONES
         DRONES = []
         cflib.crtp.init_drivers()
         factory = CachedCfFactory(ro_cache='./cache',rw_cache='./cache')
+        logger.info(f"{URIS}")
         SWARM = Swarm(URIS)
         try:
             SWARM.open_links()
@@ -64,7 +73,6 @@ class SwarmControl:
                 redo = True
                 logger.info(f"Failed to connect to {drone}")
                 URIS.remove(drone)
-                logger.info(f"{URIS}")
         if(redo):
             SWARM.close_links()
             SWARM = Swarm(URIS)
@@ -74,10 +82,10 @@ class SwarmControl:
         return OutputDict(DRONES,"URIS").dict
 
     def CloseLinks():
-        global DRONES, URIS, factory, SWARM
         #cflib.crtp.init_drivers()
         #factory = CachedCfFactory(ro_cache='./cache',rw_cache='./cache')
         #SWARM = Swarm(URIS, factory)
+        global SWARM
         try:
             SWARM.close_links()
 
@@ -98,7 +106,6 @@ class SwarmControl:
         return OutputDict(DRONES,"URIS").dict
 
     def All_Land():
-        global DRONES, URIS, factory, SWARM
         logger.info(f"Land START")
         logger.info(DRONES)
         if(SWARM._is_open):
@@ -108,7 +115,7 @@ class SwarmControl:
             SWARM.parallel(SwarmControl.Land)
             # SWARM.close_links()
             logger.info(f"Land STOP")
-        return OutputDict(True,"OK").dict
+        return [OutputDict(True,"OK").dict for d in DRONES]
     def Land(scf):
         global commander, DefaultZSpeed
         # commander = PositionHlCommander(crazyflie=scf,default_height=DefaultHeight,controller=PositionHlCommander.CONTROLLER_MELLINGER)
@@ -116,7 +123,6 @@ class SwarmControl:
         commander.land(DefaultZSpeed)
 
     def All_TakeOff():
-        global DRONES, URIS, factory, SWARM
         logger.info(f"TakeOff START")
         logger.info(DRONES)
         if(SWARM._is_open):
