@@ -14,6 +14,9 @@ import threading
 from typing import List
 app = FastAPI()
 
+
+#python -m uvicorn swarm:app --host 0.0.0.0 --port 8000
+
 activeuris = []
 
 logger = Logger("log.txt")
@@ -74,6 +77,21 @@ async def move_drones_endpoint(uriss: str, movetoss: str):
         thread.start()
     return "Threads started successfully for all drones."
 
+@app.get("/OpenLinks/")
+async def open_links():
+    # Vous pouvez personnaliser la liste des URIs ici selon vos besoins
+    uris_list = ["IP1"]
+    return {"URIS": uris_list}
+
+@app.get("/getposition/")
+async def get_position():
+    # Remplacez ceci par la logique réelle pour récupérer les positions des drones
+    # Ici, je vais retourner un exemple de données statiques
+    exemple_positions = {
+        "IP1": {"X": "1.0", "Y": "2.0", "Z": "3.0", "yaw": "45.0"}
+        
+    }
+    return {"position": exemple_positions}
 
 def poshold(cf, t, x, y, z):
     steps = t * 10
