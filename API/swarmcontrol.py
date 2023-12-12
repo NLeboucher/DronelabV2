@@ -4,7 +4,6 @@ import cflib.crtp
 from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
 from cflib.crazyflie import Crazyflie
 from cflib.crazyflie.swarm import CachedCfFactory
-from cflib.crazyflie.swarm import Swarm
 from cflib.positioning.motion_commander import MotionCommander
 from cflib.positioning.position_hl_commander import PositionHlCommander
 from typing import List
@@ -18,12 +17,14 @@ if(path == "API"):
     from outputdict import OutputDict
     from enums.option import Option   
     from quad import Quad
+    from swarm import Swarm
 else:
     from API.logger import Logger
     from API.move import Move
     from API.outputdict import OutputDict
     from API.enums.option import Option   
     from API.quad import Quad 
+    from API.swarm import Swarm
 from typing import List
 
 debug = True
