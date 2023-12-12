@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static DroneBehavior;
 
-public class DroneSwarmControl : MonoBehaviour
+public class DroneSwarmControle : MonoBehaviour
 {
     [SerializeField] private GameObject DronePrefab; // Référence au prefab du drone
     private int numberOfDrones = 0; // Nombre de drones à créer
@@ -19,6 +19,7 @@ public class DroneSwarmControl : MonoBehaviour
     public static bool isCoroutineCheckDroneConnectionRunning = false;
     public static bool isCoroutineGetFromAPIRunning = false;
     public static bool droneInitialized = false;
+
    
 
     private void Update()

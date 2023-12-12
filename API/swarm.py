@@ -79,19 +79,23 @@ async def move_drones_endpoint(uriss: str, movetoss: str):
 
 @app.get("/OpenLinks/")
 async def open_links():
-    # Vous pouvez personnaliser la liste des URIs ici selon vos besoins
-    uris_list = ["IP1"]
+    # Liste étendue des URIs de drones fictifs
+    uris_list = ["IP1", "IP2", "IP3", "IP4"]
     return {"URIS": uris_list}
+
+
 
 @app.get("/getposition/")
 async def get_position():
-    # Remplacez ceci par la logique réelle pour récupérer les positions des drones
-    # Ici, je vais retourner un exemple de données statiques
+    # Dictionnaire étendu avec des positions fictives pour plusieurs drones
     exemple_positions = {
-        "IP1": {"X": "1.0", "Y": "2.0", "Z": "3.0", "yaw": "45.0"}
-        
+        "IP1": {"X": "1.0", "Y": "2.0", "Z": "3.0", "yaw": "45.0"},
+        "IP2": {"X": "4.5", "Y": "6.0", "Z": "2.0", "yaw": "30.0"},
+        "IP3": {"X": "7.2", "Y": "3.1", "Z": "5.5", "yaw": "90.0"},
+        "IP4": {"X": "2.5", "Y": "1.0", "Z": "4.0", "yaw": "60.0"}
     }
     return {"position": exemple_positions}
+
 
 def poshold(cf, t, x, y, z):
     steps = t * 10

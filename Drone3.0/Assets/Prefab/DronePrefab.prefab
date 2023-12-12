@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8453661242079421764}
   - component: {fileID: 1169567199186952166}
+  - component: {fileID: 6357014535439542842}
   m_Layer: 0
   m_Name: DronePrefab
   m_TagString: Untagged
@@ -40,7 +41,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3053575140279351787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d205caa3146f20e40b140f9d29d56860, type: 3}
   m_Name: 
@@ -54,6 +55,18 @@ MonoBehaviour:
   Bool_Go_To: 0
   APIRequest: 0
   APITakeOff: 0
+--- !u!114 &6357014535439542842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3053575140279351787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324719bffa585ef40a0ffa52b230f745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8815211060349200712
 PrefabInstance:
   m_ObjectHideFlags: 0
