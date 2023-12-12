@@ -11,9 +11,9 @@ using System.Globalization;
 
 public class APIHelper : MonoBehaviour
 {
-    public static string APILocalhost = "172.21.72.102:8000";
+    public static string APILocalhost = "192.168.1.29:8000";
 
-
+    #region API Get Classes
     public static IEnumerator CheckDroneConnection()
     {
         DroneControle.isCoroutineCheckDroneConnectionRunning = true;
@@ -140,6 +140,7 @@ public class APIHelper : MonoBehaviour
                             float.TryParse(dronePosition.position[droneInformation[i].droneIP]["Z"], NumberStyles.Any, CultureInfo.InvariantCulture, out  z) &&
                             float.TryParse(dronePosition.position[droneInformation[i].droneIP]["yaw"], NumberStyles.Any, CultureInfo.InvariantCulture, out  yaw))
                         {
+                            droneInformation[i].positionInfo = true;
                             droneInformation[i].positionDroneX = x;
                             droneInformation[i].positionDroneY = y;
                             droneInformation[i].positionDroneZ = z;
@@ -166,7 +167,90 @@ public class APIHelper : MonoBehaviour
         DroneControle.isCoroutineGetFromAPIRunning = false;
     }
 
+    #endregion
 
+
+    #region API Set Classes
+
+    public static IEnumerator SetVelocityToAPI(DroneInformation[] droneInformation)
+    {
+        if (droneInformation != null)
+        {
+            string url = "http://" + APILocalhost + "/setvelocity";
+            for (int i = 0; i < droneInformation.Length; i++)
+            {
+                url = url + "/" + droneInformation[i].droneIP + "," + droneInformation[i].vitesseDroneX + "," + droneInformation[i].vitesseDroneY + "," + droneInformation[i].vitesseDroneZ + "," + droneInformation[i].vitesseDroneYaw + ";";
+            }
+            if (url.Length > 0)
+            {
+                string modifiedurl = url.Substring(0, url.Length - 1);
+                // Utilisez modifiedString qui a le dernier caractère enlevé (le point-virgule)
+                url = modifiedurl + "/";
+            }
+            Debug.Log(url);
+            UnityWebRequest request = UnityWebRequest.Get(url);
+            yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Erreur de connexion: " + request.error);
+                // Gestion des erreurs, droneConected reste false
+            }
+            else
+            {
+                // Connexion réussie
+                Debug.Log("Vitesse du drone " + droneInformation[0].droneIP + " mise à jour");
+            }
+
+        }
+        
+        else
+        {
+            Debug.LogError("droneInformation is null");
+        }
+        yield return new WaitForSeconds(0.2f);
+    }
+
+    public static IEnumerator SetGoToAPI (DroneInformation[] droneInformation, int GoToX, int GoToY, int GoToZ, int droneSpeed)
+    {
+        if (droneInformation != null)
+        {
+            string url = "http://" + APILocalhost + "/goto";
+            for (int i = 0; i < droneInformation.Length; i++)
+            {
+                url = url + "/" + droneInformation[i].droneIP + "," + GoToX.ToString() + "," + GoToY.ToString() + "," + GoToZ.ToString() + "," + droneSpeed.ToString() +";";
+            }
+            if (url.Length > 0)
+            {
+                string modifiedurl = url.Substring(0, url.Length - 1);
+                // Utilisez modifiedString qui a le dernier caractère enlevé (le point-virgule)
+                url = modifiedurl + "/";
+            }
+            Debug.Log(url);
+            UnityWebRequest request = UnityWebRequest.Get(url);
+            yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Erreur de connexion: " + request.error);
+                // Gestion des erreurs, droneConected reste false
+            }
+            else
+            {
+                // Connexion réussie
+                Debug.Log("GoTo du drone " + droneInformation[0].droneIP + " mis à jour");
+            }
+
+        }
+
+        else
+        {
+            Debug.LogError("droneInformation is null");
+        }
+        yield return new WaitForSeconds(0.2f);
+    }
+
+
+
+    #endregion
 
 
 
