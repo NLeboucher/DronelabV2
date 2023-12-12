@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections.Concurrent;
-using System.Threading;
-using System.Linq;
+
 
 
 
@@ -23,7 +22,7 @@ public class DroneControle : MonoBehaviour
     [SerializeField] private bool Bool_Go_To = false;
     [SerializeField] private bool APIRequest = false;
     [SerializeField] private bool APITakeOff = false;
-    public static string APILocalhost = "192.168.1.29:8000";
+    
 
     Vector3 Input_Vector_Position = new Vector3(0, 0, 0);
     float Input_Vector_Rotation = 0f; // Rotation horizontale
@@ -216,8 +215,7 @@ public class DroneControle : MonoBehaviour
         }
         else
         {
-            ////Input_Vector_Rotation = 0;
-            //print("tonpère");
+            
 
             // calculer et appliquer l'input de position une fois orienté vers la cible avec les axes de unity
             Vector3 vecDistWorld = (targetPos - transform.position);
