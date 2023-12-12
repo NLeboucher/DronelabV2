@@ -109,7 +109,8 @@ git clone git@github.com:NLeboucher/DronelabV2.git
 activate the virtual env from the root of the project
 ~~~
 cd DRONELABV2
-source venv/bin/activate
+python3 -m virtualenv venv
+pip install cflib pygame fastapi uvicorn
 ~~~
 
 Now you have all the depedencies
