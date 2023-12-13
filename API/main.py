@@ -26,7 +26,7 @@ class Item(BaseModel):
 @app.get("/")
 async def read_root():
     s = SwarmControl()
-    logger.info("API is UP")
+    logger.info("root")
     return {"message": "Welcome to the Drone Control API"}
 
     
@@ -36,14 +36,17 @@ async def create_item(item: Item):
 
 @app.get("/OpenLinks/")
 async def OpenLinks():
+    logger.info("OpenLinks")
     return swarm.OpenLinks()
 
 @app.get("/CloseLinks/")
 async def CloseLinks():
+    logger.info("CloseLinks")
     return swarm.CloseLinks()
 
 @app.get("/takeoff/")
 async def Take_off():
+    logger.info("takeoff")
     return swarm.All_TakeOff()
 
 @app.get("/land/")

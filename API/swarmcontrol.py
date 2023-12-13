@@ -60,7 +60,7 @@ class SwarmControl:
         cflib.crtp.init_drivers()
         factory = CachedCfFactory(ro_cache='./cache',rw_cache='./cache')
         logger.info(f"{URIS}")
-        SWARM = Swarm(URIS)
+        SWARM = Swarm(URIS, factory)
         try:
             SWARM.open_links()
 
@@ -76,7 +76,7 @@ class SwarmControl:
                 URIS.remove(drone)
         if(redo):
             SWARM.close_links()
-            SWARM = Swarm(URIS)
+            SWARM = Swarm(URIS, factory)
             SWARM.open_links()
         DRONES = [ d  for d in SWARM._cfs.keys() if SWARM._cfs[d]]
         logger.info(f"{DRONES}")
