@@ -118,15 +118,15 @@ class Swarm:
         log_config.add_variable('stateEstimate.x', 'float')
         log_config.add_variable('stateEstimate.y', 'float')
         log_config.add_variable('stateEstimate.z', 'float')
-        log_config.add_variable('stateEstimate.yaw', 'float')
+        # log_config.add_variable('stateEstimate.yaw', 'float')
 
         with SyncLogger(scf, log_config) as logger:
             for entry in logger:
                 x = entry[1]['stateEstimate.x']
                 y = entry[1]['stateEstimate.y']
                 z = entry[1]['stateEstimate.z']
-                yaw = entry[1]['stateEstimate.yaw']
-                self._positions[scf.cf.link_uri] = SwarmPosition(x, y, z, yaw)
+                # yaw = entry[1]['stateEstimate.yaw']
+                self._positions[scf.cf.link_uri] = SwarmPosition(x, y, z)
                 break
 
     def get_estimated_positions(self):
