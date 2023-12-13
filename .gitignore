@@ -70,3 +70,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /Drone3.0/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /Drone3.0/[Aa]ssets/[Ss]treamingAssets/aa/*
+*cache*
+Tutorials/
+API/temp/
+venv/
+mlvenv/
+masterthesis.md
+*log*
