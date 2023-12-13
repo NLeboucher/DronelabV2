@@ -19,6 +19,9 @@ public class DroneSwarmControle : MonoBehaviour
     public static bool isCoroutineCheckDroneConnectionRunning = false;
     public static bool isCoroutineGetFromAPIRunning = false;
     public static bool droneInitialized = false;
+    public static bool isCoroutineTakeOffRunning = false;
+    public static bool isCoroutineLandRunning = false;
+    public static bool isCoroutineCloseLinksRunning = false;
 
    
 
@@ -27,15 +30,10 @@ public class DroneSwarmControle : MonoBehaviour
 
         TakOffAndLandManagement();
 
-        if (APIRequest)
-        {
-            ControlAPI();
-        }
-        else
-        {
-            // Si vous ne voulez pas utiliser l'API, vous pouvez simplement appeler la méthode InitialiserDrone() ici
+        ControlAPI();
 
-        }
+        
+
         if (droneConected == true && droneInformation != null && droneInformation.Length > 0 && droneInitialized == false && droneInformation[0].positionInfo)
         {
             InitialiserDrone();
@@ -50,7 +48,7 @@ public class DroneSwarmControle : MonoBehaviour
                     droneObjects[i].GetComponent<DroneBehavior>().UpdateDroneInfo(droneInformation[i]);
                     droneObjects[i].transform.position = new Vector3(droneInformation[i].positionDroneX, droneInformation[i].positionDroneZ, droneInformation[i].positionDroneY);
                     droneObjects[i].transform.rotation = Quaternion.Euler(0, droneInformation[i].rotationDroneYaw, 0);  
-
+                    
                 }
 
 
@@ -59,20 +57,24 @@ public class DroneSwarmControle : MonoBehaviour
     }
     void ControlAPI()
     {
-        if (droneConected == false && DroneControle.isCoroutineCheckDroneConnectionRunning == false)
+        if (APIRequest)
         {
-            StartCoroutine(APIHelper.CheckDroneConnection());
-
-
+            if (droneConected == false && !isCoroutineCheckDroneConnectionRunning)
+            {
+                StartCoroutine(APIHelper.CheckDroneConnection());
+            }
+            else if (droneConected == true && !isCoroutineGetFromAPIRunning)
+            {
+                StartCoroutine(APIHelper.GetFromAPI());
+            }
         }
-        else if (droneConected == true && DroneControle.isCoroutineGetFromAPIRunning == false)
+        else if (droneConected == true && !isCoroutineCheckDroneConnectionRunning && !isCoroutineGetFromAPIRunning && !isCoroutineCloseLinksRunning)
         {
-            StartCoroutine(APIHelper.GetFromAPI());
+            StartCoroutine(APIHelper.CloseLinks());
         }
-
-
-
+        // Le cas où vous ne voulez pas utiliser l'API ou appeler InitialiserDrone() pourrait être traité ici
     }
+
     void InitialiserDrone()
     {
         droneInitialized = true;
@@ -95,20 +97,20 @@ public class DroneSwarmControle : MonoBehaviour
     {
         if (APITakeOff)
         {
-            if (droneConected == true && droneInformation != null && droneInformation.Length > 0 && droneInformation[0].takeoff == false)
+            if (droneConected && droneInformation != null && droneInformation.Length > 0 && !droneInformation[0].takeoff == false && !isCoroutineTakeOffRunning)
             {
                 StartCoroutine(APIHelper.TakeOff());
             }
 
-            else
+            else if (!droneConected )
             {
                 APITakeOff = false;
             }
         }
 
-        else
+        else if (!APITakeOff)
         {
-            if (droneConected == true && droneInformation != null && droneInformation.Length > 0 && droneInformation[0].takeoff == true)
+            if (droneConected  && droneInformation != null && droneInformation.Length > 0 && droneInformation[0].takeoff  && !isCoroutineLandRunning)
             {
                 StartCoroutine(APIHelper.Land());
             }
