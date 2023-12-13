@@ -10,7 +10,7 @@ public class DroneApiResponse//utilliser les trucs de noé pour les stocker dans 
 [System.Serializable]
 public class DronePositionResponse
 {
-    public Dictionary<string, Dictionary<string, string>> position;
+    public Dictionary<string, float[]> Positions;
 }
 
 public class DroneInformation  //maybe attache to game object
@@ -21,7 +21,7 @@ public class DroneInformation  //maybe attache to game object
     public float positionDroneX;
     public float positionDroneY;
     public float positionDroneZ;
-    public float rotationDroneYaw;
+    public float rotationDroneYaw = 0;
     public float vitesseDroneX;
     public float vitesseDroneY;
     public float vitesseDroneZ;

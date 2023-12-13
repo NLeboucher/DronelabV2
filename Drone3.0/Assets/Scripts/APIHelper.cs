@@ -11,7 +11,8 @@ using System.Globalization;
 
 public class APIHelper : MonoBehaviour
 {
-    public static string APILocalhost = "172.21.72.102:8000";
+    public static string APILocalhost = "172.21.73.34:8080";
+    //public static string APILocalhost = "127.0.0.1:8000";
 
     #region API Get Classes
     public static IEnumerator CheckDroneConnection()
@@ -26,31 +27,46 @@ public class APIHelper : MonoBehaviour
         if (request.result != UnityWebRequest.Result.Success)
         {
             Debug.LogError("Erreur de connexion: " + request.error);
+            DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = false;
             // Gestion des erreurs, droneConected reste false
         }
         else
         {
             // Connexion réussie
-            DroneSwarmControle.droneConected = true;
+            
             string jsonResponse = request.downloadHandler.text;
             DroneApiResponse response = JsonUtility.FromJson<DroneApiResponse>(jsonResponse);
-
+            Debug.Log("Contenu de la réponse OpenLinks JSON: " + jsonResponse);
             // Créer et remplir le tableau de DroneInformation avec les IPs
             DroneSwarmControle.droneInformation = new DroneInformation[response.URIS.Length];
+            Debug.Log("Nombre de drones connectés: " + response.URIS.Length);
+            if (response.URIS.Length == 0)
+            {
+                Debug.LogError("Aucun drone n'est connecté");
+            }
+            else
+            {
+                DroneSwarmControle.droneConected = true;
+            }
             for (int i = 0; i < response.URIS.Length; i++)
             {
+
                 DroneSwarmControle.droneInformation[i] = new DroneInformation { droneIP = response.URIS[i] };
+                Debug.Log("droneInformation[" + i + "] = " + DroneSwarmControle.droneInformation[i].droneIP);
             }
+            
         }
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1);
+        DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = false;
         Debug.Log("Fin de la Coroutine CheckDroneConnection");
         
-        DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = false;
+        
     }
 
     public static IEnumerator TakeOff()
     {
         Debug.Log("Début de la Coroutine TakeOff");
+        DroneSwarmControle.isCoroutineTakeOffRunning = true;
         string url = "http://" + APILocalhost + "/takeoff/";
         Debug.Log(url);
         UnityWebRequest request = UnityWebRequest.Get(url);
@@ -71,12 +87,14 @@ public class APIHelper : MonoBehaviour
            
         }
         yield return new WaitForSeconds(0.2f);
+        DroneSwarmControle.isCoroutineTakeOffRunning = false;
         Debug.Log("Fin de la Coroutine TakeOff");
     }
     
     public static IEnumerator Land()
     {
         Debug.Log("Début de la Coroutine Land");
+        DroneSwarmControle.isCoroutineLandRunning = true;
         string url = "http://" + APILocalhost + "/land/";
         Debug.Log(url);
         UnityWebRequest request = UnityWebRequest.Get(url);
@@ -98,13 +116,14 @@ public class APIHelper : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
         Debug.Log("Fin de la Coroutine Land");
+        DroneSwarmControle.isCoroutineLandRunning = false;
     }
 
     public static IEnumerator GetFromAPI() 
     {
         DroneSwarmControle.isCoroutineGetFromAPIRunning = true;
         Debug.Log("Début de la Coroutine GetFromAPI");
-        string url = "http://" + APILocalhost + "/getposition/";
+        string url = "http://" + APILocalhost + "/getestimatedpositions/";
 
         UnityWebRequest request = UnityWebRequest.Get(url);
         yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
@@ -113,27 +132,36 @@ public class APIHelper : MonoBehaviour
         if (request.result != UnityWebRequest.Result.Success)
         {
             Debug.LogError("Error: " + request.error);
-            DroneSwarmControle.droneConected = false;
+            //enlever ppour l'instrant pour tester
+            //DroneSwarmControle.droneConected = false;
         }
         else
         {
             // Successfully received response
             string jsonResponse = request.downloadHandler.text;
-            Debug.Log("Contenu de la réponse JSON: " + jsonResponse);
+            Debug.Log("Contenu de la réponse  de getposition JSON: " + jsonResponse);
 
-            //DronePositionResponse dronePosision = JsonUtility.FromJson<DronePositionResponse>(jsonResponse);
+            
             DronePositionResponse dronePosition = Newtonsoft.Json.JsonConvert.DeserializeObject<DronePositionResponse>(jsonResponse);
 
-            Debug.Log("information stocked in DronePositionResponse = "+ dronePosition.position["IP1"]["X"]);
+            //Debug.Log("information stocked in DronePositionResponse = "+ dronePosition.Positions[droneInformation[0].droneIP][0]);
 
             // arrange values of dronePosision in droneInformation
             if (droneInformation != null)                                               
             {
                 for (int i = 0; i < droneInformation.Length; i++)
                 {
-                    if (dronePosition.position.ContainsKey(droneInformation[i].droneIP))
+                    Debug.Log( "Type de position "+dronePosition.Positions[droneInformation[i].droneIP][0].GetType());
+                    if (dronePosition.Positions.ContainsKey(droneInformation[i].droneIP))
                     {
-                        float x, y, z, yaw;
+                        droneInformation[i].positionInfo = true;
+                        droneInformation[i].positionDroneX = dronePosition.Positions[droneInformation[i].droneIP][0];
+                        droneInformation[i].positionDroneY = dronePosition.Positions[droneInformation[i].droneIP][1]; 
+                        droneInformation[i].positionDroneZ = dronePosition.Positions[droneInformation[i].droneIP][2]; 
+
+
+
+                        /*float x, y, z, yaw;
                         //L'utilisation de CultureInfo.InvariantCulture garantit que le point est toujours utilisé comme séparateur décimal, même si la culture actuelle définit une virgule comme séparateur décimal.
                         if (float.TryParse(dronePosition.position[droneInformation[i].droneIP]["X"], NumberStyles.Any, CultureInfo.InvariantCulture, out  x) &&
                             float.TryParse(dronePosition.position[droneInformation[i].droneIP]["Y"], NumberStyles.Any, CultureInfo.InvariantCulture, out  y) &&
@@ -150,7 +178,7 @@ public class APIHelper : MonoBehaviour
                         else
                         {
                             Debug.LogError("Erreur lors de la conversion des valeurs en float.");
-                        }
+                        }*/
 
                     }
                 }
@@ -167,10 +195,37 @@ public class APIHelper : MonoBehaviour
         DroneSwarmControle.isCoroutineGetFromAPIRunning = false;
     }
 
+    public static IEnumerator CloseLinks()
+    {
+        Debug.Log("Début de la Coroutine CloseLinks");
+        DroneSwarmControle.isCoroutineCloseLinksRunning = true;
+        string url = "http://" + APILocalhost + "/CloseLinks/";
+        Debug.Log(url);
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
+
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError("Erreur de connexion pour CloseLinks: " + request.error);
+            // Gestion des erreurs, droneConected reste false
+        }
+        else
+        {
+            // Connexion réussie
+            Debug.Log("Links fermés");
+            DroneSwarmControle.droneConected = false;
+        }
+        yield return new WaitForSeconds(0.2f);
+        DroneSwarmControle.isCoroutineCloseLinksRunning = false;
+        Debug.Log("Fin de la Coroutine CloseLinks");
+    }
+
     #endregion
 
 
     #region API Set Classes
+
+    //utiliser UnityWebRequest.Post(url, data) pour envoyer des données à l'API
 
     public static IEnumerator SetVelocityToAPI(DroneInformation[] droneInformation)
     {
