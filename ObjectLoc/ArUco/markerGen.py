@@ -3,7 +3,7 @@ from cv2 import aruco
 import os
 
 # dictionary to specify type of the marker
-marker_dict = aruco.getPredefinedDictionary(aruco.DICT_5X5_250)
+marker_dict = aruco.getPredefinedDictionary(aruco.DICT_4X4_250)
 
 # MARKER_ID = 0
 MARKER_SIZE = 400  # pixels
@@ -25,4 +25,4 @@ board = aruco.CharucoBoard((7,5), 1., .7, marker_dict)
 imboard = board.generateImage((7*150, 5*150))
 # cv.imshow("img", imboard)
 # cv.waitKey(0)
-cv.imwrite(f"{dir}/chessboard.png", imboard)
+cv.imwrite(f"{dir}/charuco.png", imboard)
