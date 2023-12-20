@@ -9,30 +9,19 @@ path = path.split("/")[::-1][0]
 print(path)
 if(path == "API"):
     from logger import Logger
-    from move import Move
+    from move import Move, Velocity
 else:
     from API.logger import Logger
-    from API.move import Move
+    from API.move import Move, Velocity
 app = FastAPI()
 logger = Logger("log.txt",False)
 swarm = SwarmControl
-
-class Item(BaseModel):
-    name: str
-    description: str | None = None
-    price: float
-    tax: float | None = None
 
 @app.get("/")
 async def read_root():
     s = SwarmControl()
     logger.info("root")
     return {"message": "Welcome to the Drone Control API"}
-
-    
-@app.post("/items/")
-async def create_item(item: Item):
-    return item
 
 @app.get("/OpenLinks/")
 async def OpenLinks():
@@ -44,21 +33,21 @@ async def CloseLinks():
     logger.info("CloseLinks")
     return swarm.CloseLinks()
 
-@app.get("/takeoff/")
-async def Take_off():
+@app.get("/All_TakeOff/")
+async def TakeOff():
     logger.info("takeoff")
     return swarm.All_TakeOff()
 
-@app.get("/land/")
-async def Land():
+@app.get("/All_Land/")
+async def AllLand():
     return swarm.All_Land()
 
 @app.get("/getestimatedpositions/")
 async def GetEstimatedPositions():
     return swarm.All_GetEstimatedPositions()
-a = Move(radio="radio://0/28/2M/E7E7E7E703",x=0,y=0,z=0,yaw_rate=0,velocity=0)
+
 @app.post("/All_StartLinearMotion/")
-async def All_StartLinearMotion(args_arr : List[Move]):
+async def AllSetSpeed(args_arr : List[Velocity]):
     return swarm.All_StartLinearMotion(args_arr)
 
 @app.post("/All_MoveDistance/")
