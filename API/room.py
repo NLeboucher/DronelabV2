@@ -8,13 +8,16 @@ else:
     from API.logger import Logger
 logger = Logger("log.txt")
 from scipy.spatial import ConvexHull, Delaunay
+import pygame as pg
 
 class Room:
-    def __init__(self, points):
-        self.points = points
-        self.is_3d_object = self.check_3d_object()
+    rooms = {"DroneLab": [[4.0,-7.0,0.0],[-0.15,-7,0.0],[-11.0,11.0,0.0],[-4.0,11.0,1.0],[4.0,8.0,0.0],[4,-7.0,1.5],[-0.15,-7.0,1.5],[-11.0,11.0,1.5],[-4.0,11.0,1.5],[4.0,8.0,1.5]],
+             "Stairs":[(3.5, 3.5, 0), (-1.5, 3.5, 0), (-1.5, 0.5, 0), (3.5, 0.5, 0), (3.5, 3.5, 2.5), (-1.5, 3.5, 2.5), (-1.5, 0.5, 2.5), (3.5, 0.5, 2.5)]}
+    def __init__(self, points=None):
+        self.points = Room.rooms["DroneLab"]
+        self.is_3d_object = self._check_3d_object()
 
-    def check_3d_object(self):
+    def _check_3d_object(self):
         # Check if there are at least four points (minimum for a 3D object)
         if len(self.points) < 4:
             return False
@@ -38,9 +41,12 @@ class Room:
             return False
 
     def is_point_inside(self, point):
+        if not self.is_3d_object:
+            raise ValueError("room is not a 3d Object.")
         # Check if the point is inside the convex hull
         if not hasattr(self, 'convex_hull'):
             raise ValueError("Convex hull not computed. Call check_3d_object method first.")
+        if len(point) != 3:
+            point = pg.Vector3(point[0], point[1], 0.0)
         ret = self.convex_hull.find_simplex(point)
-        print(ret)
         return ret >= 0

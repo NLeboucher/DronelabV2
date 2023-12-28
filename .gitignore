@@ -75,5 +75,6 @@ Tutorials/
 API/temp/
 venv/
 mlvenv/
-masterthesis.md
-*log*
+masterthesis*
+*log.txt
+Nicolas-Leboucher.pdf
