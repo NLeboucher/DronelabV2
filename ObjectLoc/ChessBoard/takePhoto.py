@@ -1,5 +1,6 @@
 import cv2 as cv
 import os
+import Camera
 
 def take_photo():
     dir = os.path.dirname(os.path.abspath(__file__))+"/images"

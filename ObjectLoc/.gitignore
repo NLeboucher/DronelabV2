@@ -1,3 +1,4 @@
 markers/
 images/
 *cach*
+*.npz
