@@ -5,6 +5,8 @@ import os
 
 nw = 9
 nh = 6
+square_size = 27.0
+
 
 dir = os.path.dirname(os.path.abspath(__file__))+"/images"
 
@@ -13,6 +15,7 @@ criteria = (cv.TERM_CRITERIA_EPS + cv.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 # prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
 objp = np.zeros((nw*nh,3), np.float32)
 objp[:,:2] = np.mgrid[0:nw,0:nh].T.reshape(-1,2)
+objp *= square_size
 # Arrays to store object points and image points from all the images.
 objpoints = [] # 3d point in real world space
 imgpoints = [] # 2d points in image plane.

@@ -21,8 +21,8 @@ for id in range(20):  # genereting 20 markers
     # cv.waitKey(0)
     # break
 
-board = aruco.CharucoBoard((7,5), 1., .7, marker_dict)
-imboard = board.generateImage((7*150, 5*150))
+board = aruco.CharucoBoard((6,4), 1., .8, marker_dict)
+imboard = board.generateImage((6*200, 4*200))
 # cv.imshow("img", imboard)
 # cv.waitKey(0)
 cv.imwrite(f"{dir}/charuco.png", imboard)

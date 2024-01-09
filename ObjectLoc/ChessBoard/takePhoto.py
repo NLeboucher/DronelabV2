@@ -1,26 +1,28 @@
 import cv2 as cv
 import os
-import Camera
+import sys
+sys.path.append("..")
+from utilities.Camera import *
 
 def take_photo():
     dir = os.path.dirname(os.path.abspath(__file__))+"/images"
     os.makedirs(dir, exist_ok=True)
     # Open the default camera
-    cap = cv.VideoCapture(0)
+    cam = rsCamera()
     cv.namedWindow("Camera", cv.WINDOW_NORMAL) 
     cv.resizeWindow("Camera", 800, 600)   
 
-    # Check if the camera is opened successfully
-    if not cap.isOpened():
-        print("Unable to open the camera")
-        return
+    # # Check if the camera is opened successfully
+    # if not cap.isOpened():
+    #     print("Unable to open the camera")
+    #     return
 
     # Counter for the number of photos taken
     photo_count = 0
 
     # Read and display the video frames until the 'q' key is pressed
     while True:
-        ret, frame = cap.read()
+        frame,_ = cam.getNextFrame()
         cv.imshow("Camera", frame)
 
         key = cv.waitKey(1) & 0xFF
@@ -36,7 +38,7 @@ def take_photo():
         #     print(key)
 
     # Release the camera and close the window
-    cap.release()
+    # cam.release()
     cv.destroyAllWindows()
 
 # Call the function to start capturing photos

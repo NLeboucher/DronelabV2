@@ -3,7 +3,7 @@ import numpy as np
 import pyrealsense2 as rs
  
  
-dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_5X5_100)
+dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_250)
 parameters =  cv2.aruco.DetectorParameters()
 detector = cv2.aruco.ArucoDetector(dictionary, parameters)
 
@@ -40,8 +40,9 @@ def aruco_display(corners, ids, rejected, image):
 
 
 if __name__ == '__main__':
-
-    from Camera import *
+    import sys
+    sys.path.append("..")
+    from utilities.Camera import *
     # # Configure depth and color streams
     # pipeline = rs.pipeline()
     # config = rs.config()

@@ -18,7 +18,7 @@ class rsCamera:
         found_rgb = False
         for s in self.device.sensors:
             if s.get_info(rs.camera_info.name) == 'RGB Camera':
-                s.set_option(rs.option.exposure, 100)  # Set your desired exposure value here
+                # s.set_option(rs.option.exposure, 100)  # Set your desired exposure value here
                 found_rgb = True
                 break
         if not found_rgb:

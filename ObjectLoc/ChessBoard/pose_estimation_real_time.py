@@ -2,6 +2,10 @@ import numpy as np
 import cv2 as cv
 import glob
 import os
+import sys
+sys.path.append("..")
+from utilities.Camera import *
+
 # Load previously saved data
 with np.load('B.npz') as X:
     mtx, dist, _, _ = [X[i] for i in ('mtx','dist','rvecs','tvecs')]
@@ -17,6 +21,7 @@ def draw(img, corners, imgpts):
 nw = 9
 nh = 6
 
+
 criteria = (cv.TERM_CRITERIA_EPS + cv.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 objp = np.zeros((nw*nh,3), np.float32)
 objp[:,:2] = np.mgrid[0:nw,0:nh].T.reshape(-1,2)
@@ -25,10 +30,10 @@ axis = np.float32([[3,0,0], [0,3,0], [0,0,-3]]).reshape(-1,3)
 cv.namedWindow("img", cv.WINDOW_NORMAL) 
 cv.resizeWindow("img", 800, 600)   
 
-cap = cv.VideoCapture(0)
+cam = rsCamera()
 
 while True:
-    ret, img = cap.read()
+    img, _ = cam.getNextFrame()
     gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
     ret, corners = cv.findChessboardCorners(gray, (nw,nh),None,flags=(cv.CALIB_CB_FAST_CHECK))
     if ret == True:
