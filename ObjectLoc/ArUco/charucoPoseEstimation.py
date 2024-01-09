@@ -10,6 +10,8 @@ import argparse
 import numpy as np
 import cv2 as cv
 import sys
+sys.path.append("..")
+from utilities.Camera import *
 
 
 def read_camera_parameters(filename):
@@ -40,7 +42,7 @@ def main():
                         default="2", action="store", dest="d", type=int)
     parser.add_argument("-ci", help="Camera id if input doesnt come from video (-v)", default="0", action="store",
                         dest="ci", type=int)
-    parser.add_argument("-c", help="Input file with calibrated camera parameters", default="", action="store",
+    parser.add_argument("-c", help="Input file with calibrated camera parameters", default="B.yaml", action="store",
                         dest="cam_param")
 
     args = parser.parse_args()
@@ -69,24 +71,29 @@ def main():
     board = cv.aruco.CharucoBoard(board_size, square_len, marker_len, aruco_dict)
     charuco_detector = cv.aruco.CharucoDetector(board)
 
-    image = None
-    input_video = None
-    wait_time = 10
-    if video != "":
-        input_video = cv.VideoCapture(cv.samples.findFileOrKeep(video, False))
-        image = input_video.retrieve()[1] if input_video.grab() else None
-    elif img_path == "":
-        input_video = cv.VideoCapture(camera_id)
-        image = input_video.retrieve()[1] if input_video.grab() else None
-    elif img_path != "":
-        wait_time = 0
-        image = cv.imread(cv.samples.findFile(img_path, False))
+    # image = None
+    # input_video = None
+    # wait_time = 10
+    # if video != "":
+    #     input_video = cv.VideoCapture(cv.samples.findFileOrKeep(video, False))
+    #     image = input_video.retrieve()[1] if input_video.grab() else None
+    # elif img_path == "":
+    #     input_video = cv.VideoCapture(camera_id)
+    #     image = input_video.retrieve()[1] if input_video.grab() else None
+    # elif img_path != "":
+    #     wait_time = 0
+    #     image = cv.imread(cv.samples.findFile(img_path, False))
 
-    if image is None:
-        print("Error: unable to open video/image source")
-        sys.exit(0)
+    # if image is None:
+    #     print("Error: unable to open video/image source")
+    #     sys.exit(0)
 
-    while image is not None:
+
+    wait_time = 1
+    cam = rsCamera()
+
+    while True:
+        image , _ = cam.getNextFrame()
         image_copy = np.copy(image)
         charuco_corners, charuco_ids, marker_corners, marker_ids = charuco_detector.detectBoard(image)
         if not (marker_ids is None) and len(marker_ids) > 0:
@@ -108,7 +115,7 @@ def main():
         key = cv.waitKey(wait_time)
         if key == 27:
             break
-        image = input_video.retrieve()[1] if input_video is not None and input_video.grab() else None
+        # image = input_video.retrieve()[1] if input_video is not None and input_video.grab() else None
 
 
 if __name__ == "__main__":

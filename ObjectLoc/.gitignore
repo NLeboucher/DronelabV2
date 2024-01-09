@@ -2,3 +2,6 @@ markers/
 images*/
 *cach*
 *.npz
+*.yaml
+*.png
+*.jpg

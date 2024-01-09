@@ -44,6 +44,9 @@ cv.destroyAllWindows()
 ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 np.savez("B.npz",ret=ret, mtx=mtx, dist=dist, rvecs=rvecs, tvecs=tvecs)
 
+fs = cv.FileStorage("B.yaml", cv.FILE_STORAGE_WRITE)
+fs.write("camera_matrix",mtx)
+fs.write("distortion_coefficients",dist)
 
 img = cv.imread(f'{dir}/photo1.jpg')
 h,  w = img.shape[:2]
@@ -54,4 +57,4 @@ dst = cv.undistort(img, mtx, dist, None, newcameramtx)
 # crop the image
 x, y, w, h = roi
 dst = dst[y:y+h, x:x+w]
-cv.imwrite(f'{dir}/calibresult.png', dst)
+cv.imwrite(f'{dir}/../calibresult.png', dst)
