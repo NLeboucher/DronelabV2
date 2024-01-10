@@ -16,10 +16,11 @@ else:
 app = FastAPI()
 logger = Logger("log.txt",False)
 swarm = SwarmControl
-
+swarm.OpenLinks()
 @app.get("/")
 async def read_root():
     s = SwarmControl()
+
     logger.info("root")
     return {"message": "Welcome to the Drone Control API"}
 
