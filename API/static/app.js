@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { DragControls} from 'three/examples/DragControls.js'
+import { DragControls } from 'DragControls';
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 // Drone Setup
 const IP="172.21.73.34"
