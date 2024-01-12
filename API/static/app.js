@@ -3,6 +3,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { DragControls } from 'DragControls';
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
+
 // Drone Setup
 const IP="172.21.73.34"
 const apiUrl = `http://${IP}:8080/`;
@@ -10,7 +11,7 @@ const useTrueDrones = false;
 
 // Scene, Camera, Renderer Setup
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.3, 1000);
 const renderer = new THREE.WebGLRenderer();
 
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -41,25 +42,27 @@ selectionBox.visible = false; // Initially hidden
 scene.add(selectionBox);
 
 // add fog
-// scene.fog = new THREE.FogExp2(0x000000, 0.6);
-
-// OrbitControls
-const controls = new OrbitControls(camera, renderer.domElement);
+// add raycaster
+const raycaster = new THREE.Raycaster();
 
 
 
 // Drone Class
 class Drone {
+    static droneMeshes = [];
     constructor(id, position, model) {
         this.id = id;
         this.URI = ""
         this.position = position;
+        console.log("model",model)
         this.model = model.clone(); // Clone the model
         this.model.position.set(position.x, position.z, position.y);
         this.goalPosition = new THREE.Vector3(position.x, position.z, position.y);
         this.model.castShadow = true;
         this.model.receiveShadow = true;
+        this.model.layers.enable(1); // Enable layer 1 for the model
         scene.add(this.model);
+        Drone.droneMeshes.push(this.model);
     }
     toString() {
         return `(id: ${this.id}, URI:${this.URI}): modelposition: ${this.model.position.x} /${this.position.x} , ${this.model.position.y} /${this.position.y}, ${this.model.position.z} /${this.position.z} `;
@@ -90,12 +93,16 @@ const cubeFolder = gui.addFolder('Drones')
 // Load the Drone Model
 const loader = new GLTFLoader();
 let droneModel; // This will hold the original loaded model
+let groupDroneModel;
 const axesHelper = new THREE.AxesHelper( 5 );
 scene.add( axesHelper );
 let drones = [];
+
 loader.load('assets/drone.glb', (gltf) => {
     droneModel = gltf.scene;
-    console.log(droneModel)
+    groupDroneModel = new THREE.Group();
+    groupDroneModel.add(droneModel);
+    console.log("group :", groupDroneModel)
     // add the model to the scene
     // scene.add(droneModel);
 
@@ -104,6 +111,10 @@ loader.load('assets/drone.glb', (gltf) => {
     
 
 });
+const controls = new DragControls( Drone.droneMeshes, camera, renderer.domElement );   
+// controls.addEventListener( 'dragstart', dragStartCallback );
+// controls.addEventListener( 'dragend', dragendCallback );
+
 
 async function asyncCall(call="") {
     console.log('calling'+ useTrueDrones);
@@ -130,18 +141,19 @@ async function asyncCall(call="") {
 
 
 
-function createDrones(N=5) {
+function createDrones(N=1) {
 
     // const N = 5; // Number of drones
     for (let i = 0; i < N; i++) {
         const random_position = new THREE.Vector3(
-            Math.random() * 3,
-            Math.random() * 3,
-            Math.random() * 3,
+            Math.random() * 1.5,
+            Math.random() * 0.5,
+            Math.random() * 0.5 ,
         );
-        const drone = new Drone(i, random_position, droneModel);
+        const drone = new Drone(i, random_position, groupDroneModel);
         // console.log(drone.goalPosition.x,drone.goalPosition.y,drone.goalPosition.z)
         drones.push(drone);
+        Drone.droneMeshes.push(drone.model);
 
         let SepcubeFolder = cubeFolder.addFolder('Drone '+i)
         SepcubeFolder.add(drone, 'id');
@@ -176,13 +188,30 @@ async function updatePositions() {
         item.model.position.set(item.position.x, item.position.z, item.position.y);
     }); 
 }
+controls.addEventListener('drag', function(event) {
+    event.object.position.copy(event.object.position);
+    updatePositions()    
+    console.log("Dragging:",event.object.position,drones[0].model.position,drones[0].position)
+});
+controls.addEventListener('dragstart', function(event) {
+    console.log("raycaster",raycaster)
+    const intersects = raycaster.intersectObjects(Drone.droneMeshes, false);
+    // const draggedDrone = event.object;
+    const droneIndex = intersects.id;
+    console.log("Dragging START:",event.object.position,drones[0].model.position,drones[0].position)
 
+    if (droneIndex !== -1) {
+        console.log('DRONE:', droneIndex);
+        // You can now work with the specific drone
+        // For example, drones[droneIndex].position, or any other property
+    }
+});
 
 function animateDrones() {
     drones.forEach(drone => {
         // Assuming children 5 to 8 are the propellers
         for (let i = 5; i <= 8; i++) {
-            let propeller = drone.model.children[0].children[i];
+            let propeller = drone.model.children[0].children[0].children[i];
             let speed = 0.2;
             if(drone.position.z>0.0){
                 propeller.rotation.z += speed;
@@ -229,7 +258,7 @@ function animate() {
     InterpolateDroneMotion();
 
     requestAnimationFrame(animate);
-    controls.update(); // Only required if controls.enableDamping or controls.autoRotate are set to true
+    // controls.update(); // Only required if controls.enableDamping or controls.autoRotate are set to true
     renderer.render(scene, camera);
 
 }
