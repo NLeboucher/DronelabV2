@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections.Concurrent;
 
-
-
-
 public class DroneControle : MonoBehaviour
 {
     #region variables region
@@ -20,25 +17,17 @@ public class DroneControle : MonoBehaviour
     [SerializeField] private int Go_To_Y = 0;
     [SerializeField] private int Go_To_Z = 0;
     [SerializeField] private bool Bool_Go_To = false;
-    [SerializeField] private bool APIRequest = false;
-    [SerializeField] private bool APITakeOff = false;
+    
     
 
     Vector3 Input_Vector_Position = new Vector3(0, 0, 0);
     float Input_Vector_Rotation = 0f; // Rotation horizontale
     public static bool droneConected = false;
-    public static DroneInformation[] droneInformation = null;
-    public static bool isCoroutineCheckDroneConnectionRunning = false;
-    public static bool isCoroutineGetFromAPIRunning = false;
+    
 
     #endregion
-
-
-
     private void Update()
     {
-
-        
 
 
         Input_Vector_Rotation = 0f;
@@ -96,64 +85,13 @@ public class DroneControle : MonoBehaviour
                 Bool_Go_To = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            if (APIRequest)
-            {
-                APIRequest = false;
-            }
-            else
-            {
-                APIRequest = true;
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (APITakeOff)
-            {
-                APITakeOff = false;
-            }
-            else
-            {
-                APITakeOff = true;
-            }
-        }
+       
         #endregion
 
         if (Bool_Go_To)
         {
             CalculateInputsForTarget_Position();
         }
-        
-        if (APITakeOff)
-        {
-            if (droneConected == true && droneInformation!= null && droneInformation.Length > 0 && droneInformation[0].takeoff==false)
-            {
-                StartCoroutine(APIHelper.TakeOff());
-            }
-            
-            else
-            {
-                APITakeOff = false;
-            }
-        }
-
-        else
-        {
-            if (droneConected == true && droneInformation != null && droneInformation.Length > 0 && droneInformation[0].takeoff == true)
-            {
-                StartCoroutine(APIHelper.Land());
-            }
-        }
-
-        if (APIRequest)
-        {
-            ControlAPI();
-        }
-        
-
-
 
         /*// Calcul du tilt en fonction de Input_Vector_Position
         Vector3 Drone_tilt_when_mooving_vector = new Vector3(
@@ -177,13 +115,7 @@ public class DroneControle : MonoBehaviour
             // Appliquer la rotation autour de l'axe Y local
             transform.Rotate(Vector3.up, rotationAmount);
         }
-
-
-        Debug.Log(droneInformation[0].droneIP);
-        Debug.Log(droneInformation[0].positionDroneX);
     }
-
-
 
 
     void CalculateInputsForTarget_Position()
@@ -204,8 +136,6 @@ public class DroneControle : MonoBehaviour
         float angleToTarget = Vector3.SignedAngle(forward, targetDirection, Vector3.up);
 
 
-
-
         if (Mathf.Abs(angleToTarget) > 1f) // Seuil pour commencer à tourner
         {
             
@@ -215,8 +145,6 @@ public class DroneControle : MonoBehaviour
         }
         else
         {
-            
-
             // calculer et appliquer l'input de position une fois orienté vers la cible avec les axes de unity
             Vector3 vecDistWorld = (targetPos - transform.position);
             // Convertir ce vecteur dans l'espace local du drone
@@ -224,8 +152,6 @@ public class DroneControle : MonoBehaviour
             //on inverse pour avoir le xyz pour les humain normal
             Vector3 inputposition = new Vector3(vecDistLocal.x, vecDistLocal.z, vecDistLocal.y);
             Input_Vector_Position = inputposition;
-
-            
 
 
             if (vecDistLocal.magnitude < distThreshold)
@@ -236,26 +162,4 @@ public class DroneControle : MonoBehaviour
 
         }
     }
-
-    void ControlAPI()
-    {
-        if (droneConected == false && DroneControle.isCoroutineCheckDroneConnectionRunning == false)
-        {
-            StartCoroutine(APIHelper.CheckDroneConnection());
-
-
-        }
-        else if (droneConected == true && DroneControle.isCoroutineGetFromAPIRunning == false)
-        {
-            StartCoroutine(APIHelper.GetFromAPI());
-        }
-
-
-
-    }
-
-
-
-
-
 }

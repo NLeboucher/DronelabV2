@@ -65,6 +65,7 @@
     <Compile Include="Assets\LitJson\JsonMockWrapper.cs" />
     <Compile Include="Assets\LitJson\Lexer.cs" />
     <Compile Include="Assets\LitJson\JsonException.cs" />
+    <Compile Include="Assets\Scripts\PostHelper.cs" />
     <Compile Include="Assets\Scripts\APIHelper.cs" />
     <Compile Include="Assets\LitJson\ParserToken.cs" />
     <Compile Include="Assets\LitJson\JsonMapper.cs" />

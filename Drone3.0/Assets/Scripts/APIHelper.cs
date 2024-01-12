@@ -11,8 +11,9 @@ using System.Globalization;
 
 public class APIHelper : MonoBehaviour
 {
+    
     public static string APILocalhost = "172.21.73.34:8080";
-    //public static string APILocalhost = "127.0.0.1:8000";
+    //public static string APILocalhost = "192.168.1.29:8000";
 
     #region API Get Classes
     public static IEnumerator CheckDroneConnection()
@@ -38,7 +39,7 @@ public class APIHelper : MonoBehaviour
             DroneApiResponse response = JsonUtility.FromJson<DroneApiResponse>(jsonResponse);
             Debug.Log("Contenu de la réponse OpenLinks JSON: " + jsonResponse);
             // Créer et remplir le tableau de DroneInformation avec les IPs
-            DroneSwarmControle.droneInformation = new DroneInformation[response.URIS.Length];
+            DroneSwarmControle.droneInformation = new List<DroneInformation>(response.URIS.Length);
             Debug.Log("Nombre de drones connectés: " + response.URIS.Length);
             if (response.URIS.Length == 0)
             {
@@ -67,7 +68,7 @@ public class APIHelper : MonoBehaviour
     {
         Debug.Log("Début de la Coroutine TakeOff");
         DroneSwarmControle.isCoroutineTakeOffRunning = true;
-        string url = "http://" + APILocalhost + "/takeoff/";
+        string url = "http://" + APILocalhost + "/All_TakeOff/";
         Debug.Log(url);
         UnityWebRequest request = UnityWebRequest.Get(url);
         yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
@@ -80,7 +81,7 @@ public class APIHelper : MonoBehaviour
         else
         {
             // Connexion réussie
-            for (int i = 0;i < droneInformation.Length; i++)
+            for (int i = 0;i < droneInformation.Count; i++)
             {
                 droneInformation[i].takeoff = true;
             }
@@ -95,7 +96,7 @@ public class APIHelper : MonoBehaviour
     {
         Debug.Log("Début de la Coroutine Land");
         DroneSwarmControle.isCoroutineLandRunning = true;
-        string url = "http://" + APILocalhost + "/land/";
+        string url = "http://" + APILocalhost + "/All_Land/";
         Debug.Log(url);
         UnityWebRequest request = UnityWebRequest.Get(url);
         yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
@@ -108,7 +109,7 @@ public class APIHelper : MonoBehaviour
         else
         {
             // Connexion réussie
-            for (int i = 0; i < droneInformation.Length; i++)
+            for (int i = 0; i < droneInformation.Count; i++)
             {
                 droneInformation[i].takeoff = false;
             }
@@ -132,54 +133,31 @@ public class APIHelper : MonoBehaviour
         if (request.result != UnityWebRequest.Result.Success)
         {
             Debug.LogError("Error: " + request.error);
-            //enlever ppour l'instrant pour tester
-            //DroneSwarmControle.droneConected = false;
+            
         }
         else
         {
             // Successfully received response
             string jsonResponse = request.downloadHandler.text;
-            Debug.Log("Contenu de la réponse  de getposition JSON: " + jsonResponse);
+            //Debug.Log("Contenu de la réponse  de getposition JSON: " + jsonResponse);
 
             
             DronePositionResponse dronePosition = Newtonsoft.Json.JsonConvert.DeserializeObject<DronePositionResponse>(jsonResponse);
 
-            //Debug.Log("information stocked in DronePositionResponse = "+ dronePosition.Positions[droneInformation[0].droneIP][0]);
+            
 
             // arrange values of dronePosision in droneInformation
             if (droneInformation != null)                                               
             {
-                for (int i = 0; i < droneInformation.Length; i++)
+                for (int i = 0; i < droneInformation.Count; i++)
                 {
-                    Debug.Log( "Type de position "+dronePosition.Positions[droneInformation[i].droneIP][0].GetType());
+                    //Debug.Log( "Type de position "+dronePosition.Positions[droneInformation[i].droneIP][0].GetType());
                     if (dronePosition.Positions.ContainsKey(droneInformation[i].droneIP))
                     {
-                        droneInformation[i].positionInfo = true;
-                        droneInformation[i].positionDroneX = dronePosition.Positions[droneInformation[i].droneIP][0];
-                        droneInformation[i].positionDroneY = dronePosition.Positions[droneInformation[i].droneIP][1]; 
-                        droneInformation[i].positionDroneZ = dronePosition.Positions[droneInformation[i].droneIP][2]; 
-
-
-
-                        /*float x, y, z, yaw;
-                        //L'utilisation de CultureInfo.InvariantCulture garantit que le point est toujours utilisé comme séparateur décimal, même si la culture actuelle définit une virgule comme séparateur décimal.
-                        if (float.TryParse(dronePosition.position[droneInformation[i].droneIP]["X"], NumberStyles.Any, CultureInfo.InvariantCulture, out  x) &&
-                            float.TryParse(dronePosition.position[droneInformation[i].droneIP]["Y"], NumberStyles.Any, CultureInfo.InvariantCulture, out  y) &&
-                            float.TryParse(dronePosition.position[droneInformation[i].droneIP]["Z"], NumberStyles.Any, CultureInfo.InvariantCulture, out  z) &&
-                            float.TryParse(dronePosition.position[droneInformation[i].droneIP]["yaw"], NumberStyles.Any, CultureInfo.InvariantCulture, out  yaw))
-                        {
-                            droneInformation[i].positionInfo = true;
-                            droneInformation[i].positionDroneX = x;
-                            droneInformation[i].positionDroneY = y;
-                            droneInformation[i].positionDroneZ = z;
-                            droneInformation[i].rotationDroneYaw = yaw;
-                            Debug.Log("droneInformation[" + i + "] = " + droneInformation[i].droneIP + " " + droneInformation[i].positionDroneX + " " + droneInformation[i].positionDroneY + " " + droneInformation[i].positionDroneZ + " " + droneInformation[i].rotationDroneYaw);
-                        }
-                        else
-                        {
-                            Debug.LogError("Erreur lors de la conversion des valeurs en float.");
-                        }*/
-
+                        droneInformation[i].dronePosition.positionInfo = true;
+                        droneInformation[i].dronePosition.positionDroneX = dronePosition.Positions[droneInformation[i].droneIP][0];
+                        droneInformation[i].dronePosition.positionDroneY = dronePosition.Positions[droneInformation[i].droneIP][1]; 
+                        droneInformation[i].dronePosition.positionDroneZ = dronePosition.Positions[droneInformation[i].droneIP][2]; 
                     }
                 }
             }
@@ -225,45 +203,78 @@ public class APIHelper : MonoBehaviour
 
     #region API Set Classes
 
-    //utiliser UnityWebRequest.Post(url, data) pour envoyer des données à l'API
 
-    public static IEnumerator SetVelocityToAPI(DroneInformation[] droneInformation)
+
+    public static IEnumerator SetVelocityToAPI()
     {
-        if (droneInformation != null)
-        {
-            string url = "http://" + APILocalhost + "/setvelocity";
-            for (int i = 0; i < droneInformation.Length; i++)
-            {
-                url = url + "/" + droneInformation[i].droneIP + "," + droneInformation[i].vitesseDroneX + "," + droneInformation[i].vitesseDroneY + "," + droneInformation[i].vitesseDroneZ + "," + droneInformation[i].vitesseDroneYaw + ";";
-            }
-            if (url.Length > 0)
-            {
-                string modifiedurl = url.Substring(0, url.Length - 1);
-                // Utilisez modifiedString qui a le dernier caractère enlevé (le point-virgule)
-                url = modifiedurl + "/";
-            }
-            Debug.Log(url);
-            UnityWebRequest request = UnityWebRequest.Get(url);
-            yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
-            if (request.result != UnityWebRequest.Result.Success)
-            {
-                Debug.LogError("Erreur de connexion: " + request.error);
-                // Gestion des erreurs, droneConected reste false
-            }
-            else
-            {
-                // Connexion réussie
-                Debug.Log("Vitesse du drone " + droneInformation[0].droneIP + " mise à jour");
-            }
+        DroneSwarmControle.isCoroutineSetVelocity = true;
+        Debug.Log("Début de la Coroutine SetVelocityToAPI");
 
-        }
-        
-        else
+        string url = "http://" + APILocalhost + "/all_startlinearmotion";
+
+        if (DroneSwarmControle.droneInformation == null)
         {
             Debug.LogError("droneInformation is null");
+            yield break; // Arrête la coroutine si droneInformation est null
         }
+
+        DroneSpeedDataList droneSpeedDataList = new DroneSpeedDataList();
+
+        for (int i = 0; i < DroneSwarmControle.droneInformation.Count; i++)
+        {
+            DroneSpeedData data = new DroneSpeedData
+            {
+                Vx = DroneSwarmControle.droneInformation[i].droneVelocity.vitesseDroneX,
+                Vy = DroneSwarmControle.droneInformation[i].droneVelocity.vitesseDroneY,
+                Vz = DroneSwarmControle.droneInformation[i].droneVelocity.vitesseDroneZ,
+                yaw_rate = DroneSwarmControle.droneInformation[i].droneVelocity.vitesseDroneYaw
+            };
+            droneSpeedDataList.drones.Add(data);
+        }
+
+        // Serialize the drone speed data list to JSON
+        string json = JsonUtility.ToJson(droneSpeedDataList);
+        Debug.Log("json: " + json);
+
+        // Create a new UnityWebRequest for sending a POST request
+        UnityWebRequest www = new UnityWebRequest(url, "POST");
+
+        // Convert the JSON string to a byte array
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
+
+        // Set up the request's upload handler with the byte array
+        www.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
+
+        // Set up a download handler to receive the response
+        www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+
+        // Set the request's content type to JSON
+        www.SetRequestHeader("Content-Type", "application/json");
+
+        // Send the web request and wait for the response
+        yield return www.SendWebRequest();
+
+        // Check if the request was successful and log the response
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            Debug.Log("Response: " + www.downloadHandler.text);
+        }
+
+        // Dispose of the web request
+        www.Dispose();
         yield return new WaitForSeconds(0.2f);
+        DroneSwarmControle.isCoroutineSetVelocity = false;
+        Debug.Log("Fin de la Coroutine SetVelocityToAPI");
+    
     }
+
+
+
+    
 
     public static IEnumerator SetGoToAPI (DroneInformation[] droneInformation, int GoToX, int GoToY, int GoToZ, int droneSpeed)
     {

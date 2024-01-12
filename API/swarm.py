@@ -83,19 +83,45 @@ async def open_links():
     uris_list = ["IP1", "IP2", "IP3", "IP4"]
     return {"URIS": uris_list}
 
-
-
-@app.get("/getposition/")
+import time
+@app.get("/getestimatedpositions/")
 async def get_position():
-    # Dictionnaire étendu avec des positions fictives pour plusieurs drones
-    exemple_positions = {
-        "IP1": {"X": "1.0", "Y": "2.0", "Z": "3.0", "yaw": "45.0"},
-        "IP2": {"X": "4.5", "Y": "6.0", "Z": "2.0", "yaw": "30.0"},
-        "IP3": {"X": "7.2", "Y": "3.1", "Z": "5.5", "yaw": "90.0"},
-        "IP4": {"X": "2.5", "Y": "1.0", "Z": "4.0", "yaw": "60.0"}
-    }
-    return {"position": exemple_positions}
+    # Temps écoulé en secondes
+    elapsed_time = time.time() % 60  # Utilisez % 60 pour créer une boucle toutes les 60 secondes
 
+    # Simuler différents comportements de déplacement
+    # Drone 1 : Mouvement en cercle
+    x1 = 5 + math.cos(elapsed_time) * 2
+    y1 = 5 + math.sin(elapsed_time) * 2
+    z1 = 3
+    yaw1 = elapsed_time * 6  # Rotation continue
+
+    # Drone 2 : Mouvement en ligne droite avec boucle
+    x2 = 4 + (elapsed_time % 10)  # Boucle toutes les 10 secondes
+    y2 = 6
+    z2 = 2
+    yaw2 = 30
+
+    # Drone 3 : Mouvement vertical
+    x3 = 7.2
+    y3 = 3.1
+    z3 = 3 + math.sin(elapsed_time)  # Oscillation verticale
+    yaw3 = 90
+
+    # Drone 4 : Mouvement descendant et ascendant
+    x4 = 2.5
+    y4 = 1.0
+    z4 = 5 - (elapsed_time % 5)  # Descend et remonte toutes les 5 secondes
+    yaw4 = 60
+# Dictionnaire avec des positions mises à jour sous forme de listes [X, Y, Z]
+    exemple_positions = {
+        "IP1": [(x1), (y1), (z1)],
+        "IP2": [(x2), (y2), (z2)],
+        "IP3": [(x3), (y3), (z3)],
+        "IP4": [(x4), (y4), (z4)]
+    }
+
+    return {"Positions": exemple_positions}
 
 def poshold(cf, t, x, y, z):
     steps = t * 10
