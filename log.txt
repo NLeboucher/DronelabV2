@@ -15011,3 +15011,2553 @@
 [2023-12-13 18:22:19] [INFO] ['radio://0/27/2M/E7E7E7E702']
 [2023-12-13 18:22:19] [INFO] GetEstimatedPosition START
 [2023-12-13 18:22:19] [INFO] ['radio://0/27/2M/E7E7E7E702']
+[2024-01-12 18:06:13] [init] Started Logger
+[2024-01-12 18:06:13] [init] Started Logger
+[2024-01-12 18:06:14] [init] Started Logger
+[2024-01-12 18:07:52] [init] Started Logger
+[2024-01-12 18:07:52] [init] Started Logger
+[2024-01-12 18:07:52] [init] Started Logger
+[2024-01-12 18:17:11] [init] Started Logger
+[2024-01-12 18:17:11] [init] Started Logger
+[2024-01-12 18:17:11] [init] Started Logger
+[2024-01-12 18:17:32] [INFO] root
+[2024-01-12 18:20:38] [init] Started Logger
+[2024-01-12 18:20:38] [init] Started Logger
+[2024-01-12 18:20:38] [init] Started Logger
+[2024-01-12 18:21:25] [init] Started Logger
+[2024-01-12 18:21:25] [init] Started Logger
+[2024-01-12 18:21:25] [init] Started Logger
+[2024-01-12 18:28:21] [init] Started Logger
+[2024-01-12 18:28:21] [init] Started Logger
+[2024-01-12 18:28:22] [init] Started Logger
+[2024-01-12 18:29:00] [INFO] root
+[2024-01-12 18:30:16] [INFO] root
+[2024-01-12 18:31:06] [INFO] OpenLinks
+[2024-01-12 18:31:06] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/29/2M/E7E7E7E704'}
+[2024-01-12 18:31:12] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 18:31:12] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 18:31:12] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-12 18:31:12] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 18:31:13] [INFO] ['radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:31:45] [INFO] takeoff
+[2024-01-12 18:31:45] [INFO] TakeOff START
+[2024-01-12 18:31:45] [INFO] ['radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:31:48] [INFO] TakeOff STOP
+[2024-01-12 18:31:52] [INFO] Land START
+[2024-01-12 18:31:52] [INFO] ['radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:31:53] [INFO] Land STOP
+[2024-01-12 18:32:23] [INFO] CloseLinks
+[2024-01-12 18:32:23] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703'])
+[2024-01-12 18:32:23] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 18:32:30] [INFO] OpenLinks
+[2024-01-12 18:32:30] [INFO] {'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 18:32:31] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 18:32:31] [INFO] ['radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:32:36] [INFO] CloseLinks
+[2024-01-12 18:32:36] [INFO] dict_keys(['radio://0/28/2M/E7E7E7E703'])
+[2024-01-12 18:32:36] [INFO] Disconnected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 18:32:40] [INFO] OpenLinks
+[2024-01-12 18:32:40] [INFO] {'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 18:32:40] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 18:32:40] [INFO] ['radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:33:01] [INFO] root
+[2024-01-12 18:33:05] [INFO] root
+[2024-01-12 18:33:05] [INFO] root
+[2024-01-12 18:33:06] [INFO] root
+[2024-01-12 18:33:06] [INFO] root
+[2024-01-12 18:33:06] [INFO] root
+[2024-01-12 18:33:06] [INFO] root
+[2024-01-12 18:33:06] [INFO] root
+[2024-01-12 18:33:11] [INFO] OpenLinks
+[2024-01-12 18:33:11] [INFO] {'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 18:33:12] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 18:33:12] [INFO] ['radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:34:02] [init] Started Logger
+[2024-01-12 18:34:02] [init] Started Logger
+[2024-01-12 18:34:02] [init] Started Logger
+[2024-01-12 18:34:06] [INFO] root
+[2024-01-12 18:34:09] [INFO] OpenLinks
+[2024-01-12 18:34:09] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/29/2M/E7E7E7E704', 'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 18:35:34] [init] Started Logger
+[2024-01-12 18:35:34] [init] Started Logger
+[2024-01-12 18:35:34] [init] Started Logger
+[2024-01-12 18:35:39] [INFO] OpenLinks
+[2024-01-12 18:35:39] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/29/2M/E7E7E7E704', 'radio://0/80/2M/E7E7E7E701'}
+[2024-01-12 18:35:47] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 18:35:47] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 18:35:47] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 18:35:47] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 18:35:52] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 18:35:56] [INFO] OpenLinks
+[2024-01-12 18:35:56] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'}
+[2024-01-12 18:38:07] [init] Started Logger
+[2024-01-12 18:38:07] [init] Started Logger
+[2024-01-12 18:38:07] [init] Started Logger
+[2024-01-12 18:38:10] [INFO] OpenLinks
+[2024-01-12 18:38:10] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/29/2M/E7E7E7E704', 'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 18:38:17] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 18:38:17] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 18:38:17] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 18:38:17] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 18:38:22] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:34] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:34] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:38] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:38] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:38] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:38] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:39] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:39] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:40] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:40] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:46] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:46] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:47] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:47] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:47] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:47] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:48] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:48] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:48] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:48] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:49] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:49] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:49] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:49] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:49] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:49] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:38:49] [INFO] GetEstimatedPosition START
+[2024-01-12 18:38:49] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 18:38:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 18:41:29] [INFO] OpenLinks
+[2024-01-12 18:41:29] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 18:58:09] [init] Started Logger
+[2024-01-12 18:58:09] [init] Started Logger
+[2024-01-12 18:58:10] [init] Started Logger
+[2024-01-12 19:08:32] [init] Started Logger
+[2024-01-12 19:08:32] [init] Started Logger
+[2024-01-12 19:08:32] [init] Started Logger
+[2024-01-12 19:12:51] [init] Started Logger
+[2024-01-12 19:12:51] [init] Started Logger
+[2024-01-12 19:12:51] [init] Started Logger
+[2024-01-12 19:12:58] [INFO] root
+[2024-01-12 19:13:41] [INFO] OpenLinks
+[2024-01-12 19:13:41] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/29/2M/E7E7E7E704', 'radio://0/27/2M/E7E7E7E702'}
+[2024-01-12 19:13:49] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 19:13:49] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 19:13:49] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 19:13:49] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 19:13:55] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:15:15] [init] Started Logger
+[2024-01-12 19:15:15] [init] Started Logger
+[2024-01-12 19:15:16] [init] Started Logger
+[2024-01-12 19:15:35] [INFO] root
+[2024-01-12 19:16:05] [init] Started Logger
+[2024-01-12 19:16:06] [init] Started Logger
+[2024-01-12 19:16:06] [init] Started Logger
+[2024-01-12 19:17:16] [INFO] root
+[2024-01-12 19:18:21] [INFO] OpenLinks
+[2024-01-12 19:18:21] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/29/2M/E7E7E7E704'}
+[2024-01-12 19:18:28] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 19:18:28] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 19:18:28] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 19:18:28] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 19:18:34] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 19:18:38] [INFO] OpenLinks
+[2024-01-12 19:18:38] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 19:19:43] [init] Started Logger
+[2024-01-12 19:19:43] [init] Started Logger
+[2024-01-12 19:19:44] [init] Started Logger
+[2024-01-12 19:19:48] [INFO] OpenLinks
+[2024-01-12 19:19:48] [INFO] {'radio://0/29/2M/E7E7E7E704', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 19:19:55] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 19:19:55] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 19:19:55] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 19:19:55] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 19:20:00] [INFO] ['radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703']
+[2024-01-12 19:20:00] [INFO] OpenLinks
+[2024-01-12 19:20:00] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 19:20:41] [init] Started Logger
+[2024-01-12 19:20:41] [init] Started Logger
+[2024-01-12 19:20:41] [init] Started Logger
+[2024-01-12 19:20:45] [INFO] OpenLinks
+[2024-01-12 19:20:45] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/29/2M/E7E7E7E704', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'}
+[2024-01-12 19:20:52] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 19:20:52] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 19:20:52] [INFO] Connected to radio://0/28/2M/E7E7E7E703
+[2024-01-12 19:20:52] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 19:20:58] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:20:58] [INFO] GetEstimatedPosition START
+[2024-01-12 19:20:58] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:20:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:20:58] [INFO] GetEstimatedPosition START
+[2024-01-12 19:20:58] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:20:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:20:59] [INFO] GetEstimatedPosition START
+[2024-01-12 19:20:59] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:20:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:20:59] [INFO] GetEstimatedPosition START
+[2024-01-12 19:20:59] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:20:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:20:59] [INFO] GetEstimatedPosition START
+[2024-01-12 19:20:59] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:20:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:00] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:00] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:00] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:00] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:00] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:00] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:01] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:01] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:01] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:01] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:01] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:01] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:02] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:02] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:02] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:02] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:02] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:02] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:02] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:02] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:02] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:03] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:03] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:03] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:03] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:03] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:03] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:04] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:04] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:04] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:04] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:04] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:04] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:05] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:05] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:05] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:05] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:05] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:05] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:06] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:06] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:06] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:06] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:06] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:06] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:07] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:07] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:07] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:07] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:07] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:07] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:08] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:08] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:08] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:08] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:08] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:08] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:09] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:09] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:09] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:09] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:09] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:09] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:10] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:10] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:10] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:10] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:10] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:10] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:11] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:11] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:11] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:11] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:11] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:11] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:12] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:12] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:12] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:12] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:12] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:12] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:13] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:13] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:13] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:13] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:13] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:13] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:14] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:14] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:14] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:14] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:14] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:14] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:15] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:15] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:15] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:15] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:15] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:15] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:16] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:16] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:16] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:16] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:16] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:16] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:17] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:17] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:17] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:17] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:17] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:17] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:18] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:18] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:18] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:18] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:18] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:18] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:19] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:19] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:19] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:19] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:19] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:19] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:20] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:20] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:20] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:20] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:20] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:20] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:21] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:21] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:21] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:21] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:21] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:21] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:22] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:22] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:22] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:22] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:22] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:22] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:23] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:23] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:23] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:23] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:24] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:24] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:24] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:24] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:24] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:24] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:25] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:25] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:25] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:25] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:25] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:25] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:26] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:26] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:26] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:26] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:26] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:26] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:27] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:27] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:27] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:27] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:27] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:27] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:28] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:28] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:28] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:28] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:28] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:28] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:29] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:29] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:29] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:29] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:29] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:29] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:30] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:30] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:30] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:30] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:30] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:30] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:31] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:31] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:31] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:31] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:31] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:31] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:32] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:32] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:32] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:32] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:32] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:32] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:33] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:33] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:33] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:33] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:33] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:33] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:33] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:34] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:34] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:34] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:34] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:34] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:34] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:34] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:35] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:35] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:35] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:35] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:35] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:35] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:36] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:36] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:36] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:36] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:36] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:36] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:37] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:37] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:37] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:37] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:37] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:37] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:38] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:38] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:38] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:38] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:38] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:38] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:39] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:39] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:39] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:39] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:39] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:39] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:40] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:40] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:40] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:40] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:40] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:40] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:41] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:41] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:41] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:41] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:41] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:41] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:42] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:42] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:42] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:42] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:43] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:43] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:43] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:43] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:43] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:43] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:44] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:44] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:44] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:44] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:44] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:44] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:45] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:45] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:45] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:45] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:45] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:45] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:46] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:46] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:46] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:46] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:46] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:46] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:47] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:47] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:47] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:47] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:47] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:47] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:48] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:48] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:48] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:48] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:48] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:48] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:49] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:49] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:49] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:49] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:49] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:49] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:50] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:50] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:50] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:50] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:50] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:50] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:51] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:51] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:51] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:51] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:51] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:51] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:52] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:52] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:52] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:52] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:52] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:52] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:53] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:53] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:53] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:53] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:53] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:53] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:54] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:54] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:54] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:54] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:54] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:54] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:55] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:55] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:55] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:55] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:55] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:55] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:56] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:56] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:56] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:56] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:56] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:56] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:57] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:57] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:57] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:57] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:57] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:57] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:58] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:58] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:58] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:58] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:58] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:58] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:59] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:59] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:59] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:59] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:21:59] [INFO] GetEstimatedPosition START
+[2024-01-12 19:21:59] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:21:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:03] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:03] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:03] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:03] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:03] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:03] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:04] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:04] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:04] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:04] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:04] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:04] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:05] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:05] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:05] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:05] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:05] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:05] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:06] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:06] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:06] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:06] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:06] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:06] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:07] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:07] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:07] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:07] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:07] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:07] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:08] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:08] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:08] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:08] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:08] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:08] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:09] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:09] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:09] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:09] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:09] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:09] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:10] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:10] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:10] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:10] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:10] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:10] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:11] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:11] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:11] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:11] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:11] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:11] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:12] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:12] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:12] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:12] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:12] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:12] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:13] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:13] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:13] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:13] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:13] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:13] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:14] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:14] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:14] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:14] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:14] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:14] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:16] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:16] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:16] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:16] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:17] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:17] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:17] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:17] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:17] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:17] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:18] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:18] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:18] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:18] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:18] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:18] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:19] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:19] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:19] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:19] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:19] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:19] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:21] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:21] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:21] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:21] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:22] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:22] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:22] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:22] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:22] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:22] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:23] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:23] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:24] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:24] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:24] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:24] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:24] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:24] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:25] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:25] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:25] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:25] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:25] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:25] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:26] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:26] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:26] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:26] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:26] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:26] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:27] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:27] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:27] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:27] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:27] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:27] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:28] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:28] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:28] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:28] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:28] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:28] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:29] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:29] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:29] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:29] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:29] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:29] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 19:22:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 19:22:30] [INFO] GetEstimatedPosition START
+[2024-01-12 19:22:30] [INFO] ['radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:13:01] [init] Started Logger
+[2024-01-12 20:13:01] [init] Started Logger
+[2024-01-12 20:13:02] [init] Started Logger
+[2024-01-12 20:13:09] [INFO] OpenLinks
+[2024-01-12 20:13:09] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/29/2M/E7E7E7E704', 'radio://0/28/2M/E7E7E7E703'}
+[2024-01-12 20:13:12] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 20:13:12] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 20:13:12] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 20:13:12] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-12 20:13:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:13:22] [INFO] GetEstimatedPosition START
+[2024-01-12 20:13:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:13:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:14:46] [INFO] OpenLinks
+[2024-01-12 20:14:46] [INFO] {'radio://0/80/2M/E7E7E7E701'}
+[2024-01-12 20:14:46] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 20:14:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:14:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:14:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:14:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:17:09] [INFO] OpenLinks
+[2024-01-12 20:17:09] [INFO] {'radio://0/80/2M/E7E7E7E701'}
+[2024-01-12 20:17:52] [init] Started Logger
+[2024-01-12 20:17:52] [init] Started Logger
+[2024-01-12 20:17:53] [init] Started Logger
+[2024-01-12 20:17:57] [INFO] OpenLinks
+[2024-01-12 20:17:57] [INFO] {'radio://0/29/2M/E7E7E7E704', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'}
+[2024-01-12 20:18:46] [init] Started Logger
+[2024-01-12 20:18:46] [init] Started Logger
+[2024-01-12 20:18:46] [init] Started Logger
+[2024-01-12 20:18:54] [INFO] OpenLinks
+[2024-01-12 20:18:54] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/29/2M/E7E7E7E704'}
+[2024-01-12 20:19:32] [init] Started Logger
+[2024-01-12 20:19:32] [init] Started Logger
+[2024-01-12 20:19:32] [init] Started Logger
+[2024-01-12 20:19:40] [INFO] OpenLinks
+[2024-01-12 20:19:40] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703', 'radio://0/29/2M/E7E7E7E704'}
+[2024-01-12 20:19:44] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 20:19:44] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 20:19:44] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-12 20:19:44] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 20:19:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:19:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:19:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:19:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:02] [INFO] OpenLinks
+[2024-01-12 20:33:02] [INFO] {'radio://0/80/2M/E7E7E7E701'}
+[2024-01-12 20:33:03] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 20:33:03] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:03] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:03] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:03] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:03] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:03] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:03] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:04] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:04] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:04] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:04] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:04] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:04] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:04] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:04] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:14] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:14] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:14] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:14] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:14] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:14] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:14] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:14] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:15] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:15] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:15] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:15] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:15] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:15] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:15] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:15] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:16] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:16] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:16] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:16] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:16] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:16] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:16] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:16] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:17] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:17] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:17] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:17] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:17] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:17] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:17] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:17] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:18] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:18] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:18] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:18] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:18] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:18] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:18] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:18] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:19] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:19] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:19] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:19] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:19] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:19] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:19] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:19] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:20] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:20] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:20] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:20] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:20] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:20] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:20] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:20] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:21] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:21] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:21] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:21] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:21] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:21] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:22] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:22] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:22] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:22] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:23] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:23] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:23] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:23] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:23] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:23] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:23] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:23] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:24] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:24] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:24] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:24] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:24] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:24] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:24] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:24] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:25] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:25] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:25] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:25] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:25] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:25] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:25] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:25] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:26] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:26] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:26] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:26] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:26] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:26] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:26] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:26] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:27] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:27] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:27] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:27] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:27] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:27] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:27] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:27] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:28] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:28] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:28] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:28] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:28] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:28] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:28] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:28] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:29] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:29] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:29] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:29] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:29] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:29] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:29] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:29] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:30] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:30] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:30] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:30] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:30] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:30] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:30] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:30] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:31] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:31] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:31] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:31] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:31] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:31] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:31] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:31] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:32] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:32] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:32] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:32] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:32] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:32] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:32] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:33] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:33] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:33] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:33] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:33] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:33] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:33] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:34] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:34] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:34] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:34] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:34] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:34] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:34] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:34] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:35] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:35] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:35] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:35] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:35] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:35] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:35] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:35] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:36] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:36] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:36] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:36] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:36] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:36] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:36] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:36] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:37] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:37] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:37] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:37] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:37] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:37] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:37] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:37] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:38] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:38] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:38] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:38] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:38] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:38] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:38] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:38] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:39] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:39] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:39] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:39] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:39] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:39] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:39] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:39] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:40] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:40] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:40] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:40] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:40] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:40] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:40] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:40] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:41] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:41] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:41] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:41] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:41] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:41] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:41] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:41] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:42] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:42] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:42] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:42] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:42] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:42] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:42] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:43] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:43] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:43] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:43] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:43] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:43] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:43] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:45] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:45] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:45] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:45] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:45] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:45] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:45] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:45] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:52] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:52] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:52] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:52] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:52] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:52] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:52] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:52] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:53] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:53] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:53] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:53] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:53] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:53] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:53] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:53] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:54] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:54] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:54] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:54] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:54] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:54] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:55] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:55] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:55] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:55] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:55] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:55] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:55] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:55] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:56] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:56] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:56] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:56] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:56] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:56] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:56] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:56] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:57] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:57] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:57] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:57] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:58] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:58] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:58] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:58] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:58] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:58] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:58] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:58] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:59] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:59] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:59] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:59] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:59] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:59] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:33:59] [INFO] GetEstimatedPosition START
+[2024-01-12 20:33:59] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:33:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:00] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:00] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:00] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:00] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:00] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:00] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:00] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:00] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:01] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:01] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:34:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:34:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:34:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:35] [init] Started Logger
+[2024-01-12 20:35:35] [init] Started Logger
+[2024-01-12 20:35:36] [init] Started Logger
+[2024-01-12 20:35:42] [INFO] OpenLinks
+[2024-01-12 20:35:42] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/29/2M/E7E7E7E704'}
+[2024-01-12 20:35:46] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-12 20:35:46] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-12 20:35:46] [INFO] Connected to radio://0/80/2M/E7E7E7E701
+[2024-01-12 20:35:46] [INFO] Failed to connect to radio://0/29/2M/E7E7E7E704
+[2024-01-12 20:35:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:52] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:52] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:52] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:52] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:52] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:52] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:52] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:52] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:52] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:53] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:53] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:53] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:53] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:53] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:53] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:53] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:53] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:53] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:54] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:54] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:54] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:54] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:54] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:54] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:54] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:54] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:54] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:55] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:55] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:55] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:55] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:55] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:55] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:55] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:55] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:55] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:56] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:56] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:56] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:56] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:56] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:56] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:56] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:56] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:57] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:57] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:57] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:57] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:57] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:57] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:58] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:58] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:58] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:58] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:58] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:58] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:58] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:59] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:59] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:59] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:59] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:59] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:59] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:35:59] [INFO] GetEstimatedPosition START
+[2024-01-12 20:35:59] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:35:59] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:00] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:00] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:00] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:00] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:00] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:00] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:00] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:00] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:00] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:01] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:01] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:01] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:01] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:01] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:01] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:01] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:01] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:01] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:02] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:02] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:02] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:02] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:02] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:02] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:02] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:02] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:02] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:02] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:02] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:02] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:03] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:03] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:03] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:03] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:03] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:03] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:03] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:03] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:03] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:04] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:04] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:04] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:04] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:04] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:04] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:04] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:04] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:04] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:05] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:05] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:05] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:06] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:06] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:06] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:07] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:07] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:07] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:08] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:08] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:08] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:09] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:09] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:09] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:10] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:10] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:10] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:11] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:11] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:11] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:12] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:12] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:12] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:13] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:13] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:13] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:14] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:14] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:14] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:14] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:14] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:14] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:14] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:14] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:14] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:15] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:15] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:15] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:15] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:15] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:15] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:15] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:15] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:15] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:16] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:16] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:16] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:16] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:16] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:16] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:16] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:16] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:16] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:17] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:17] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:17] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:17] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:17] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:17] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:17] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:17] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:17] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:18] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:18] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:18] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:18] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:18] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:18] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:18] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:18] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:18] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:19] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:19] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:19] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:19] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:19] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:19] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:19] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:19] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:19] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:20] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:20] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:20] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:20] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:20] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:20] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:20] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:20] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:20] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:21] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:21] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:21] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:21] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:21] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:21] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:21] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:21] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:22] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:22] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:22] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:22] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:22] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:23] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:23] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:23] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:23] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:23] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:23] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:23] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:23] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:23] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:24] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:24] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:24] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:24] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:24] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:24] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:24] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:24] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:24] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:25] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:25] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:25] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:25] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:25] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:25] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:25] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:25] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:25] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:26] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:26] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:26] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:26] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:26] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:26] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:26] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:26] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:26] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:27] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:27] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:27] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:27] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:27] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:27] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:27] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:27] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:27] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:28] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:28] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:28] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:28] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:28] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:28] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:28] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:28] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:28] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:29] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:29] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:29] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:29] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:29] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:29] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:29] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:29] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:29] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:30] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:30] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:30] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:30] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:30] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:30] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:30] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:30] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:30] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:31] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:31] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:31] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:31] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:31] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:31] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:31] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:31] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:31] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:32] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:32] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:32] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:32] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:32] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:32] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:32] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:32] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:32] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:33] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:33] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:33] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:33] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:33] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:33] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:33] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:33] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:33] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:34] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:34] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:34] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:34] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:34] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:34] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:34] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:34] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:34] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:35] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:35] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:35] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:35] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:35] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:35] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:35] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:35] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:35] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:36] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:36] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:36] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:36] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:36] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:36] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:36] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:36] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:36] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:37] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:37] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:37] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:37] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:37] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:37] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:37] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:37] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:37] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:38] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:38] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:38] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:38] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:38] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:38] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:38] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:38] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:38] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:39] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:39] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:39] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:39] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:39] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:39] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:39] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:39] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:39] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:40] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:40] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:40] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:40] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:40] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:40] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:40] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:40] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:40] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:41] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:41] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:41] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:41] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:41] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:41] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:41] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:41] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:41] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:42] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:42] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:42] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:42] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:42] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:42] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:42] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:42] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:42] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:43] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:43] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:43] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:43] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:43] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:43] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:43] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:43] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:43] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:44] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:44] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:44] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:45] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:45] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:45] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:45] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:45] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:45] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:45] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:46] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:46] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:46] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:47] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:47] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:47] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:48] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:48] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:48] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:49] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:49] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:49] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:50] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:50] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:50] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:36:51] [INFO] GetEstimatedPosition STOP
+[2024-01-12 20:36:51] [INFO] GetEstimatedPosition START
+[2024-01-12 20:36:51] [INFO] ['radio://0/80/2M/E7E7E7E701']
+[2024-01-12 20:38:03] [INFO] GetEstimatedPosition STOP

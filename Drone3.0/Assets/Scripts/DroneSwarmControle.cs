@@ -52,7 +52,7 @@ public class DroneSwarmControle : MonoBehaviour
 
 
 
-        if (droneConected == true && droneInformation != null && droneInformation.Count > 0 && droneInitialized == false && droneInformation[0].dronePosition.positionInfo)
+        if (droneConected == true && droneInformation != null && droneInformation.Count > 0 && !droneInitialized  && droneInformation[0].dronePosition.positionInfo)
         {
             InitialiserDrone();
         }
@@ -71,10 +71,13 @@ public class DroneSwarmControle : MonoBehaviour
             }
         }
         // what drone did you select ?
-        if (DroneSwarmControle.selectedDroneIndex >= 0 && DroneSwarmControle.selectedDroneIndex < DroneSwarmControle.droneInformation.Count)
+        if (droneInformation != null && selectedDroneIndex >= 0 && selectedDroneIndex < droneInformation.Count)
         {
-            selectedDrone = DroneSwarmControle.droneInformation[DroneSwarmControle.selectedDroneIndex];
-            
+            selectedDrone = droneInformation[selectedDroneIndex];
+        }
+        else
+        {
+            selectedDrone = null; // Reset to null if conditions are not met
         }
 
         if (StartGoTO && selectedDrone!=null && droneConected == true && droneInformation != null && droneInformation.Count > 0)

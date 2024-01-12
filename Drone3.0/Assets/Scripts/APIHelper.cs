@@ -12,8 +12,9 @@ using System.Globalization;
 public class APIHelper : MonoBehaviour
 {
     
-    public static string APILocalhost = "172.21.73.34:8080";
+    //public static string APILocalhost = "172.21.73.34:8080";
     //public static string APILocalhost = "192.168.1.29:8000";
+    public static string APILocalhost = "172.21.72.165:8000";
 
     #region API Get Classes
     public static IEnumerator CheckDroneConnection()
@@ -51,11 +52,15 @@ public class APIHelper : MonoBehaviour
             }
             for (int i = 0; i < response.URIS.Length; i++)
             {
-
-                DroneSwarmControle.droneInformation[i] = new DroneInformation { droneIP = response.URIS[i] };
+                DroneSwarmControle.droneInformation.Add(new DroneInformation
+                {
+                    droneIP = response.URIS[i],
+                    dronePosition = new DronePosition(), // Initialize DronePosition
+                    droneVelocity = new DroneVelocity()  // Initialize DroneVelocity
+                });
                 Debug.Log("droneInformation[" + i + "] = " + DroneSwarmControle.droneInformation[i].droneIP);
             }
-            
+
         }
         yield return new WaitForSeconds(1);
         DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = false;
@@ -154,10 +159,10 @@ public class APIHelper : MonoBehaviour
                     //Debug.Log( "Type de position "+dronePosition.Positions[droneInformation[i].droneIP][0].GetType());
                     if (dronePosition.Positions.ContainsKey(droneInformation[i].droneIP))
                     {
-                        droneInformation[i].dronePosition.positionInfo = true;
-                        droneInformation[i].dronePosition.positionDroneX = dronePosition.Positions[droneInformation[i].droneIP][0];
-                        droneInformation[i].dronePosition.positionDroneY = dronePosition.Positions[droneInformation[i].droneIP][1]; 
-                        droneInformation[i].dronePosition.positionDroneZ = dronePosition.Positions[droneInformation[i].droneIP][2]; 
+                        DroneSwarmControle.droneInformation[i].dronePosition.positionInfo = true;
+                        DroneSwarmControle.droneInformation[i].dronePosition.positionDroneX = dronePosition.Positions[droneInformation[i].droneIP][0];
+                        DroneSwarmControle.droneInformation[i].dronePosition.positionDroneY = dronePosition.Positions[droneInformation[i].droneIP][1];
+                        DroneSwarmControle.droneInformation[i].dronePosition.positionDroneZ = dronePosition.Positions[droneInformation[i].droneIP][2]; 
                     }
                 }
             }

@@ -454,7 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DronePrefab: {fileID: 3053575140279351787, guid: 3fbe2e83f28bd1247ab1c11eb6e9441a,
     type: 3}
-  APIRequest: 0
+  APIRequest: 1
   APITakeOff: 0
   droneAPITracking: 0
   droneAPIVelocity: 0
