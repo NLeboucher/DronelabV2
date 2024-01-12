@@ -1,147 +1,301 @@
-from typing import Union
-
-from fastapi import FastAPI
-import math
+# -*- coding: utf-8 -*-
+#
+#     ||          ____  _ __
+#  +------+      / __ )(_) /_______________ _____  ___
+#  | 0xBC |     / __  / / __/ ___/ ___/ __ `/_  / / _ \
+#  +------+    / /_/ / / /_/ /__/ /  / /_/ / / /_/  __/
+#   ||  ||    /_____/_/\__/\___/_/   \__,_/ /___/\___/
+#
+#  Copyright (C) 2016 Bitcraze AB
+#
+#  This program is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation; either version 2
+#  of the License, or (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
 import time
-import json 
-import cflib.crtp
-from cflib.crazyflie import Crazyflie, syncCrazyflie
-from datetime import datetime
-from Logger import Logger
-from Move import Move
-from cflib.positioning.motion_commander import MotionCommander as Driver
-import threading
-from typing import List
-app = FastAPI()
+from collections import namedtuple
+from threading import Thread
+
+from cflib.crazyflie import Crazyflie
+from cflib.crazyflie.log import LogConfig
+from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
+from cflib.crazyflie.syncLogger import SyncLogger
+
+SwarmPosition = namedtuple('SwarmPosition', 'x y z')
 
 
-#python -m uvicorn swarm:app --host 0.0.0.0 --port 8000
+class _Factory:
+    """
+    Default Crazyflie factory class.
+    """
 
-activeuris = []
-
-logger = Logger("log.txt")
-# Add the appropriate URI(s) of the drone(s) you want to communicate with
-uris = ["radio://0/80/2M/E7E7E7E701", "radio://0/27/2M/E7E7E7E702", "radio://0/28/2M/E7E7E7E703"]
-activeuris = []
-
-@app.get("/")
-async def read_root():
-    return {"message": "Welcome to the Drone Control API"}
+    def construct(self, uri):
+        return SyncCrazyflie(uri)
 
 
-@app.get("/items/")
-def getavailabledrones():
-        # Initialize the drivers
-    cflib.crtp.init_drivers(enable_debug_driver=False)
-    activeuris = []
-    # Communicate with each drone using its URI
-    for uri in uris:
-        t=datetime.now()
+class CachedCfFactory:
+    """
+    Factory class that creates Crazyflie instances with TOC caching
+    to reduce connection time.
+    """
+
+    def __init__(self, ro_cache=None, rw_cache=None):
+        self.ro_cache = ro_cache
+        self.rw_cache = rw_cache
+
+    def construct(self, uri):
+        cf = Crazyflie(ro_cache=self.ro_cache, rw_cache=self.rw_cache)
+        return SyncCrazyflie(uri, cf=cf)
+
+
+class Swarm:
+    """
+    Runs a swarm of Crazyflies. It implements a functional-ish style of
+    sequential or parallel actions on all individuals of the swarm.
+
+    When the swarm is connected, a link is opened to each Crazyflie through
+    SyncCrazyflie instances. The instances are maintained by the class and are
+    passed in as the first argument in swarm wide actions.
+    """
+
+    def __init__(self, uris, factory=_Factory()):
+        """
+        Constructs a Swarm instance and instances used to connect to the
+        Crazyflies
+
+        :param uris: A set of uris to use when connecting to the Crazyflies in
+        the swarm
+        :param factory: A factory class used to create the instances that are
+         used to open links to the Crazyflies. Mainly used for unit testing.
+        """
+        self._cfs = {}
+        self._is_open = False
+        self._positions = dict()
+
+        for uri in uris:
+            self._cfs[uri] = factory.construct(uri)
+
+    def open_links(self):
+        """
+        Open links to all individuals in the swarm
+        """
+        if self._is_open:
+            raise Exception('Already opened')
+
         try:
-            with syncCrazyflie.SyncCrazyflie(uri, cf=Crazyflie(rw_cache='./cache')) as scf:
-                
-                activeuris.append(uri)
+            self.parallel(lambda scf: scf.open_link())
+            self._is_open = True
         except Exception as e:
-            logger.warning(f"Failed to connect to {uri} due to {e}")
-    return activeuris
+            self.close_links()
+            raise e
 
-def handle_move_drone(moveto, uri):
-    move = Move(moveto)
-    try:
-        with syncCrazyflie.SyncCrazyflie(uri, cf=Crazyflie(rw_cache='./cache')) as scf:
-            with Driver(scf) as drone:
-                drone.move_distance(
-                    move.distance_x_m,
-                    move.distance_y_m,
-                    move.distance_z_m,
-                    velocity=move.velocity,
-                )
-        return 1
-    except Exception as e:
-        return -1
 
-@app.post("/move_drone/{uri}/{moveto}")
-async def move_drone_endpoint(moveto: str, uri: str):
-    thread = threading.Thread(target=handle_move_drone, args=(moveto, uri))
-    thread.start()
-    return "Thread started successfully."
+    def close_links(self):
+        """
+        Close all open links
+        """
+        for uri, cf in self._cfs.items():
+            cf.close_link()
 
-@app.post("/move_drones/{uris}/{movetos}")
-async def move_drones_endpoint(uriss: str, movetoss: str):
-    threads = []
-    movetos = movetoss.split(";")
-    uris = uriss.split(",")
-    for moveto, uri in zip(movetos, uris):
-        thread = threading.Thread(target=handle_move_drone, args=(moveto, uri))
-        threads.append(thread)
-        thread.start()
-    return "Threads started successfully for all drones."
+        self._is_open = False
 
-@app.get("/OpenLinks/")
-async def open_links():
-    # Liste étendue des URIs de drones fictifs
-    uris_list = ["IP1", "IP2", "IP3", "IP4"]
-    return {"URIS": uris_list}
+    def __enter__(self):
+        self.open_links()
+        return self
 
-import time
-@app.get("/getestimatedpositions/")
-async def get_position():
-    # Temps écoulé en secondes
-    elapsed_time = time.time() % 60  # Utilisez % 60 pour créer une boucle toutes les 60 secondes
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.close_links()
 
-    # Simuler différents comportements de déplacement
-    # Drone 1 : Mouvement en cercle
-    x1 = 5 + math.cos(elapsed_time) * 2
-    y1 = 5 + math.sin(elapsed_time) * 2
-    z1 = 3
-    yaw1 = elapsed_time * 6  # Rotation continue
+    def __get_estimated_position(self, scf):
+        log_config = LogConfig(name='stateEstimate', period_in_ms=10)
+        log_config.add_variable('stateEstimate.x', 'float')
+        log_config.add_variable('stateEstimate.y', 'float')
+        log_config.add_variable('stateEstimate.z', 'float')
+        # log_config.add_variable('stateEstimate.yaw', 'float')
 
-    # Drone 2 : Mouvement en ligne droite avec boucle
-    x2 = 4 + (elapsed_time % 10)  # Boucle toutes les 10 secondes
-    y2 = 6
-    z2 = 2
-    yaw2 = 30
+        with SyncLogger(scf, log_config) as logger:
+            for entry in logger:
+                x = entry[1]['stateEstimate.x']
+                y = entry[1]['stateEstimate.y']
+                z = entry[1]['stateEstimate.z']
+                # yaw = entry[1]['stateEstimate.yaw']
+                self._positions[scf.cf.link_uri] = SwarmPosition(x, y, z)
+                break
 
-    # Drone 3 : Mouvement vertical
-    x3 = 7.2
-    y3 = 3.1
-    z3 = 3 + math.sin(elapsed_time)  # Oscillation verticale
-    yaw3 = 90
+    def get_estimated_positions(self):
+        """
+        Return a `dict`, keyed by URI and with the SwarmPosition namedtuples as
+        value, with the estimated (x, y, z) of each Crazyflie in the swarm.
+        """
+        self.parallel_safe(self.__get_estimated_position)
+        return self._positions
 
-    # Drone 4 : Mouvement descendant et ascendant
-    x4 = 2.5
-    y4 = 1.0
-    z4 = 5 - (elapsed_time % 5)  # Descend et remonte toutes les 5 secondes
-    yaw4 = 60
-# Dictionnaire avec des positions mises à jour sous forme de listes [X, Y, Z]
-    exemple_positions = {
-        "IP1": [(x1), (y1), (z1)],
-        "IP2": [(x2), (y2), (z2)],
-        "IP3": [(x3), (y3), (z3)],
-        "IP4": [(x4), (y4), (z4)]
-    }
+    def __wait_for_position_estimator(self, scf):
+        log_config = LogConfig(name='Kalman Variance', period_in_ms=500)
+        log_config.add_variable('kalman.varPX', 'float')
+        log_config.add_variable('kalman.varPY', 'float')
+        log_config.add_variable('kalman.varPZ', 'float')
 
-    return {"Positions": exemple_positions}
+        var_y_history = [1000] * 10
+        var_x_history = [1000] * 10
+        var_z_history = [1000] * 10
 
-def poshold(cf, t, x, y, z):
-    steps = t * 10
+        threshold = 0.001
 
-    for r in range(steps):
-        cf.commander.send_position_setpoint(x, y, 0, z)
+        with SyncLogger(scf, log_config) as logger:
+            for log_entry in logger:
+                data = log_entry[1]
+
+                var_x_history.append(data['kalman.varPX'])
+                var_x_history.pop(0)
+                var_y_history.append(data['kalman.varPY'])
+                var_y_history.pop(0)
+                var_z_history.append(data['kalman.varPZ'])
+                var_z_history.pop(0)
+
+                min_x = min(var_x_history)
+                max_x = max(var_x_history)
+                min_y = min(var_y_history)
+                max_y = max(var_y_history)
+                min_z = min(var_z_history)
+                max_z = max(var_z_history)
+
+                if (max_x - min_x) < threshold and (
+                        max_y - min_y) < threshold and (
+                        max_z - min_z) < threshold:
+                    break
+
+    def __reset_estimator(self, scf):
+        cf = scf.cf
+        cf.param.set_value('kalman.resetEstimation', '1')
         time.sleep(0.1)
+        cf.param.set_value('kalman.resetEstimation', '0')
+        self.__wait_for_position_estimator(scf)
+
+    def reset_estimators(self):
+        """
+        Reset estimator on all members of the swarm and wait for a stable
+        positions. Blocks until position estimators finds a position.
+        """
+        self.parallel_safe(self.__reset_estimator)
+
+    def sequential(self, func, args_dict=None):
+        """
+        Execute a function for all Crazyflies in the swarm, in sequence.
+
+        The first argument of the function that is passed in will be a
+        SyncCrazyflie instance connected to the Crazyflie to operate on.
+        A list of optional parameters (per Crazyflie) may follow defined by
+        the `args_dict`. The dictionary is keyed on URI and has a list of
+        parameters as value.
+
+        Example:
+        ```python
+        def my_function(scf, optional_param0, optional_param1)
+            ...
+
+        args_dict = {
+            URI0: [optional_param0_cf0, optional_param1_cf0],
+            URI1: [optional_param0_cf1, optional_param1_cf1],
+            ...
+        }
 
 
-def run_sequence(scf, positions):
-    cf = scf.cf
+        swarm.sequential(my_function, args_dict)
+        ```
 
-    # Number of setpoints sent per second
-    fs = 4
-    fsi = 1.0 / fs
+        :param func: The function to execute
+        :param args_dict: Parameters to pass to the function
+        """
+        for uri, cf in self._cfs.items():
+            args = self._process_args_dict(cf, uri, args_dict)
+            func(*args)
 
-    for pos in positions:
-        x, y, z = pos
-        poshold(cf, 2, x, y, z)
+    def parallel(self, func, args_dict=None):
+        """
+        Execute a function for all Crazyflies in the swarm, in parallel.
+        One thread per Crazyflie is started to execute the function. The
+        threads are joined at the end. Exceptions raised by the threads are
+        ignored.
 
-    cf.commander.send_stop_setpoint()
-    # Hand control over to the high level commander to avoid timeout and locking of the Crazyflie
-    cf.commander.send_notify_setpoint_stop()
+        For a more detailed description of the arguments, see `sequential()`
+
+        :param func: The function to execute
+        :param args_dict: Parameters to pass to the function
+        """
+        try:
+            self.parallel_safe(func, args_dict)
+        except Exception:
+            pass
+
+    def parallel_safe(self, func, args_dict=None):
+        """
+        Execute a function for all Crazyflies in the swarm, in parallel.
+        One thread per Crazyflie is started to execute the function. The
+        threads are joined at the end and if one or more of the threads raised
+        an exception this function will also raise an exception.
+
+        For a more detailed description of the arguments, see `sequential()`
+
+        :param func: The function to execute
+        :param args_dict: Parameters to pass to the function
+        """
+        threads = []
+        reporter = self.Reporter()
+
+        for uri, scf in self._cfs.items():
+            args = [func, reporter] + \
+                self._process_args_dict(scf, uri, args_dict)
+
+            thread = Thread(target=self._thread_function_wrapper, args=args)
+            threads.append(thread)
+            thread.start()
+
+        for thread in threads:
+            thread.join()
+
+        if reporter.is_error_reported():
+            first_error = reporter.errors[0]
+            raise Exception('One or more threads raised an exception when '
+                            'executing parallel task') from first_error
+
+    def _thread_function_wrapper(self, *args):
+        reporter = None
+        try:
+            func = args[0]
+            reporter = args[1]
+            func(*args[2:])
+        except Exception as e:
+            if reporter:
+                reporter.report_error(e)
+
+    def _process_args_dict(self, scf, uri, args_dict):
+        args = [scf]
+
+        if args_dict:
+            args += args_dict[uri]
+
+        return args
+
+    class Reporter:
+        def __init__(self):
+            self.error_reported = False
+            self._errors = []
+
+        @property
+        def errors(self):
+            return self._errors
+
+        def report_error(self, e):
+            self.error_reported = True
+            self._errors.append(e)
+
+        def is_error_reported(self):
+            return self.error_reported
