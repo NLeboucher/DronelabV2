@@ -1,6 +1,8 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+import os
+import sys
 app = FastAPI()
 
 html = """
@@ -39,7 +41,16 @@ html = """
     </body>
 </html>
 """
-app.mount("../static", StaticFiles(directory="static"), name="static")
+path = os.getcwd()
+folders = path.split("/")
+if("API" in folders):
+    path = "/".join(folders[:folders.index("API")+1])
+    print(path)
+else:
+    Exception("Executed from Wrong folder, you need to be in DronelabV2")
+sys.path.insert(0, path)
+print(f"{path}/static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 class ConnectionManager:
     def __init__(self):
         self.active_connections: list[WebSocket] = []

@@ -1,21 +1,22 @@
-from API.swarmcontrol import SwarmControl
 from fastapi.middleware.cors import CORSMiddleware
 
-from API.logger import Logger
-from API.outputdict import OutputDict
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 import os
 path = os.getcwd()
-path = path.split("/")[::-1][0]
-print(path)
-if(path == "API"):
+folders = path.split("/")
+if("API" in folders):
+    path = "/".join(folders[:folders.index("API")+1])
+    print(path)
+    from swarmcontrol import SwarmControl
     from logger import Logger
     from move import Move, Velocity
+    from outputdict import OutputDict
 else:
-    from API.logger import Logger
-    from API.move import Move, Velocity
+    Exception("Executed from Wrong folder, you need to be in DronelabV2")
+
 app = FastAPI()
 origins = [
     "*",
@@ -81,5 +82,3 @@ async def TestMax(args_arr: List[Velocity]):
 @app.post("/All_MoveDistance/")
 async def All_MoveDistance(args_arr : List[Move]):
     return swarm.All_MoveDistance(args_arr)
-
-

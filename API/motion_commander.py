@@ -46,7 +46,15 @@ from queue import Queue
 from threading import Thread
 
 from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
-from API.logger import Logger
+import os
+path = os.getcwd()
+folders = path.split("/")
+if("API" in folders):
+    path = "/".join(folders[:folders.index("API")+1])
+    print(path)
+else:
+    Exception("Executed from Wrong folder, you need to be in DronelabV2")
+from logger import Logger
 
 debug = True
 logger = Logger("log.txt",debug)

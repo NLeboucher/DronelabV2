@@ -1,49 +1,43 @@
 from fastapi import FastAPI, WebSocket
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
+
 import asyncio
 import cv2
 import mediapipe as mp
 import numpy as np
 import pyrealsense2 as rs
+import os, sys
 
 app = FastAPI()
 
-html = """
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Pose Estimation</title>
-    </head>
-    <body>
-        <h1>Pose Estimation Coordinates</h1>
-        <ul id='messages'>
-        </ul>
-        <script>
-            var ws = new WebSocket("ws://localhost:8000/ws");
-            window.onbeforeunload = function() {
-            ws.onclose = function () {}; // disable onclose handler
-            ws.close();
-            };
-            ws.onmessage = function(event) {
-                var messages = document.getElementById('messages')
-                var message = document.createElement('li')
-                var content = document.createTextNode(event.data)
-                message.appendChild(content)
-                messages.appendChild(message)
-            };
-            
-        </script>
-    </body>
-</html>
-"""
-
+path = os.getcwd()
+folders = path.split("/")
+if("API" in folders):
+    path = "/".join(folders[:folders.index("API")+1])
+    print(path)
+else:
+    Exception("Executed from Wrong folder, you need to be in DronelabV2")
+sys.path.insert(0, path)
+print(f"{path}/static")
+origins = ["*"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+app.mount(f"/static", StaticFiles(directory="static"), name="static")
 @app.get("/")
 async def get():
-    return HTMLResponse(html)
+    return FileResponse('static/index.html')
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
+    await manager.connect(websocket)
     try:
     # Configure RealSense pipeline
         pipeline = rs.pipeline()
@@ -92,9 +86,25 @@ async def websocket_endpoint(websocket: WebSocket):
     except Exception as e:
         print(e)
     finally:
-        await websocket.close()
+        await manager.disconnect(websocket)
         print("Websocket closed")
+class ConnectionManager:
+    def __init__(self):
+        self._active_connections: list[WebSocket] = []
 
+    async def connect(self, websocket: WebSocket):
+        await websocket.accept()
+        self._active_connections.append(websocket)
+
+    def disconnect(self, websocket: WebSocket):
+        self._active_connections.remove(websocket)
+
+    async def sendCoordinates(self, message: str, websocket: WebSocket):
+        for connection in self._active_connections:
+            await connection.send_text(message)
+        
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+
+    manager = ConnectionManager()
+    uvicorn.run(app, host="0.0.0.0", port=8001)

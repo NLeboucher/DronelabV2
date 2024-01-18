@@ -1,3 +1,16 @@
 [2023-11-30 11:43:46] [init] Started Logger
 [2023-11-30 11:45:17] [init] Started Logger
 [2023-11-30 11:45:17] [init] Started Logger
+[2024-01-18 19:02:03] [init] Started Logger
+[2024-01-18 19:02:25] [init] Started Logger
+[2024-01-18 19:03:18] [init] Started Logger
+[2024-01-18 19:03:54] [init] Started Logger
+[2024-01-18 19:03:54] [init] Started Logger
+[2024-01-18 19:03:54] [init] Started Logger
+[2024-01-18 19:03:54] [init] Started Logger
+[2024-01-18 19:03:54] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E7E7', 'radio://0/80/2M/E7E7E7E701'}
+[2024-01-18 19:03:54] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-18 19:03:54] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-18 19:03:54] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-18 19:03:54] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-18 19:03:54] [INFO] []

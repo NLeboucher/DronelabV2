@@ -28,7 +28,7 @@ document.getElementById("ip").value = IP;
 
 // Load the Background Texture
 const textureLoader = new THREE.TextureLoader();
-textureLoader.load('assets/equirectangular_bg.png', function (texture) {
+textureLoader.load('static/assets/equirectangular_bg.png', function (texture) {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.background = texture;
 });
@@ -123,7 +123,7 @@ let axesHelper = new THREE.AxesHelper( 5 );
 scene.add( axesHelper );
 let drones = [];
 function loadDroneModel() {
-    loader.load('assets/drone.glb', (gltf) => {
+    loader.load('static/assets/drone.glb', (gltf) => {
         droneModel = gltf.scene;
         // add the model to the scene
         // scene.add(droneModel);
