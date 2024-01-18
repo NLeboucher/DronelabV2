@@ -18,8 +18,8 @@ def draw(img, corners, imgpts):
     return img
 
 
-nw = 9
-nh = 6
+nw = 4
+nh = 3
 
 
 criteria = (cv.TERM_CRITERIA_EPS + cv.TERM_CRITERIA_MAX_ITER, 30, 0.001)
