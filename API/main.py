@@ -1,5 +1,8 @@
 from API.swarmcontrol import SwarmControl
+from fastapi.middleware.cors import CORSMiddleware
+
 from API.logger import Logger
+from API.outputdict import OutputDict
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
@@ -14,7 +17,17 @@ else:
     from API.logger import Logger
     from API.move import Move, Velocity
 app = FastAPI()
-logger = Logger("log.txt",False)
+origins = [
+    "*",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+logger = Logger("log.txt",True)
 swarm = SwarmControl
 swarm.OpenLinks()
 @app.get("/")
@@ -48,8 +61,22 @@ async def GetEstimatedPositions():
     return swarm.All_GetEstimatedPositions()
 
 @app.post("/All_StartLinearMotion/")
-async def AllSetSpeed(args_arr : List[Velocity]):
+async def AllSetSpeed(args_arr: List[Velocity] ): #: OutputDict(List[Velocity],"Drones")
     return swarm.All_StartLinearMotion(args_arr)
+
+@app.post("/TestMax/")
+async def TestMax(args_arr: List[Velocity]):
+    try:
+        logger.info(f"TestMax input {args_arr}")
+
+        if(type(args_arr) == type(List[Velocity])):
+            logger.info("TestMax Victory{args_arr}")
+        else:
+            logger.info("TestMax Defeat{args_arr}")
+        return args_arr
+    except Exception as e:
+        logger.info(f"TestMax Error {e}")
+    
 
 @app.post("/All_MoveDistance/")
 async def All_MoveDistance(args_arr : List[Move]):

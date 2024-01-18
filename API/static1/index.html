@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drone Display</title>
+    <style>
+        body { margin: 0; 
+            background-color: #f0f0f0;
+			color: #000;
+			touch-action: none; }
+        canvas { display: block; }
+        myButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+        a {
+				color: #08e;
+			}
+        .selectBox {
+				border: 1px solid #55aaff;
+				background-color: rgba(75, 160, 255, 0.3);
+				position: fixed;
+			}
+    </style>
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
+</head>
+<body>
+    <button class="myButton" id="button1">Button 1</button>
+    <div id="info">
+        <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a>
+    </div>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/",
+                "DragControls": "https://unpkg.com/three@0.156.0/examples/jsm/controls/DragControls.js"                
+            }
+        }
+    </script>
+    
+    <script src="app.js" type="module"></script>
+</body>
+</html>

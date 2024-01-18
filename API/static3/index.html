@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - drag controls</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<style>
+			body {
+				background-color: #f0f0f0;
+				color: #444;
+			}
+			a {
+				color: #08f;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="info">
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - drag controls<br />
+			Use "Shift+Click" to add/remove objects to/from a group.<br />
+			Grouped objects can be transformed as a union.
+		</div>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/",
+					"DragControls": "https://unpkg.com/three@0.156.0/examples/jsm/controls/DragControls.js"                
+				}
+			}
+		</script>
+
+        <script src="app.js" type="module"></script>
+
+
+	</body>
+</html>

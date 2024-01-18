@@ -36,7 +36,7 @@ URIS = {
     'radio://0/28/2M/E7E7E7E703',
     'radio://0/80/2M/E7E7E7E701',
     'radio://0/27/2M/E7E7E7E702',
-    'radio://0/29/2M/E7E7E7E704',
+    'radio://0/80/2M/E7E7E7E7E7',
     # Add more URIs if you want more copters in the swarm
 }
 DRONES = []
