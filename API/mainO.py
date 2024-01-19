@@ -10,8 +10,37 @@ import mediapipe as mp
 import numpy as np
 import pyrealsense2 as rs
 import os, sys
+import uvicorn
+path = os.getcwd()
+folders = path.split("/")
+if("API" in folders):
+    path = "/".join(folders[:folders.index("API")+1])
+    print(path)
+    from swarmcontrol import SwarmControl
+    from logger import Logger
+    from move import Move, Velocity
+    from outputdict import OutputDict
+else:
+    Exception("Executed from Wrong folder, you need to be in DronelabV2")
 
+class ConnectionManager:
+    def __init__(self):
+        self._active_connections: list[WebSocket] = []
+
+    async def connect(self, websocket: WebSocket):
+        await websocket.accept()
+        self._active_connections.append(websocket)
+
+    def disconnect(self, websocket: WebSocket):
+        self._active_connections.remove(websocket)
+
+    async def sendCoordinates(self, message: str, websocket: WebSocket):
+        for connection in self._active_connections:
+            await connection.send_text(message)
+        
+manager = ConnectionManager()
 app = FastAPI()
+logger = Logger("logH.txt",True)
 
 path = os.getcwd()
 folders = path.split("/")
@@ -31,6 +60,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.mount(f"/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/HelloWorld/")
+async def read_root():
+    return {"message": "Welcome to the human pose API"}
+
+
 @app.get("/")
 async def get():
     return FileResponse('static/index.html')
@@ -88,23 +123,7 @@ async def websocket_endpoint(websocket: WebSocket):
     finally:
         await manager.disconnect(websocket)
         print("Websocket closed")
-class ConnectionManager:
-    def __init__(self):
-        self._active_connections: list[WebSocket] = []
 
-    async def connect(self, websocket: WebSocket):
-        await websocket.accept()
-        self._active_connections.append(websocket)
+def main(host="0.0.0.0", port=8001):
 
-    def disconnect(self, websocket: WebSocket):
-        self._active_connections.remove(websocket)
-
-    async def sendCoordinates(self, message: str, websocket: WebSocket):
-        for connection in self._active_connections:
-            await connection.send_text(message)
-        
-if __name__ == "__main__":
-    import uvicorn
-
-    manager = ConnectionManager()
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    uvicorn.run(app, host=host, port=port)

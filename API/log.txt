@@ -14,3 +14,124 @@
 [2024-01-18 19:03:54] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
 [2024-01-18 19:03:54] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
 [2024-01-18 19:03:54] [INFO] []
+[2024-01-18 20:06:26] [init] Started Logger
+[2024-01-18 20:06:26] [init] Started Logger
+[2024-01-18 20:06:26] [init] Started Logger
+[2024-01-18 20:06:26] [init] Started Logger
+[2024-01-18 20:06:26] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/80/2M/E7E7E7E7E7', 'radio://0/27/2M/E7E7E7E702'}
+[2024-01-18 20:06:26] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-18 20:06:26] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-18 20:06:26] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-18 20:06:26] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-18 20:06:26] [INFO] []
+[2024-01-18 20:06:51] [init] Started Logger
+[2024-01-18 20:06:51] [init] Started Logger
+[2024-01-18 20:06:51] [init] Started Logger
+[2024-01-18 20:06:51] [init] Started Logger
+[2024-01-18 20:06:51] [INFO] {'radio://0/80/2M/E7E7E7E7E7', 'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702'}
+[2024-01-18 20:06:51] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-18 20:06:51] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-18 20:06:51] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-18 20:06:51] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-18 20:06:51] [INFO] []
+[2024-01-18 20:07:48] [init] Started Logger
+[2024-01-18 20:07:48] [init] Started Logger
+[2024-01-18 20:07:48] [init] Started Logger
+[2024-01-18 20:07:48] [init] Started Logger
+[2024-01-18 20:07:48] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E7E7', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'}
+[2024-01-18 20:07:48] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-18 20:07:48] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-18 20:07:48] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-18 20:07:48] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-18 20:07:48] [INFO] []
+[2024-01-18 20:08:27] [init] Started Logger
+[2024-01-18 20:08:27] [init] Started Logger
+[2024-01-18 20:08:27] [init] Started Logger
+[2024-01-18 20:08:27] [init] Started Logger
+[2024-01-18 20:08:27] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E7E7'}
+[2024-01-18 20:08:27] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-18 20:08:27] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-18 20:08:27] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-18 20:08:27] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-18 20:08:27] [INFO] []
+[2024-01-18 20:09:17] [init] Started Logger
+[2024-01-18 20:09:17] [init] Started Logger
+[2024-01-18 20:09:17] [init] Started Logger
+[2024-01-18 20:09:17] [init] Started Logger
+[2024-01-18 20:09:17] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E7E7'}
+[2024-01-18 20:09:17] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-18 20:09:17] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-18 20:09:17] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-18 20:09:17] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-18 20:09:17] [INFO] []
+[2024-01-18 20:10:46] [init] Started Logger
+[2024-01-18 20:10:46] [init] Started Logger
+[2024-01-18 20:10:46] [init] Started Logger
+[2024-01-18 20:10:46] [init] Started Logger
+[2024-01-18 20:10:46] [INFO] {'radio://0/80/2M/E7E7E7E7E7', 'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E701'}
+[2024-01-18 20:10:49] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-18 20:10:49] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-18 20:10:49] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-18 20:10:49] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-18 20:10:49] [INFO] []
+[2024-01-18 20:11:23] [init] Started Logger
+[2024-01-18 20:11:23] [init] Started Logger
+[2024-01-18 20:11:23] [init] Started Logger
+[2024-01-18 20:11:23] [init] Started Logger
+[2024-01-18 20:11:23] [INFO] {'radio://0/80/2M/E7E7E7E7E7', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'}
+[2024-01-18 20:11:27] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-18 20:11:27] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-18 20:11:27] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-18 20:11:27] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-18 20:11:27] [INFO] []
+[2024-01-19 10:20:22] [init] Started Logger
+[2024-01-19 10:20:22] [init] Started Logger
+[2024-01-19 10:20:22] [init] Started Logger
+[2024-01-19 10:20:22] [init] Started Logger
+[2024-01-19 10:20:22] [INFO] {'radio://0/28/2M/E7E7E7E703', 'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E7E7', 'radio://0/80/2M/E7E7E7E701'}
+[2024-01-19 10:20:22] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-19 10:20:22] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-19 10:20:22] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-19 10:20:22] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-19 10:20:22] [INFO] []
+[2024-01-19 10:21:33] [INFO] root
+[2024-01-19 10:26:57] [init] Started Logger
+[2024-01-19 10:26:57] [init] Started Logger
+[2024-01-19 10:26:57] [init] Started Logger
+[2024-01-19 10:26:57] [init] Started Logger
+[2024-01-19 10:26:57] [INFO] {'radio://0/27/2M/E7E7E7E702', 'radio://0/80/2M/E7E7E7E7E7', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701'}
+[2024-01-19 10:26:57] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-19 10:26:57] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-19 10:26:57] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-19 10:26:57] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-19 10:26:57] [INFO] []
+[2024-01-19 10:33:59] [init] Started Logger
+[2024-01-19 10:33:59] [init] Started Logger
+[2024-01-19 10:33:59] [init] Started Logger
+[2024-01-19 10:33:59] [init] Started Logger
+[2024-01-19 10:33:59] [INFO] {'radio://0/80/2M/E7E7E7E701', 'radio://0/80/2M/E7E7E7E7E7', 'radio://0/27/2M/E7E7E7E702', 'radio://0/28/2M/E7E7E7E703'}
+[2024-01-19 10:33:59] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-19 10:33:59] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-19 10:33:59] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-19 10:33:59] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-19 10:33:59] [INFO] []
+[2024-01-19 11:38:04] [init] Started Logger
+[2024-01-19 11:38:04] [init] Started Logger
+[2024-01-19 11:38:04] [init] Started Logger
+[2024-01-19 11:41:02] [init] Started Logger
+[2024-01-19 11:41:02] [init] Started Logger
+[2024-01-19 11:41:02] [init] Started Logger
+[2024-01-19 11:44:34] [init] Started Logger
+[2024-01-19 11:44:34] [init] Started Logger
+[2024-01-19 11:44:34] [init] Started Logger
+[2024-01-19 11:44:46] [init] Started Logger
+[2024-01-19 11:44:46] [init] Started Logger
+[2024-01-19 11:44:46] [init] Started Logger
+[2024-01-19 11:44:46] [init] Started Logger
+[2024-01-19 11:44:46] [INFO] {'radio://0/80/2M/E7E7E7E7E7', 'radio://0/28/2M/E7E7E7E703', 'radio://0/80/2M/E7E7E7E701', 'radio://0/27/2M/E7E7E7E702'}
+[2024-01-19 11:44:46] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E7E7
+[2024-01-19 11:44:46] [INFO] Failed to connect to radio://0/28/2M/E7E7E7E703
+[2024-01-19 11:44:46] [INFO] Failed to connect to radio://0/80/2M/E7E7E7E701
+[2024-01-19 11:44:46] [INFO] Failed to connect to radio://0/27/2M/E7E7E7E702
+[2024-01-19 11:44:46] [INFO] []
+[2024-01-19 11:44:53] [INFO] root
