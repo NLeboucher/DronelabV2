@@ -126,4 +126,4 @@ async def websocket_endpoint(websocket: WebSocket):
 
 def main(host="0.0.0.0", port=8001):
 
-    uvicorn.run(app, host=host, port=port)
+    uvicorn.run("mainO:app", host=host, port=port)

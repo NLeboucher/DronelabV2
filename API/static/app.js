@@ -224,7 +224,7 @@ async function updatePositions() {
     drones.forEach(item => {
         // console.log(item.toString())
         item.model.position.set(item.position.x, item.position.z, item.position.y);
-        // console.log(item.worldPosition);
+        // console.log(item.worldPosition.x, item.worldPosition.y, item.worldPosition.z);
         // item.model.position.set(item.worldPosition.x, item.worldPosition.z,item.worldPosition.y);
     }); 
 }
@@ -307,7 +307,7 @@ function animate() {
         f=0;start=Date.now();
     }
     
-    // updatePositions();
+    updatePositions();
     animateDrones();
     InterpolateDroneMotion();
 
