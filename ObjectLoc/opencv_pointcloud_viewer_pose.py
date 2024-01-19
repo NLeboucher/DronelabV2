@@ -297,10 +297,13 @@ def ToHTransform(rotation_matrix, translation_vector):
     pose_mat[3,3] = 1
     return pose_mat
 
+rot_mat = None
+tvecs = None
 def to_word_coord(verts,img):
-
+    global rot_mat
+    global tvecs
     gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-    ret, corners = cv.findChessboardCorners(gray, (nw,nh),None,flags=(cv.CALIB_CB_FAST_CHECK))
+    ret, corners = cv.findChessboardCorners(gray, (nw,nh),None,flags=cv.CALIB_CB_FAST_CHECK)
     if ret == True:
         corners2 = cv.cornerSubPix(gray,corners,(11,11),(-1,-1),criteria)
         # Find the rotation and translation vectors.
@@ -311,6 +314,7 @@ def to_word_coord(verts,img):
         # rot_i = np.transpose(rvecs)
         # trans_i = - np.matmul(rot_i, tvecs)
         # T = ToHTransform(rot_i,trans_i)
+    if tvecs is not None:
         return np.matmul(verts - np.transpose(tvecs), rot_mat)
     return verts
     

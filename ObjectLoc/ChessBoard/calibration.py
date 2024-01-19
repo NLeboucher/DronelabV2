@@ -42,7 +42,8 @@ for fname in images:
 cv.destroyAllWindows()
 
 ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
-np.savez("B.npz",ret=ret, mtx=mtx, dist=dist, rvecs=rvecs, tvecs=tvecs)
+np.savez("B.npz", mtx=mtx, dist=dist)
+# np.savez("B.npz",ret=ret, mtx=mtx, dist=dist, rvecs=rvecs, tvecs=tvecs)
 
 fs = cv.FileStorage("B.yaml", cv.FILE_STORAGE_WRITE)
 fs.write("camera_matrix",mtx)

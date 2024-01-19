@@ -8,7 +8,7 @@ from utilities.Camera import *
 
 # Load previously saved data
 with np.load('B.npz') as X:
-    mtx, dist, _, _ = [X[i] for i in ('mtx','dist','rvecs','tvecs')]
+    mtx, dist = [X[i] for i in ('mtx','dist')]
 
 def draw(img, corners, imgpts):
     corner = corners[0].ravel().astype(int)
