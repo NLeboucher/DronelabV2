@@ -4,19 +4,22 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
-import os
+import os, sys
 import uvicorn
 path = os.getcwd()
 folders = path.split("/")
-if("API" in folders):
-    path = "/".join(folders[:folders.index("API")+1])
+if("DronelabV2" in folders):
+    path = "/".join(folders[:folders.index("DronelabV2")+1])
+    sys.path.insert(0, path)
+
     print(path)
-    from swarmcontrol import SwarmControl
-    from logger import Logger
-    from move import Move, Velocity
-    from outputdict import OutputDict
+    from API.logger import Logger
+    from API.move import Move, Velocity
+    from API.outputdict import OutputDict
+    from API.swarmcontrol import SwarmControl
 else:
     Exception("Executed from Wrong folder, you need to be in DronelabV2")
+
 
 app = FastAPI()
 origins = ["*"]
@@ -64,22 +67,9 @@ async def GetEstimatedPositions():
 async def AllSetSpeed(args_arr: List[Velocity] ): #: OutputDict(List[Velocity],"Drones")
     return swarm.All_StartLinearMotion(args_arr)
 
-@app.post("/TestMax/")
-async def TestMax(args_arr: List[Velocity]):
-    try:
-        logger.info(f"TestMax input {args_arr}")
-
-        if(type(args_arr) == type(List[Velocity])):
-            logger.info("TestMax Victory{args_arr}")
-        else:
-            logger.info("TestMax Defeat{args_arr}")
-        return args_arr
-    except Exception as e:
-        logger.info(f"TestMax Error {e}")
-    
-
 @app.post("/All_MoveDistance/")
 async def All_MoveDistance(args_arr : List[Move]):
+    logger.info(f"MoveDistance {args_arr}")
     return swarm.All_MoveDistance(args_arr)
 
 def main(host="0.0.0.0", port=8000):

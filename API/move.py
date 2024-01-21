@@ -8,11 +8,12 @@ class Move(BaseModel):
     def Export(self):
         return [self.x,self.y,self.z,self.yaw_rate,self.velocity]
     def Import(moveArr):
-        self.x = moveArr[0]
-        self.y = moveArr[1]
-        self.z = moveArr[2]
-        self.yaw_rate = moveArr[3]
-        self.velocity = moveArr[4]
+        x = moveArr[0]
+        y = moveArr[1]
+        z = moveArr[2]
+        yaw_rate = moveArr[3]
+        velocity = moveArr[4]
+        return Move(x=x,y=y,z=z,yaw_rate=yaw_rate,velocity=velocity)
 
 class Velocity(BaseModel):
     Vx:float

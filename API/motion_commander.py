@@ -267,7 +267,7 @@ class MotionCommander:
         time.sleep(flight_time)
         self.stop()
 
-    def move_distance(self, distance_x_m, distance_y_m, distance_z_m,
+    def move_distance(self, distance_x_m, distance_y_m, distance_z_m,yaw=0.0,
                       velocity=VELOCITY):
         """
         Move in a straight line.
@@ -283,14 +283,18 @@ class MotionCommander:
         """
         distance = math.sqrt(distance_x_m * distance_x_m +
                              distance_y_m * distance_y_m +
-                             distance_z_m * distance_z_m)
+                             distance_z_m * distance_z_m
+                             )
+        if(velocity == 0):
+            velocity = VELOCITY
         flight_time = distance / velocity
 
         velocity_x = velocity * distance_x_m / distance
         velocity_y = velocity * distance_y_m / distance
         velocity_z = velocity * distance_z_m / distance
-
-        self.start_linear_motion(velocity_x, velocity_y, velocity_z)
+        yawvelocity = velocity * yaw / distance
+        logger.info(f"move_distance with ({velocity_x, velocity_y, velocity_z, yawvelocity}) for {flight_time} seconds")
+        self.start_linear_motion(velocity_x, velocity_y, velocity_z,rate_yaw=yawvelocity)
         time.sleep(flight_time)
         self.stop()
 

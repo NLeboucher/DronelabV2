@@ -7,26 +7,24 @@ from cflib.crazyflie.swarm import CachedCfFactory
 from cflib.positioning.position_hl_commander import PositionHlCommander
 from typing import List
 import os
+import os, sys
+import uvicorn
 path = os.getcwd()
-path = path.split("/")[::-1][0]
-print(path)
-if(path == "API"):
-    from logger import Logger
-    from move import Move, Velocity
-    from outputdict import OutputDict
-    from enums.option import Option   
-    from quad import Quad
-    from swarm import Swarm
-    from motion_commander import MotionCommander
-
-else:
+folders = path.split("/")
+print(folders)
+if("DronelabV2" in folders):
+    path = "/".join(folders[:folders.index("DronelabV2")+1])
+    print(path)
     from API.logger import Logger
     from API.move import Move, Velocity
     from API.outputdict import OutputDict
     from API.enums.option import Option   
-    from API.quad import Quad 
+    from API.quad import Quad
     from API.swarm import Swarm
-    from API.motion_commander import MotionCommander
+    from motion_commander import MotionCommander
+else:
+    Exception("Executed from Wrong folder, you need to be in DronelabV2")
+
 from typing import List
 
 debug = True
@@ -193,7 +191,7 @@ class SwarmControl:
         args= Move.Import(args_dict)
         logger.info(f"start_linear_motion with{args.x, args.y, args.z, args.yaw_rate} for {scf._link_uri}")
         # commanders[scf] = MotionCommander(scf,default_height=DefaultHeight,isflying=True)
-        commanders[scf].move_distance(distance_x_m=args.x, distance_y_m=args.y, distance_z_m= args.z,velocity=args.velocity)
+        commanders[scf].move_distance(distance_x_m=args.x, distance_y_m=args.y, distance_z_m= args.z,yaw=args.yaw_rate,velocity=args.velocity)
 
     def Parallelize_safe(func,arguments:dict = {}):
         global DRONES, URIS, factory, SWARM

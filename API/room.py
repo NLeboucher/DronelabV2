@@ -1,11 +1,14 @@
-import os
+
+import os, sys
+import uvicorn
 path = os.getcwd()
-path = path.split("/")[::-1][0]
-print(path)
-if(path == "API"):
-    from logger import Logger
-else:
+folders = path.split("/")
+if("DronelabV2" in folders):
+    path = "/".join(folders[:folders.index("DronelabV2")+1])
+    sys.path.insert(0, path)
     from API.logger import Logger
+else:
+    Exception("Executed from Wrong folder, you need to be in DronelabV2")
 logger = Logger("log.txt")
 from scipy.spatial import ConvexHull, Delaunay
 import pygame as pg
