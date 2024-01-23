@@ -100,6 +100,7 @@ install virtualenv if you dont have it:
 
 ~~~
 python3.10 -m pip install virtualenv 
+
 ~~~
 
 clone the repository
@@ -109,8 +110,13 @@ git clone git@github.com:NLeboucher/DronelabV2.git
 activate the virtual env from the root of the project
 ~~~
 cd DRONELABV2
-python3 -m virtualenv venv
-pip install cflib pygame fastapi uvicorn
+python3.10 -m virtualenv venv
+sudo apt install python3.10-venv
+source venv/bin/activate
+~~~
+install the python dependencies
+~~~
+pip install cflib pygame fastapi uvicorn mediapipe opencv-python pyrealsense
 ~~~
 
 Now you have all the depedencies
