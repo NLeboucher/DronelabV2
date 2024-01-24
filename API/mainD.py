@@ -1,5 +1,6 @@
 from fastapi.middleware.cors import CORSMiddleware
-from ratelimit import RateLimitMiddleware, Rule
+
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
@@ -29,12 +30,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
     
-)
-app.add_middleware(
-    RateLimitMiddleware,
-    config={
-        r"^/user": [Rule(second=5, block_time=60)],
-    },
 )
 logger = Logger("logD.txt",True)
 swarm = SwarmControl
