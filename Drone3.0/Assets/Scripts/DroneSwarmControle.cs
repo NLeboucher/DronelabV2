@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+
 using UnityEngine;
 using static DroneBehavior;
 
@@ -18,6 +18,7 @@ public class DroneSwarmControle : MonoBehaviour
 
 
     private List<GameObject> droneObjects = new List<GameObject>(); // Liste pour stocker les GameObjects des drones
+    
 
     public static bool droneConected = false;
     public static List<DroneInformation> droneInformation = null; // Liste pour stocker les informations des drones
@@ -91,7 +92,6 @@ public class DroneSwarmControle : MonoBehaviour
 
     }
 
-    //
     void ControlAPI()
     {
         if (APIRequest)
@@ -163,9 +163,18 @@ public class DroneSwarmControle : MonoBehaviour
         if (droneAPIVelocity && droneConected && droneInformation != null && droneInformation.Count > 0 && droneInformation[0].takeoff && !isCoroutineSetVelocity)
         {
             StartCoroutine(APIHelper.SetVelocityToAPI());
-        }
 
+            if (selectedDrone != null)
+            {
+                if (selectedDrone.droneVelocity.vitesseDroneX == 0 && selectedDrone.droneVelocity.vitesseDroneY == 0 && selectedDrone.droneVelocity.vitesseDroneZ == 0)
+                {
+                    droneAPIVelocity = false;
+                }
+            }
+        }
         
+
+
     }
 
     void UpdateDroneVelocityTowardsGoTo(DroneInformation selectedDrone, Vector3 GoToPosition, float maxSpeed)
@@ -180,6 +189,13 @@ public class DroneSwarmControle : MonoBehaviour
             selectedDrone.dronePosition.positionDroneZ
         );
 
+        // Assume droneRotation is in Euler angles and convert it to a Quaternion
+        Quaternion droneRotation = Quaternion.Euler(
+            0,
+            selectedDrone.dronePosition.rotationDroneYaw,
+            0
+        );
+
         // Calculate the direction towards the target position
         Vector3 directionToTarget = (GoToPosition - dronePosition);
 
@@ -190,25 +206,21 @@ public class DroneSwarmControle : MonoBehaviour
             selectedDrone.droneVelocity.vitesseDroneX = 0;
             selectedDrone.droneVelocity.vitesseDroneY = 0;
             selectedDrone.droneVelocity.vitesseDroneZ = 0;
+            StartCoroutine(APIHelper.SetVelocityToAPI());
             StartGoTO = false;
+            return; // Exit the function as no further calculation is needed
         }
-        directionToTarget = directionToTarget.normalized;
-        //if the direction vector is a local vector add this : 
-
-        /*// Calculate the direction towards the target position
-        Vector3 directionToTarget = (targetPosition - dronePosition);
+        directionToTarget = (GoToPosition - dronePosition).normalized;
 
         // Convert the direction to the drone's local space
-        Vector3 directionToLocalSpace = droneRotation.Inverse() * directionToTarget;
-        Vector3 desiredVelocityLocal = directionToLocalSpace.normalized * maxSpeed;*/
-
+        Vector3 directionToLocalSpace = Quaternion.Inverse(droneRotation) * directionToTarget;
 
         // Scale the direction vector to the maximum speed
-        Vector3 desiredVelocity = directionToTarget * maxSpeed ;
+        Vector3 desiredVelocityLocal = directionToLocalSpace.normalized * maxSpeed;
 
         // Update the drone's velocity in DroneInformation
-        selectedDrone.droneVelocity.vitesseDroneX = desiredVelocity.x;
-        selectedDrone.droneVelocity.vitesseDroneY = desiredVelocity.y;
-        selectedDrone.droneVelocity.vitesseDroneZ = desiredVelocity.z;
+        selectedDrone.droneVelocity.vitesseDroneX = desiredVelocityLocal.x;
+        selectedDrone.droneVelocity.vitesseDroneY = desiredVelocityLocal.y;
+        selectedDrone.droneVelocity.vitesseDroneZ = desiredVelocityLocal.z;
     }
 }

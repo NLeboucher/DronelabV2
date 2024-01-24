@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
+using Newtonsoft.Json;
 
 // this script is to test the post request 
 // it is not used in the project
@@ -11,6 +12,7 @@ using UnityEngine.Networking;
 public class PostHelper : MonoBehaviour
 {
     [SerializeField] bool post = false;
+    public static string APILocalhost = "192.168.2.159:8000";
     // Start is called before the first frame update
     void Start()
     {
@@ -47,12 +49,17 @@ public class PostHelper : MonoBehaviour
     {
         if (post)
         {
-            StartCoroutine(PostData());
+            StartCoroutine(SetVelocityToAPI());
             post = false;
         }
     }
-    IEnumerator PostData()
+    public static IEnumerator SetVelocityToAPI()
     {
+        DroneSwarmControle.isCoroutineSetVelocity = true;
+        Debug.Log("Début de la Coroutine SetVelocityToAPI");
+
+        string url = "http://" + APILocalhost + "/All_StartLinearMotion";
+        //string url = "http://" + APILocalhost + "/TestMax";
 
         if (DroneSwarmControle.droneInformation == null)
         {
@@ -60,7 +67,7 @@ public class PostHelper : MonoBehaviour
             yield break; // Arrête la coroutine si droneInformation est null
         }
 
-        DroneSpeedDataList droneSpeedDataList = new DroneSpeedDataList();
+        List<DroneSpeedData> droneSpeedDataList = new List<DroneSpeedData>();
 
         for (int i = 0; i < DroneSwarmControle.droneInformation.Count; i++)
         {
@@ -71,15 +78,17 @@ public class PostHelper : MonoBehaviour
                 Vz = DroneSwarmControle.droneInformation[i].droneVelocity.vitesseDroneZ,
                 yaw_rate = DroneSwarmControle.droneInformation[i].droneVelocity.vitesseDroneYaw
             };
-            droneSpeedDataList.drones.Add(data);
+            droneSpeedDataList.Add(data);
         }
 
-        // Serialize the drone speed data list to JSON
-        string json = JsonUtility.ToJson(droneSpeedDataList);
+        // Serialize the list directly to JSON using Newtonsoft.Json
+        string json = JsonConvert.SerializeObject(droneSpeedDataList, Formatting.Indented);
+
+
         Debug.Log("json: " + json);
 
         // Create a new UnityWebRequest for sending a POST request
-        UnityWebRequest www = new UnityWebRequest("https://httpbin.org/post", "POST");
+        UnityWebRequest www = new UnityWebRequest(url, "POST");
 
         // Convert the JSON string to a byte array
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
@@ -108,6 +117,10 @@ public class PostHelper : MonoBehaviour
 
         // Dispose of the web request
         www.Dispose();
+        yield return new WaitForSeconds(0.2f);
+        DroneSwarmControle.isCoroutineSetVelocity = false;
+        Debug.Log("Fin de la Coroutine SetVelocityToAPI");
+
     }
 
 

@@ -9,12 +9,15 @@ using static DroneSwarmControle;
 using Newtonsoft.Json;
 using System.Globalization;
 
+
+
+// new feature to add : if openlinks dosent work, try to do just / it should reset the api
 public class APIHelper : MonoBehaviour
 {
-    
-    //public static string APILocalhost = "172.21.73.34:8080";
-    //public static string APILocalhost = "192.168.1.29:8000";
-    public static string APILocalhost = "172.21.72.165:8000";
+
+    public static string APILocalhost = "172.20.10.3:8000";
+    //public static string APILocalhost = "192.168.2.233:8000";
+    //public static string APILocalhost = "172.21.72.165:8000";
 
     #region API Get Classes
     public static IEnumerator CheckDroneConnection()
@@ -159,10 +162,12 @@ public class APIHelper : MonoBehaviour
                     //Debug.Log( "Type de position "+dronePosition.Positions[droneInformation[i].droneIP][0].GetType());
                     if (dronePosition.Positions.ContainsKey(droneInformation[i].droneIP))
                     {
+                        //Warning !!!! i inversed the y and z axis since unity has a different axis system than the API
                         DroneSwarmControle.droneInformation[i].dronePosition.positionInfo = true;
                         DroneSwarmControle.droneInformation[i].dronePosition.positionDroneX = dronePosition.Positions[droneInformation[i].droneIP][0];
                         DroneSwarmControle.droneInformation[i].dronePosition.positionDroneY = dronePosition.Positions[droneInformation[i].droneIP][1];
-                        DroneSwarmControle.droneInformation[i].dronePosition.positionDroneZ = dronePosition.Positions[droneInformation[i].droneIP][2]; 
+                        DroneSwarmControle.droneInformation[i].dronePosition.positionDroneZ = dronePosition.Positions[droneInformation[i].droneIP][2];
+                        DroneSwarmControle.droneInformation[i].dronePosition.rotationDroneYaw = dronePosition.Positions[droneInformation[i].droneIP][3];
                     }
                 }
             }
@@ -215,7 +220,8 @@ public class APIHelper : MonoBehaviour
         DroneSwarmControle.isCoroutineSetVelocity = true;
         Debug.Log("Début de la Coroutine SetVelocityToAPI");
 
-        string url = "http://" + APILocalhost + "/all_startlinearmotion";
+        string url = "http://" + APILocalhost + "/All_StartLinearMotion";
+        //string url = "http://" + APILocalhost + "/TestMax";
 
         if (DroneSwarmControle.droneInformation == null)
         {
@@ -223,7 +229,7 @@ public class APIHelper : MonoBehaviour
             yield break; // Arrête la coroutine si droneInformation est null
         }
 
-        DroneSpeedDataList droneSpeedDataList = new DroneSpeedDataList();
+        List<DroneSpeedData> droneSpeedDataList = new List<DroneSpeedData>();
 
         for (int i = 0; i < DroneSwarmControle.droneInformation.Count; i++)
         {
@@ -234,12 +240,14 @@ public class APIHelper : MonoBehaviour
                 Vz = DroneSwarmControle.droneInformation[i].droneVelocity.vitesseDroneZ,
                 yaw_rate = DroneSwarmControle.droneInformation[i].droneVelocity.vitesseDroneYaw
             };
-            droneSpeedDataList.drones.Add(data);
+            droneSpeedDataList.Add(data);
         }
 
-        // Serialize the drone speed data list to JSON
-        string json = JsonUtility.ToJson(droneSpeedDataList);
-        Debug.Log("json: " + json);
+        // Serialize the list directly to JSON using Newtonsoft.Json
+        string json = JsonConvert.SerializeObject(droneSpeedDataList, Formatting.Indented);
+
+
+        //Debug.Log("json: " + json);
 
         // Create a new UnityWebRequest for sending a POST request
         UnityWebRequest www = new UnityWebRequest(url, "POST");
@@ -274,14 +282,14 @@ public class APIHelper : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         DroneSwarmControle.isCoroutineSetVelocity = false;
         Debug.Log("Fin de la Coroutine SetVelocityToAPI");
-    
+
     }
 
 
 
-    
 
-    public static IEnumerator SetGoToAPI (DroneInformation[] droneInformation, int GoToX, int GoToY, int GoToZ, int droneSpeed)
+
+/*    public static IEnumerator SetGoToAPI (DroneInformation[] droneInformation, int GoToX, int GoToY, int GoToZ, int droneSpeed)
     {
         if (droneInformation != null)
         {
@@ -317,7 +325,7 @@ public class APIHelper : MonoBehaviour
             Debug.LogError("droneInformation is null");
         }
         yield return new WaitForSeconds(0.2f);
-    }
+    }*/
 
 
 

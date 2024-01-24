@@ -63,7 +63,6 @@ public class DroneSpeedData
 [System.Serializable]
 public class DroneSpeedDataList
 {
-    public List<DroneSpeedData> drones = new List<DroneSpeedData>();
+    public List<DroneSpeedData> Velocity = new List<DroneSpeedData>();
 }
-
 
