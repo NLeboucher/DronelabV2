@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drone Display</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        myButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    Here is the drone display, you can connect to the drone API and see the drones moving around in real time.
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/",
+                "DragControls": "https://unpkg.com/three@0.156.0/examples/jsm/controls/DragControls.js"
+            }
+        }
+    </script>
+    <!-- <canvas id="canvas"></canvas> -->
+    
+    <script src="../static/staticLandmarks/app.js" type="module"></script>
+</body>
+</html>

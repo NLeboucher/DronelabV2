@@ -5,6 +5,7 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 import asyncio
+from threading import Thread, Lock
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -13,6 +14,10 @@ import os, sys
 import uvicorn
 path = os.getcwd()
 folders = path.split("/")
+calibrate = False
+calibrate_lock = Lock()
+stop = False
+stop_lock = Lock()
 if("DronelabV2" in folders):
     path = "/".join(folders[:folders.index("DronelabV2")+1])
     sys.path.insert(0, path)
@@ -40,7 +45,7 @@ class ConnectionManager:
         
 manager = ConnectionManager()
 app = FastAPI()
-logger = Logger("logH.txt",True)
+logger = Logger("logAAAAAA.txt",True)
 
 print(f"{path}/API/static")
 origins = ["*"]
@@ -52,7 +57,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.mount(f"/static", StaticFiles(directory="API/static"), name="static")
-
+app.mount("/staticLandmarks", StaticFiles(directory="API/static/staticLandmarks"), name="static")
 @app.get("/HelloWorld/")
 async def read_root():
     return {"message": "Welcome to the human pose API"}
@@ -62,119 +67,120 @@ async def read_root():
 async def get():
     return FileResponse('API/static/index.html')
 
+@app.get("/StaticLandmark/")
+async def getTest():
+    logger.info("StaticLandmark entered")
+    file_path = os.path.abspath("static/staticLandmarks/index.html")
+    logger.info(file_path)
+    return FileResponse("API/static/staticLandmarks/index.html")
+
+
 @app.get("/calibrate")
 async def calibrate():
-    config = rs.config()
-    pipeline = rs.pipeline()
-    pipeline.start(config)
+    global calibrate
+    with calibrate_lock:
+        calibrate = True
+@app.get("/stop")
+async def stop():
+    global stop
+    with stop_lock:
+        stop = True
+async def websocket_thread(websocket: WebSocket):
+    async def connect(websocket: WebSocket):
+        await manager.connect(websocket)
 
-    # Get stream profile and camera intrinsics
-    profile = pipeline.get_active_profile()
-    depth_profile = rs.video_stream_profile(profile.get_stream(rs.stream.depth))
-    depth_intrinsics = depth_profile.get_intrinsics()
-    w, h = depth_intrinsics.width, depth_intrinsics.height
-    # Get camera intrinsics from the profile
-    intr = profile.get_stream(rs.stream.color).as_video_stream_profile().get_intrinsics()
-    camera_matrix = np.array([[intr.fx, 0, intr.ppx],
-                            [0, intr.fy, intr.ppy],
-                            [0, 0, 1]])
-    dist_coeffs = np.array(intr.coeffs)
+    async def disconnect(websocket: WebSocket):
+        await manager.disconnect(websocket)
 
-    nw = 4
-    nh = 3
-    square_size = 0.0505  # Size of a chessboard square in meters
+    async def websocket_endpoint(websocket: WebSocket):
+        await manager.connect(websocket)
+        try:
+        # Configure RealSense pipeline
+            pipeline = rs.pipeline()
+            config = rs.config()
+            config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
+            config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
 
-    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
-    #description des points du chessboard
-    objp = np.zeros((nw*nh,3), np.float32)
-    objp[:,:2] = np.mgrid[0:nw,0:nh].T.reshape(-1,2)
-    objp *= square_size
+            # Start the RealSense pipeline
+            pipeline.start(config)
+            align = rs.align(rs.stream.color)
 
-    rot_mat = None
-    tvecs = None
-    frames = pipeline.wait_for_frames()
+            # Initiate holistic model
+            mp_holistic = mp.solutions.holistic
+            with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
+                while True:
+                    frames = pipeline.wait_for_frames()
+                    aligned_frames = align.process(frames)
+                    color_frame = aligned_frames.get_color_frame()
+                    depth_frame = aligned_frames.get_depth_frame()
 
-    color_frame = frames.get_color_frame()
+                    if not color_frame or not depth_frame:
+                        continue
 
-    color_image = np.asanyarray(color_frame.get_data())
+                    depth_intrin = depth_frame.profile.as_video_stream_profile().intrinsics
+                    frame = np.asanyarray(color_frame.get_data())
+                    image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                    image.flags.writeable = False
 
-    rot_mat, tvecs = to_word_coord(color_image,nw,nh,criteria,objp,camera_matrix,dist_coeffs)
-    print(rot_mat)
-    print(tvecs)
-    return tvecs
+                    results = holistic.process(image)
+                    with calibrate_lock:
+                        if(calibrate):
+                            color_image = np.asanyarray(color_frame.get_data())
+                            to_word_coord(color_image)
+                            calibrate = False
+                        else:
 
-def to_word_coord(img,nw,nh,criteria,objp,camera_matrix,dist_coeffs):
+                            for landmarks in [results.pose_landmarks]:
+                                if landmarks:
+                                    for landmark_id, landmark in enumerate(landmarks.landmark):
+                                        pixel_x = int(landmark.x * color_frame.width)
+                                        pixel_y = int(landmark.y * color_frame.height)
+                                        if 0 <= pixel_x < depth_frame.width and 0 <= pixel_y < depth_frame.height:
+                                            depth = depth_frame.get_distance(pixel_x, pixel_y)
+                                            point = rs.rs2_deproject_pixel_to_point(depth_intrin, [pixel_x, pixel_y], depth)
+                                            x, y, z = point
+                                            await websocket.send_text(f"Landmark {landmark_id}: X={x}, Y={y}, Z={z}")
+
+                    if cv2.waitKey(1) & 0xFF == ord('q'):
+                        break
+
+            pipeline.stop()
+        except Exception as e:
+            print(e)
+        finally:
+            await manager.disconnect(websocket)
+            print("Websocket closed")
+    # loop = asyncio.new_event_loop()
+    # asyncio.set_event_loop(loop)
+    # loop.run_until_complete(websocket_endpoint(websocket))
+rot_mat = None
+tvecs = None
+def to_word_coord(img):
     global rot_mat
     global tvecs
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-    ret, corners = cv2.findChessboardCorners(gray, (nw,nh),None,flags=cv2.CALIB_CB_FAST_CHECK)
+    ret, corners = cv2.findChessboardCorners(gray, (nw,nh),None,flags=cv2.ADAPTIVE_THRESH_GAUSSIAN_C)
     if ret == True:
-        corners2 = cv2.cornerSubPix(gray,corners,(11,11),(-1,-1),criteria)
+        corners2 = cv.cornerSubPix(gray,corners,(11,11),(-1,-1),criteria)
         # Find the rotation and translation vectors.
         ret,rvecs, tvecs = cv2.solvePnP(objp, corners2, camera_matrix, dist_coeffs)
 
         rot_mat,_ = cv2.Rodrigues(rvecs)
 
-    
-
+        # rot_i = np.transpose(rvecs)
+        # trans_i = - np.matmul(rot_i, tvecs)
+        # T = ToHTransform(rot_i,trans_i)
     # if tvecs is not None:
-    #     # apply the rotation and translation vectors to the vertices
     #     return np.matmul(verts - np.transpose(tvecs), rot_mat)
-    return  rot_mat, tvecs
+    # return verts
 @app.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
-    await manager.connect(websocket)
-    try:
-    # Configure RealSense pipeline
-        pipeline = rs.pipeline()
-        config = rs.config()
-        config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
-        config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
-
-        # Start the RealSense pipeline
-        pipeline.start(config)
-        align = rs.align(rs.stream.color)
-
-        # Initiate holistic model
-        mp_holistic = mp.solutions.holistic
-        with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
-            while True:
-                frames = pipeline.wait_for_frames()
-                aligned_frames = align.process(frames)
-                color_frame = aligned_frames.get_color_frame()
-                depth_frame = aligned_frames.get_depth_frame()
-
-                if not color_frame or not depth_frame:
-                    continue
-
-                depth_intrin = depth_frame.profile.as_video_stream_profile().intrinsics
-                frame = np.asanyarray(color_frame.get_data())
-                image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                image.flags.writeable = False
-
-                results = holistic.process(image)
-
-                for landmarks in [results.pose_landmarks]:
-                    if landmarks:
-                        for landmark_id, landmark in enumerate(landmarks.landmark):
-                            pixel_x = int(landmark.x * color_frame.width)
-                            pixel_y = int(landmark.y * color_frame.height)
-                            if 0 <= pixel_x < depth_frame.width and 0 <= pixel_y < depth_frame.height:
-                                depth = depth_frame.get_distance(pixel_x, pixel_y)
-                                point = rs.rs2_deproject_pixel_to_point(depth_intrin, [pixel_x, pixel_y], depth)
-                                x, y, z = point
-                                await websocket.send_text(f"Landmark {landmark_id}: X={x}, Y={y}, Z={z}")
-
-                if cv2.waitKey(1) & 0xFF == ord('q'):
-                    break
-
-        pipeline.stop()
-    except Exception as e:
-        print(e)
-    finally:
-        await manager.disconnect(websocket)
-        print("Websocket closed")
-
+async def websocket_handler(websocket: WebSocket):
+    with stop_lock:
+        stop = False
+    logger.info("websocket_handling")
+    # Start the websocket handling in a separate thread
+    thread = Thread(target=websocket_thread, args=(websocket,))
+    thread.start()
 def main(host="0.0.0.0", port=8001):
 
     uvicorn.run("mainO:app", host=host, port=port)

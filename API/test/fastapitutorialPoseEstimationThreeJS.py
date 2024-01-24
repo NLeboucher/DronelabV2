@@ -29,6 +29,8 @@ import mediapipe as mp
 import numpy as np
 import pyrealsense2 as rs
 import threading
+from threading import Thread, Lock
+
 import queue
 
 app = FastAPI()
@@ -36,6 +38,13 @@ port = 8002
 IP = "localhost"
 results_queue = queue.Queue()
 
+# state variables
+calibrate = False
+calibrate_lock = Lock()
+stop = False
+stop_lock = Lock()
+
+# mount static files to /static for web server
 app.mount(f"/static", StaticFiles(directory="./static"), name="static")
 
 class ConnectionManager:
@@ -88,6 +97,7 @@ async def start_broadcasting():
     asyncio.create_task(manager.broadcast_landmarks())
 
 def pose_estimation_thread():
+    print("pose_estimation_thread started")
     pipeline = rs.pipeline()
     config = rs.config()
     config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
@@ -103,7 +113,7 @@ def pose_estimation_thread():
                 aligned_frames = align.process(frames)
                 color_frame = aligned_frames.get_color_frame()
                 depth_frame = aligned_frames.get_depth_frame()
-
+                print("got frames")
                 if not color_frame or not depth_frame:
                     continue
 
@@ -132,7 +142,7 @@ def pose_estimation_thread():
         finally:
             pipeline.stop()
 
-threading.Thread(target=pose_estimation_thread, daemon=True).start()
+Thread(target=pose_estimation_thread, daemon=True).start()
 
 if __name__ == "__main__":
     import uvicorn
