@@ -112,22 +112,13 @@ class Swarm:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.close_links()
-    boule = True
-    log_config=None
+
     def __get_estimated_position(self, scf):
-        global boule, log_config
-        if(boule):
-            log_config = LogConfig(name='stateEstimate', period_in_ms=10)
-            log_config.add_variable('stateEstimate.x', 'float')
-            log_config.add_variable('stateEstimate.y', 'float')
-            log_config.add_variable('stateEstimate.z', 'float')
-            log_config.add_variable('stateEstimate.yaw', 'float')
-            boule = False
-        # log_config = LogConfig(name='stateEstimate', period_in_ms=10)
-        # log_config.add_variable('stateEstimate.x', 'float')
-        # log_config.add_variable('stateEstimate.y', 'float')
-        # log_config.add_variable('stateEstimate.z', 'float')
-        # log_config.add_variable('stateEstimate.yaw', 'float')
+        log_config = LogConfig(name='stateEstimate', period_in_ms=10)
+        log_config.add_variable('stateEstimate.x', 'float')
+        log_config.add_variable('stateEstimate.y', 'float')
+        log_config.add_variable('stateEstimate.z', 'float')
+        log_config.add_variable('stateEstimate.yaw', 'float')
 
         with SyncLogger(scf, log_config) as logger:
             for entry in logger:
@@ -137,6 +128,7 @@ class Swarm:
                 yaw = entry[1]['stateEstimate.yaw']
                 self._positions[scf.cf.link_uri] = SwarmPosition(x, y, z, yaw)
                 break
+        log_config.delete()
 
     def get_estimated_positions(self):
         """
