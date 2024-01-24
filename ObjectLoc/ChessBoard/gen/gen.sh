@@ -1,0 +1,1 @@
+python gen_pattern.py -o chessboard.svg --rows 5 --columns 4 --type checkerboard --square_size 20
