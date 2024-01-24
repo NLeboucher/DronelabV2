@@ -112,13 +112,22 @@ class Swarm:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.close_links()
-
+    boule = True
+    log_config=None
     def __get_estimated_position(self, scf):
-        log_config = LogConfig(name='stateEstimate', period_in_ms=10)
-        log_config.add_variable('stateEstimate.x', 'float')
-        log_config.add_variable('stateEstimate.y', 'float')
-        log_config.add_variable('stateEstimate.z', 'float')
-        log_config.add_variable('stateEstimate.yaw', 'float')
+        global boule, log_config
+        if(boule):
+            log_config = LogConfig(name='stateEstimate', period_in_ms=10)
+            log_config.add_variable('stateEstimate.x', 'float')
+            log_config.add_variable('stateEstimate.y', 'float')
+            log_config.add_variable('stateEstimate.z', 'float')
+            log_config.add_variable('stateEstimate.yaw', 'float')
+            boule = False
+        # log_config = LogConfig(name='stateEstimate', period_in_ms=10)
+        # log_config.add_variable('stateEstimate.x', 'float')
+        # log_config.add_variable('stateEstimate.y', 'float')
+        # log_config.add_variable('stateEstimate.z', 'float')
+        # log_config.add_variable('stateEstimate.yaw', 'float')
 
         with SyncLogger(scf, log_config) as logger:
             for entry in logger:
@@ -136,7 +145,7 @@ class Swarm:
         """
         self.parallel_safe(self.__get_estimated_position)
         return self._positions
-
+    
     def __wait_for_position_estimator(self, scf):
         log_config = LogConfig(name='Kalman Variance', period_in_ms=500)
         log_config.add_variable('kalman.varPX', 'float')

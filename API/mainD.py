@@ -45,7 +45,7 @@ async def read_root():
 async def OpenLinks():
     logger.info("OpenLinks")
     return swarm.OpenLinks()
-
+    
 @app.get("/CloseLinks/")
 async def CloseLinks():
     logger.info("CloseLinks")
@@ -74,4 +74,4 @@ async def All_MoveDistance(args_arr : List[Move]):
     return swarm.All_MoveDistance(args_arr)
 
 def main(host="0.0.0.0", port=8000):
-    uvicorn.run("mainD:app", host=host, port=port)
+    uvicorn.run("mainD:app", host=host, port=port, workers=1, limit_concurrency=5)
