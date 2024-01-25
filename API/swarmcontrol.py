@@ -1,5 +1,4 @@
 import time
-
 import cflib.crtp
 from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
 from cflib.crazyflie import Crazyflie
@@ -11,10 +10,9 @@ import os, sys
 import uvicorn
 path = os.getcwd()
 folders = path.split("/")
-print(folders)
 if("DronelabV2" in folders):
     path = "/".join(folders[:folders.index("DronelabV2")+1])
-    print(path)
+    print("found: ",path)
     from API.logger import Logger
     from API.move import Move, Velocity
     from API.outputdict import OutputDict
@@ -47,19 +45,20 @@ commanders = dict()
 class SwarmControl:
 
     def __init__(self, default_height=0.3, default_z_speed=0.2):
-        # global SWARM,factory, DRONES, commander, DefaultZSpeed, DefaultHeight, positions
-        DRONES = []
+        global SWARM,factory, DRONES, commander, DefaultZSpeed, DefaultHeight, positions
+        self.DRONES = []
         # SWARM = None
         # factory = None
+        self.factory = factory
         DefaultZSpeed = default_height
         DefaultHeight = default_z_speed
-        positions = dict()
+        self.positions = dict()
     def get_swarm():
         return SWARM
     
-    def OpenLinks():
+    def OpenLinks(self,):
         global SWARM, URIS, factory, DRONES
-        DRONES = []
+        self.DRONES = []
         cflib.crtp.init_drivers()
         logger.info(f"{URIS}")
         
@@ -80,11 +79,13 @@ class SwarmControl:
             SWARM.close_links()
             SWARM = Swarm(URIS, factory)
             SWARM.open_links()
-        DRONES = [ d  for d in SWARM._cfs.keys() if SWARM._cfs[d]]
-        logger.info(f"{DRONES}")
-        return OutputDict(DRONES,"URIS").dict
+        self.DRONES = [ d  for d in SWARM._cfs.keys() if SWARM._cfs[d]]
+        logger.info(f"{self.DRONES}")
+        SWARM.alt_prepare_estimator()
 
-    def CloseLinks():
+        return OutputDict(self.DRONES,"URIS").dict
+
+    def CloseLinks(self,):
         #cflib.crtp.init_drivers()
         #factory = CachedCfFactory(ro_cache='./cache',rw_cache='./cache')
         # #SWARM = Swarm(URIS, factory)
@@ -101,16 +102,16 @@ class SwarmControl:
                 logger.info(f"Still Connected to {drone}")
             else:
                 logger.info(f"Disconnected to {drone}")
-        DRONES = [ d for d in SWARM._cfs.keys() if SWARM._cfs[d].is_link_open()]
-        return OutputDict(DRONES,"URIS").dict
+        self.DRONES = [ d for d in SWARM._cfs.keys() if SWARM._cfs[d].is_link_open()]
+        return OutputDict(self.DRONES,"URIS").dict
 
     def Get_All_Drones():
-        # global DRONES, URIS, factory, SWARM
-        return OutputDict(DRONES,"URIS").dict
+        global DRONES, URIS, factory, SWARM
+        return self.DRONES
 
-    def All_Land():
+    def All_Land(self,):
         logger.info(f"Land START")
-        logger.info(DRONES)
+        logger.info(self.DRONES)
         if(SWARM._is_open):
             # SWARM = Swarm(uris=Quad.activeURIS,factory=factory)
 
@@ -118,44 +119,65 @@ class SwarmControl:
             SWARM.parallel(SwarmControl.Land)
             # SWARM.close_links()
             logger.info(f"Land STOP")
-        return [OutputDict(True,"OK").dict for d in DRONES]
+        return [OutputDict(True,"OK").dict for d in self.DRONES]
     def Land(scf):
         # global commanders, DefaultZSpeed
         # commander = PositionHlCommander(crazyflie=scf,default_height=DefaultHeight,controller=PositionHlCommander.CONTROLLER_MELLINGER)
         #commander = MotionCommander(scf,default_height=DefaultHeight)
         commanders[scf].land(DefaultZSpeed)
 
-    def All_TakeOff():
+    def All_TakeOff(self,):
         logger.info(f"All_TakeOff START")
-        logger.info(DRONES)
+        logger.info(self.DRONES)
         if(SWARM._is_open):
             SWARM.parallel(SwarmControl.Take_off)
             logger.info(f"All_TakeOff STOP")
         return OutputDict(True,"OK").dict
-    def Take_off(scf,default_height=None):
+    def Take_off(self,scf,default_height=None):
         global commanders, DefaultZSpeed, DefaultHeight
         # commander = PositionHlCommander(crazyflie=scf,default_height=DefaultHeight,controller=PositionHlCommander.CONTROLLER_MELLINGER)
         commanders[scf] = MotionCommander(scf,default_height=DefaultHeight,isflying=False)
         commanders[scf].take_off(height=default_height,velocity=DefaultZSpeed)
 
-    def All_GetEstimatedPositions():
+    def All_GetEstimatedPositions(self):
+        global a
         logger.info(f"GetEstimatedPosition START")
-        logger.info(DRONES)
+        logger.info(self.DRONES)
         if(SWARM._is_open):
             # SWARM = Swarm(uris=Quad.activeURIS,factory=factory)
             # SWARM.open_links()
-            positions = SWARM.get_estimated_positions()
+
+            self.positions = SWARM.get_estimated_positions()
+
+
+            # self.positions = SWARM.get_estimated_positions()
+
             logger.info(f"GetEstimatedPosition STOP")
             # SWARM.close_links()
-        return OutputDict(positions,"Positions").dict
-    def All_StartLinearMotion(args_arr : List[Velocity]):
+        return OutputDict(self.positions,"Positions").dict
+    def altAll_GetEstimatedPositions(self):
+        logger.info(f"GetEstimatedPosition START")
+        logger.info(self.DRONES)
+        if(SWARM._is_open):
+            # SWARM = Swarm(uris=Quad.activeURIS,factory=factory)
+            # SWARM.open_links()
+            
+            self.positions = SWARM.alt_get_estimated_positions()
+
+
+            # self.positions = SWARM.get_estimated_positions()
+
+            logger.info(f"GetEstimatedPosition STOP")
+            # SWARM.close_links()
+        return OutputDict(self.positions,"Positions").dict
+    def All_StartLinearMotion(self, args_arr : List[Velocity]):
         global DRONES, URIS, factory, SWARM
         logger.info(f"All_StartLinearMotion START with {len(args_arr)} args")
-        logger.info(DRONES)
-        if(SWARM._is_open and len(args_arr) == len(DRONES)):
-            logger.info(f"args_arr{args_arr}, DRONES{DRONES}")
-            args_dict = {d: a.Export() for (a, d) in zip(args_arr, DRONES)}
-            logger.info(f"All_StartLinearMotion{args_dict} {Velocity.Import(args_dict[DRONES[0]])}")
+        logger.info(self.DRONES)
+        if(SWARM._is_open and len(args_arr) == len(self.DRONES)):
+            logger.info(f"args_arr{args_arr}, DRONES{self.DRONES}")
+            args_dict = {d: a.Export() for (a, d) in zip(args_arr, self.DRONES)}
+            logger.info(f"All_StartLinearMotion{args_dict} {Velocity.Import(args_dict[self.DRONES[0]])}")
             SWARM.parallel_safe(SwarmControl.start_linear_motion,args_dict)
             logger.info(f"All_StartLinearMotion STOP")
             # SWARM.close_links()
@@ -165,11 +187,11 @@ class SwarmControl:
         global DRONES, URIS, factory, SWARM
 
         logger.info(f"MoveDistance START")
-        logger.info(DRONES)
-        if(SWARM._is_open and len(args_arr) == len(DRONES)):
+        logger.info(self.DRONES)
+        if(SWARM._is_open and len(args_arr) == len(self.DRONES)):
             # SWARM = Swarm(uris=Quad.activeURIS,factory=factory)
             # SWARM.open_links()
-            args_dict = {d: a.Export() for (a, d) in zip(args_arr, DRONES)}
+            args_dict = {d: a.Export() for (a, d) in zip(args_arr, self.DRONES)}
             logger.info(f"MoveDistance{args_dict}")
             SWARM.parallel(SwarmControl.move_distance,args_dict)
             logger.info(f"MoveDistance STOP")

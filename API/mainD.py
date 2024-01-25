@@ -1,4 +1,5 @@
 from fastapi.middleware.cors import CORSMiddleware
+from threading import Thread, Lock
 
 
 from fastapi import FastAPI
@@ -12,7 +13,7 @@ if("DronelabV2" in folders):
     path = "/".join(folders[:folders.index("DronelabV2")+1])
     sys.path.insert(0, path)
 
-    print(path)
+    print("found",path)
     from API.logger import Logger
     from API.move import Move, Velocity
     from API.outputdict import OutputDict
@@ -32,10 +33,11 @@ app.add_middleware(
     
 )
 logger = Logger("logD.txt",True)
-swarm = SwarmControl
-swarm.OpenLinks()
+s = SwarmControl()
+s.OpenLinks()
 @app.get("/HelloWorld/")
 async def read_root():
+    global s
     s = SwarmControl()
 
     logger.info("root")
@@ -43,35 +45,51 @@ async def read_root():
 
 @app.get("/OpenLinks/")
 async def OpenLinks():
+    global s
     logger.info("OpenLinks")
-    return swarm.OpenLinks()
+    return s.OpenLinks()
     
 @app.get("/CloseLinks/")
 async def CloseLinks():
+    global s
+
     logger.info("CloseLinks")
-    return swarm.CloseLinks()
+    return s.CloseLinks()
 
 @app.get("/All_TakeOff/")
 async def TakeOff():
+    global s
+
     logger.info("takeoff")
-    return swarm.All_TakeOff()
+    return s.All_TakeOff()
 
 @app.get("/All_Land/")
 async def AllLand():
-    return swarm.All_Land()
+    return s.All_Land()
 
 @app.get("/getestimatedpositions/")
-async def GetEstimatedPositions():
-    return swarm.All_GetEstimatedPositions()
+async def GetEstimatedPositions(boule: bool = False):
+    global s
+    
+    # return s.All_GetEstimatedPositions()
+    return s.altAll_GetEstimatedPositions() if boule else s.All_GetEstimatedPositions()
+    # default the new GetEstimatedPositions to the old one for now later to be deprecated
+@app.get("/altgetestimatedpositions/")
+async def AltGetEstimatedPositions():
+    global s
+
+    return s.altAll_GetEstimatedPositions()
 
 @app.post("/All_StartLinearMotion/")
 async def AllSetSpeed(args_arr: List[Velocity] ): #: OutputDict(List[Velocity],"Drones")
-    return swarm.All_StartLinearMotion(args_arr)
+    return s.All_StartLinearMotion(args_arr)
 
 @app.post("/All_MoveDistance/")
 async def All_MoveDistance(args_arr : List[Move]):
+    global s
+
     logger.info(f"MoveDistance {args_arr}")
-    return swarm.All_MoveDistance(args_arr)
+    return s.All_MoveDistance(args_arr)
 
 def main(host="0.0.0.0", port=8000):
-    uvicorn.run("mainD:app", host=host, port=port, workers=1, limit_concurrency=5)
+    uvicorn.run("mainD:app", host=host, port=port, workers=1, limit_concurrency=5000)

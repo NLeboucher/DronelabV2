@@ -21,7 +21,7 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 import time
 from collections import namedtuple
-from threading import Thread
+from threading import Thread, Lock
 
 from cflib.crazyflie import Crazyflie
 from cflib.crazyflie.log import LogConfig
@@ -78,6 +78,7 @@ class Swarm:
         self._cfs = {}
         self._is_open = False
         self._positions = dict()
+        self.log_config = dict()
 
         for uri in uris:
             self._cfs[uri] = factory.construct(uri)
@@ -114,11 +115,11 @@ class Swarm:
         self.close_links()
 
     def __get_estimated_position(self, scf):
-        log_config = LogConfig(name='stateEstimate', period_in_ms=10)
-        log_config.add_variable('stateEstimate.x', 'float')
-        log_config.add_variable('stateEstimate.y', 'float')
-        log_config.add_variable('stateEstimate.z', 'float')
-        log_config.add_variable('stateEstimate.yaw', 'float')
+        log_config = LogConfig(name='stateEstimate', period_in_ms=50)
+        log_config.add_variable('stateEstimate.x', 'FP16')
+        log_config.add_variable('stateEstimate.y', 'FP16')
+        log_config.add_variable('stateEstimate.z', 'FP16')
+        log_config.add_variable('stateEstimate.yaw', 'FP16')
 
         with SyncLogger(scf, log_config) as logger:
             for entry in logger:
@@ -128,8 +129,79 @@ class Swarm:
                 yaw = entry[1]['stateEstimate.yaw']
                 self._positions[scf.cf.link_uri] = SwarmPosition(x, y, z, yaw)
                 break
-        log_config.delete()
+        # log_config.stop()
+        # log_config.delete()
+        # log_config=None
 
+    def position_callback1(self, timestamp, data, logconf):
+        x = data['stateEstimate.x']
+        y = data['stateEstimate.y']
+        z = data['stateEstimate.z']
+        yaw = data['stateEstimate.yaw']
+        self._positions["radio://0/80/2M/E7E7E7E701"] = SwarmPosition(x, y, z, yaw)
+    def position_callback2(self, timestamp, data, logconf):
+        x = data['stateEstimate.x']
+        y = data['stateEstimate.y']
+        z = data['stateEstimate.z']
+        yaw = data['stateEstimate.yaw']
+        self._positions["radio://0/27/2M/E7E7E7E702"] = SwarmPosition(x, y, z, yaw)
+    def position_callback3(self, timestamp, data, logconf):
+        x = data['stateEstimate.x']
+        y = data['stateEstimate.y']
+        z = data['stateEstimate.z']
+        yaw = data['stateEstimate.yaw']
+        self._positions["radio://0/28/2M/E7E7E7E703"] = SwarmPosition(x, y, z, yaw)
+    def position_callbackE7(self, timestamp, data, logconf):
+        x = data['stateEstimate.x']
+        y = data['stateEstimate.y']
+        z = data['stateEstimate.z']
+        yaw = data['stateEstimate.yaw']
+        self._positions["radio://0/80/2M/E7E7E7E7E7"] = SwarmPosition(x, y, z, yaw)
+    def _alt_prepare_estimator(self,scf: SyncCrazyflie):
+
+        cf = scf.cf 
+        self.log_config[scf.cf.link_uri] = LogConfig(name='stateEstimate', period_in_ms=50)
+        self.log_config[scf.cf.link_uri].add_variable('stateEstimate.x', 'FP16')
+        self.log_config[scf.cf.link_uri].add_variable('stateEstimate.y', 'FP16')
+        self.log_config[scf.cf.link_uri].add_variable('stateEstimate.z', 'FP16')
+        self.log_config[scf.cf.link_uri].add_variable('stateEstimate.yaw', 'FP16')
+        self.log_config[scf.cf.link_uri].add_variable('stateEstimate.yaw', 'FP16')
+
+        # self.log_conf2 = LogConfig(name='state', period_in_ms=100)
+        # self.log_conf2.add_variable('ctrltarget.x', 'float')
+        # self.log_conf2.add_variable('ctrltarget.y', 'float')
+        # self.log_conf2.add_variable('ctrltarget.z', 'float')
+
+        # self.log_conf2 = LogConfig(name='state', period_in_ms=10)
+        # self.log_conf2.add_variable('zranging.offset', 'float')
+        # self.log_conf2.add_variable('zranging.history', 'float')
+        # self.log_conf2.add_variable('zranging.collect', 'float')
+        cf.log.add_config(self.log_config[scf.cf.link_uri])
+
+        match scf.cf.link_uri:
+            case "radio://0/80/2M/E7E7E7E7E7":
+                self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.position_callbackE7)
+            case "radio://0/28/2M/E7E7E7E703":
+                self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.position_callback3)
+            case "radio://0/27/2M/E7E7E7E702":
+                self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.position_callback2)
+            case "radio://0/80/2M/E7E7E7E701":
+                self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.position_callback1)
+        self.log_config[scf.cf.link_uri].start()
+
+
+
+    def alt_prepare_estimator(self):
+        self.parallel_safe(self._alt_prepare_estimator)
+    def _alt_get_estimated_position(self,scf:SyncCrazyflie):
+        self._positions[scf.cf.link_uri]
+    def alt_get_estimated_positions(self):
+        """
+        Return a `dict`, keyed by URI and with the SwarmPosition namedtuples as
+        value, with the estimated (x, y, z) of each Crazyflie in the swarm.
+        """
+        self.parallel_safe(self._alt_get_estimated_position)
+        return self._positions
     def get_estimated_positions(self):
         """
         Return a `dict`, keyed by URI and with the SwarmPosition namedtuples as
@@ -139,7 +211,7 @@ class Swarm:
         return self._positions
     
     def __wait_for_position_estimator(self, scf):
-        log_config = LogConfig(name='Kalman Variance', period_in_ms=500)
+        log_config = LogConfig(name='Kalman Variance', period_in_ms=5000)
         log_config.add_variable('kalman.varPX', 'float')
         log_config.add_variable('kalman.varPY', 'float')
         log_config.add_variable('kalman.varPZ', 'float')
