@@ -114,7 +114,7 @@ class SwarmControl:
         logger.info(self.DRONES)
         if(SWARM._is_open):
             # SWARM = Swarm(uris=Quad.activeURIS,factory=factory)
-
+            print("SWARM LAND",SWARM)
             # SWARM.open_links()
             SWARM.parallel(SwarmControl.Land)
             # SWARM.close_links()
@@ -130,7 +130,7 @@ class SwarmControl:
         logger.info(f"All_TakeOff START")
         logger.info(self.DRONES)
         if(SWARM._is_open):
-            SWARM.parallel(SwarmControl.Take_off)
+            SWARM.parallel_safe(SwarmControl.Take_off)
             logger.info(f"All_TakeOff STOP")
         return OutputDict(True,"OK").dict
     def Take_off(self,scf,default_height=None):

@@ -160,12 +160,13 @@ class Swarm:
     def _alt_prepare_estimator(self,scf: SyncCrazyflie):
 
         cf = scf.cf 
-        self.log_config[scf.cf.link_uri] = LogConfig(name='stateEstimate', period_in_ms=50)
+        self.log_config[scf.cf.link_uri] = LogConfig(name='stateEstimate', period_in_ms=10)
         self.log_config[scf.cf.link_uri].add_variable('stateEstimate.x', 'FP16')
         self.log_config[scf.cf.link_uri].add_variable('stateEstimate.y', 'FP16')
         self.log_config[scf.cf.link_uri].add_variable('stateEstimate.z', 'FP16')
         self.log_config[scf.cf.link_uri].add_variable('stateEstimate.yaw', 'FP16')
         self.log_config[scf.cf.link_uri].add_variable('stateEstimate.yaw', 'FP16')
+        # self.log_config[scf.cf.link_uri].add_variable('', 'FP16')
 
         # self.log_conf2 = LogConfig(name='state', period_in_ms=100)
         # self.log_conf2.add_variable('ctrltarget.x', 'float')
@@ -177,19 +178,21 @@ class Swarm:
         # self.log_conf2.add_variable('zranging.history', 'float')
         # self.log_conf2.add_variable('zranging.collect', 'float')
         cf.log.add_config(self.log_config[scf.cf.link_uri])
-
-        match scf.cf.link_uri:
-            case "radio://0/80/2M/E7E7E7E7E7":
-                self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.position_callbackE7)
-            case "radio://0/28/2M/E7E7E7E703":
-                self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.position_callback3)
-            case "radio://0/27/2M/E7E7E7E702":
-                self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.position_callback2)
-            case "radio://0/80/2M/E7E7E7E701":
-                self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.position_callback1)
+        self.callback = self.Callback(scf.cf.link_uri,self)
+        self.log_config[scf.cf.link_uri].data_received_cb.add_callback(self.callback.position_callback)
         self.log_config[scf.cf.link_uri].start()
 
+    class Callback():
+        def __init__(self,uri, papa:super):
+            self.uri = uri
+            self.papa = papa
 
+        def position_callback(self, timestamp, data, logconf):
+            x = data['stateEstimate.x']
+            y = data['stateEstimate.y']
+            z = data['stateEstimate.z']
+            yaw = data['stateEstimate.yaw']
+            self.papa._positions[self.uri] = SwarmPosition(x, y, z, yaw)
 
     def alt_prepare_estimator(self):
         self.parallel_safe(self._alt_prepare_estimator)

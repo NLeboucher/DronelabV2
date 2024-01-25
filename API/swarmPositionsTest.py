@@ -16,7 +16,7 @@ yaw_values = []
 # Assuming SwarmPosition is a class defined to hold the position data
 SwarmPosition = namedtuple('SwarmPosition', 'x y z yaw')
 # Gathering data
-for a in tqdm(range(256)):
+for a in tqdm(range(10000)):
     # Run the async position getter
     asyncio.run(mainD.AltGetEstimatedPositions())
     pos = mainD.s.positions

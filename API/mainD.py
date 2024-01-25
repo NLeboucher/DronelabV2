@@ -59,7 +59,7 @@ async def CloseLinks():
 @app.get("/All_TakeOff/")
 async def TakeOff():
     global s
-
+    print(s.DRONES)
     logger.info("takeoff")
     return s.All_TakeOff()
 
@@ -70,7 +70,6 @@ async def AllLand():
 @app.get("/getestimatedpositions/")
 async def GetEstimatedPositions(boule: bool = False):
     global s
-    
     # return s.All_GetEstimatedPositions()
     return s.altAll_GetEstimatedPositions() if boule else s.All_GetEstimatedPositions()
     # default the new GetEstimatedPositions to the old one for now later to be deprecated

@@ -118,11 +118,27 @@ def pose_estimation_thread():
     global calibrate
     global calibrate_lock
     global wascalibratedonce
+    global stop
+    global stop_lock
+    global rot_mat
+    global tvecs
+    rot_mat = np.zeros((3,3))
+    tvecs = np.zeros((3,1))
     pipeline = rs.pipeline()
     config = rs.config()
     config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
     config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
     pipeline.start(config)
+
+    profile = pipeline.get_active_profile()
+    intr = profile.get_stream(rs.stream.color).as_video_stream_profile().get_intrinsics()
+    global camera_matrix
+    camera_matrix = np.array([[intr.fx, 0, intr.ppx],
+                          [0, intr.fy, intr.ppy],
+                          [0, 0, 1]])
+    global dist_coeffs
+    dist_coeffs = np.array(intr.coeffs)
+
     align = rs.align(rs.stream.color)
     mp_holistic = mp.solutions.holistic
     with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
@@ -149,6 +165,7 @@ def pose_estimation_thread():
                 calibrate_lock.__enter__()
 
                 if(calibrate):
+                    print("calibrating")
                     color_image = np.asanyarray(color_frame.get_data())
                     calibration(color_image)
                     calibrate = False
@@ -168,7 +185,11 @@ def pose_estimation_thread():
                                 if 0 <= pixel_x < depth_frame.width and 0 <= pixel_y < depth_frame.height:
                                     depth = depth_frame.get_distance(pixel_x, pixel_y)
                                     point = rs.rs2_deproject_pixel_to_point(depth_intrin, [pixel_x, pixel_y], depth)
-                                    x, y, z =  np.matmul(np.transpose(point) - np.transpose(tvecs), rot_mat) if wascalibratedonce else point
+                                    # print("tvecs: ", tvecs) 
+                                    # print("point avant: ", point)
+                                    pa =  np.reshape(np.matmul(np.transpose(rot_mat),point - tvecs,),-1) if wascalibratedonce else point
+                                    # print("point: ", pa)
+                                    x,y, z =pa[0], pa[1], pa[2]
                                     landmarks_data.append((landmark_id, x, y, z))
                     results_queue.put(landmarks_data)
                     # print("landmarks data put with",)
@@ -179,9 +200,16 @@ def pose_estimation_thread():
         finally:
             print("stopping pipeline")
             pipeline.stop()
-def calibration(img, nw=9, nh=6, criteria=(cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)):
+def calibration(img, nw=3, nh=4, criteria=(cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)):
+    print("entered")
     global rot_mat
     global tvecs
+    global camera_matrix
+    global dist_coeffs
+    square_size = 0.071
+    objp = np.zeros((nw*nh,3), np.float32)
+    objp[:,:2] = np.mgrid[0:nw,0:nh].T.reshape(-1,2)
+    objp *= square_size
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     ret, corners = cv2.findChessboardCorners(gray, (nw,nh),None,flags=cv2.ADAPTIVE_THRESH_GAUSSIAN_C)
     if ret == True:
@@ -190,6 +218,8 @@ def calibration(img, nw=9, nh=6, criteria=(cv2.TERM_CRITERIA_EPS + cv2.TERM_CRIT
         ret,rvecs, tvecs = cv2.solvePnP(objp, corners2, camera_matrix, dist_coeffs)
 
         rot_mat,_ = cv2.Rodrigues(rvecs)
+        print("rotation matrix: ", rot_mat)
+        print("translation vector: ", tvecs)
 
 
 Thread(target=pose_estimation_thread, daemon=True).start()
