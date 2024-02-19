@@ -53,8 +53,6 @@ MonoBehaviour:
   Go_To_Y: 4
   Go_To_Z: -2
   Bool_Go_To: 0
-  APIRequest: 0
-  APITakeOff: 0
 --- !u!114 &6357014535439542842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 7326545153099616856, guid: 83cff08f67dfd3b4dbbdd354db2c0d8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7326545153099616856, guid: 83cff08f67dfd3b4dbbdd354db2c0d8c,
         type: 3}

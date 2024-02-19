@@ -38,8 +38,8 @@ public class DroneSwarmControle : MonoBehaviour
     #endregion
 
     //maxspeed of drone
-    public float maxSpeed = 0.5f;
-    public float closeEnoughDistance = 0.5f;
+    public float maxSpeed = 0.2f;
+    public float closeEnoughDistance = 0.2f;
     private void Update()
     {
 
@@ -109,7 +109,7 @@ public class DroneSwarmControle : MonoBehaviour
         {
             StartCoroutine(APIHelper.CloseLinks());
         }
-        // Le cas où vous ne voulez pas utiliser l'API ou appeler InitialiserDrone() pourrait être traité ici
+        
     }
 
     void InitialiserDrone()
@@ -223,4 +223,38 @@ public class DroneSwarmControle : MonoBehaviour
         selectedDrone.droneVelocity.vitesseDroneY = desiredVelocityLocal.y;
         selectedDrone.droneVelocity.vitesseDroneZ = desiredVelocityLocal.z;
     }
+
+    //draw the vector velocity of drone
+/*
+    void OnDrawGizmos()
+    {
+        // Ensure there is a selected drone
+        if (selectedDrone == null)
+            return;
+
+        // Get the current position of the drone
+        Vector3 dronePosition = new Vector3(
+            selectedDrone.dronePosition.positionDroneX,
+            selectedDrone.dronePosition.positionDroneY,
+            selectedDrone.dronePosition.positionDroneZ
+        );
+
+        // Retrieve the drone's velocity
+        //switch (selectedDrone.droneVelocity.vitesseDroneX)
+        Vector3 droneVelocity = new Vector3(
+            selectedDrone.droneVelocity.vitesseDroneX,
+            selectedDrone.droneVelocity.vitesseDroneZ,
+            selectedDrone.droneVelocity.vitesseDroneY
+        );
+
+        // Draw the velocity vector as an arrow
+        Gizmos.color = Color.red; // Set the color of the arrow
+        Vector3 arrowHead = dronePosition + droneVelocity; // Calculate the position of the arrowhead
+        Gizmos.DrawLine(dronePosition, arrowHead); // Draw the line part of the arrow
+
+        // Draw the arrowhead
+        // You may adjust the size and angle of the arrowhead as needed
+        Gizmos.DrawRay(arrowHead, Quaternion.LookRotation(droneVelocity) * Quaternion.Euler(0, 135, 0) * Vector3.forward * 0.5f);
+        Gizmos.DrawRay(arrowHead, Quaternion.LookRotation(droneVelocity) * Quaternion.Euler(0, 225, 0) * Vector3.forward * 0.5f);
+    }*/
 }

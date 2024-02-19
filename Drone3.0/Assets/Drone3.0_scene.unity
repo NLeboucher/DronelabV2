@@ -456,12 +456,12 @@ MonoBehaviour:
     type: 3}
   APIRequest: 1
   APITakeOff: 0
-  droneAPITracking: 0
+  droneAPITracking: 1
   droneAPIVelocity: 0
   StartGoTO: 0
   GoToPosition: {x: 1, y: 0, z: 0.5}
   maxSpeed: 0.2
-  closeEnoughDistance: 0.5
+  closeEnoughDistance: 0.2
 --- !u!4 &2071358412
 Transform:
   m_ObjectHideFlags: 0

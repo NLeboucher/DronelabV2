@@ -15,11 +15,39 @@ using System.Globalization;
 public class APIHelper : MonoBehaviour
 {
 
-    public static string APILocalhost = "172.20.10.3:8000";
+    //public static string APILocalhost = "172.20.10.4:8000";
     //public static string APILocalhost = "192.168.2.233:8000";
-    //public static string APILocalhost = "172.21.72.165:8000";
+    public static string APILocalhost = "172.21.73.11:8000";
 
     #region API Get Classes
+
+    /*public static IEnumerator CheckDroneConnection()
+    {
+        DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = true;
+        Debug.Log("Début de la Coroutine CheckDroneConnection");
+        string url = "http://" + APILocalhost + "/HelloWorld/";
+        Debug.Log(url);
+        UnityWebRequest request = UnityWebRequest.Get(url);
+        yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
+
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError("Erreur de connexion: " + request.error);
+            DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = false;
+            // Gestion des erreurs, droneConected reste false
+        }
+        else
+        {
+            Debug.Log("HelloWorld réussie");
+
+        }
+        //yield return new WaitForSeconds(1);
+        DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = false;
+        Debug.Log("Fin de la Coroutine CheckDroneConnection");
+
+
+    }*/
+
     public static IEnumerator CheckDroneConnection()
     {
         DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = true;
@@ -38,7 +66,7 @@ public class APIHelper : MonoBehaviour
         else
         {
             // Connexion réussie
-            
+
             string jsonResponse = request.downloadHandler.text;
             DroneApiResponse response = JsonUtility.FromJson<DroneApiResponse>(jsonResponse);
             Debug.Log("Contenu de la réponse OpenLinks JSON: " + jsonResponse);
@@ -68,8 +96,8 @@ public class APIHelper : MonoBehaviour
         yield return new WaitForSeconds(1);
         DroneSwarmControle.isCoroutineCheckDroneConnectionRunning = false;
         Debug.Log("Fin de la Coroutine CheckDroneConnection");
-        
-        
+
+
     }
 
     public static IEnumerator TakeOff()
@@ -134,7 +162,9 @@ public class APIHelper : MonoBehaviour
         Debug.Log("Début de la Coroutine GetFromAPI");
         string url = "http://" + APILocalhost + "/getestimatedpositions/";
 
+        
         UnityWebRequest request = UnityWebRequest.Get(url);
+        request.timeout = 1;
         yield return request.SendWebRequest();  // Envoie la requête et attend la réponse
         Debug.Log("request.resultGetFromAPI = " + request.result);
 
@@ -203,7 +233,7 @@ public class APIHelper : MonoBehaviour
             Debug.Log("Links fermés");
             DroneSwarmControle.droneConected = false;
         }
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.3f);
         DroneSwarmControle.isCoroutineCloseLinksRunning = false;
         Debug.Log("Fin de la Coroutine CloseLinks");
     }
