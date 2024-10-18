@@ -1,0 +1,9 @@
+cflib 
+pygame 
+fastapi 
+uvicorn 
+mediapipe 
+opencv-python 
+pyrealsense 
+tqdm 
+jinja2
