@@ -1,0 +1,32 @@
+virer numbers
+deux points sur le D page 6
+
+here in RED are the web references
+refenreces are 
+
+Drones components evaluation etre plus clair
+Figure captions doivent etre plus clair, un resumé de ce que l'on dit
+
+agrandir la 6 que ca soit plus lisible
+plus d'espace entre la 5 et la 6
+
+préciser le 3D dans l'image 2d de la figure 7
+enlever le 1 de l'appendix
+
+Figure 9 n'est pas assez grande
+
+so 900 andmarks per seconds apparait au milieu
+ThreeJS
+FastAPI
+Crazy Radio PA
+TCP
+UDP
+
+Conclusions conduit à tant d''apports scientifiques
+quels sont les innovations
+la precision
+quels sont les prolongements
+dans quels dommaines ca s''utilise
+
+faire des visuels du projets pour these et presentation
+FIGURE CAPTIONS

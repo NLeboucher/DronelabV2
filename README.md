@@ -116,7 +116,7 @@ source venv/bin/activate
 ~~~
 install the python dependencies
 ~~~
-pip install cflib pygame fastapi uvicorn mediapipe opencv-python pyrealsense tqdm
+pip install cflib pygame fastapi uvicorn mediapipe opencv-python pyrealsense tqdm jinja2
 ~~~
 
 Now you have all the depedencies

@@ -1,0 +1,647 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{swarm_survey}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a8079e3675150c189ea840c78fa2474c}{%
+           family={Brambilla},
+           familyi={B\bibinitperiod},
+           given={Manuele},
+           giveni={M\bibinitperiod}}}%
+        {{hash=95db106c3b066f5b0191f7d8ff170ae9}{%
+           family={Ferrante},
+           familyi={F\bibinitperiod},
+           given={Eliseo},
+           giveni={E\bibinitperiod}}}%
+        {{hash=97c2ed3dc5dc65fd915a8be83f7011dc}{%
+           family={Birattari},
+           familyi={B\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod}}}%
+        {{hash=26c8dbd8b76182fc666371044ae8dfa4}{%
+           family={Dorigo},
+           familyi={D\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{bb1fc2b89f3ed9592a880438434f9af3}
+      \strng{fullhash}{32c0c09e006243df068398e883cff27b}
+      \strng{bibnamehash}{bb1fc2b89f3ed9592a880438434f9af3}
+      \strng{authorbibnamehash}{bb1fc2b89f3ed9592a880438434f9af3}
+      \strng{authornamehash}{bb1fc2b89f3ed9592a880438434f9af3}
+      \strng{authorfullhash}{32c0c09e006243df068398e883cff27b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Swarm Intelligence}
+      \field{number}{1}
+      \field{title}{Swarm robotics: A review from the swarm engineering perspective}
+      \field{volume}{7}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 41}
+      \range{pages}{41}
+    \endentry
+    \entry{crazyflie}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=737a84806b3506be8f5aab7db220ed25}{%
+           family={Preiss},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b052dbb4564a598aac05745e88550014}
+      \strng{fullhash}{b052dbb4564a598aac05745e88550014}
+      \strng{bibnamehash}{b052dbb4564a598aac05745e88550014}
+      \strng{authorbibnamehash}{b052dbb4564a598aac05745e88550014}
+      \strng{authornamehash}{b052dbb4564a598aac05745e88550014}
+      \strng{authorfullhash}{b052dbb4564a598aac05745e88550014}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2017 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{CrazySwarm: A large nano-quadcopter swarm}
+      \field{year}{2017}
+    \endentry
+    \entry{bitcraze_cflib}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8851784d5a1819590f62efc28aea1cbf}{%
+           family={Bitcraze},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8851784d5a1819590f62efc28aea1cbf}
+      \strng{fullhash}{8851784d5a1819590f62efc28aea1cbf}
+      \strng{bibnamehash}{8851784d5a1819590f62efc28aea1cbf}
+      \strng{authorbibnamehash}{8851784d5a1819590f62efc28aea1cbf}
+      \strng{authornamehash}{8851784d5a1819590f62efc28aea1cbf}
+      \strng{authorfullhash}{8851784d5a1819590f62efc28aea1cbf}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/}}
+      \field{note}{Accessed: 2024-10-10}
+      \field{title}{CFLib - Python library for Crazyflie}
+      \field{year}{2020}
+    \endentry
+    \entry{realsense_mediapipe}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c8c924bda9af8f58203e470987084eda}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Mediapipe\bibnamedelima Dev},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8c924bda9af8f58203e470987084eda}
+      \strng{fullhash}{c8c924bda9af8f58203e470987084eda}
+      \strng{bibnamehash}{c8c924bda9af8f58203e470987084eda}
+      \strng{authorbibnamehash}{c8c924bda9af8f58203e470987084eda}
+      \strng{authornamehash}{c8c924bda9af8f58203e470987084eda}
+      \strng{authorfullhash}{c8c924bda9af8f58203e470987084eda}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Real-time pose estimation using Intel RealSense and MediaPipe for human-drone interaction}
+      \field{year}{2020}
+    \endentry
+    \entry{flyjacket}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=9bb2027ef6b9916505fd06649224330c}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Chien},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c5304d4d3b616054451f1a8db2a3974f}{%
+           family={Fua},
+           familyi={F\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a92f42f39fc9c246dccede64a2d20f93}
+      \strng{fullhash}{a92f42f39fc9c246dccede64a2d20f93}
+      \strng{bibnamehash}{a92f42f39fc9c246dccede64a2d20f93}
+      \strng{authorbibnamehash}{a92f42f39fc9c246dccede64a2d20f93}
+      \strng{authornamehash}{a92f42f39fc9c246dccede64a2d20f93}
+      \strng{authorfullhash}{a92f42f39fc9c246dccede64a2d20f93}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{FlyJacket: An upper body soft exoskeleton for immersive drone control}
+      \field{year}{2018}
+    \endentry
+    \entry{human_drone_interaction}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d73aaba6110a1036e6ad54495ebb6d93}{%
+           family={Shahbazi},
+           familyi={S\bibinitperiod},
+           given={Maziar},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5446b3034a2bb8abab497b4c1e572a35}{%
+           family={Rajabzadeh},
+           familyi={R\bibinitperiod},
+           given={Iman},
+           giveni={I\bibinitperiod}}}%
+        {{hash=39c72b7a26492f1fa6c3dc56ecb9c435}{%
+           family={Nourbakhsh},
+           familyi={N\bibinitperiod},
+           given={Saeid},
+           giveni={S\bibinitperiod}}}%
+        {{hash=059fe3903b81bf1b83607ea69454a0ea}{%
+           family={Saad},
+           familyi={S\bibinitperiod},
+           given={Wasif},
+           giveni={W\bibinitperiod}}}%
+        {{hash=dc6c52c556e129b97af112d991b1c945}{%
+           family={Mohammadi},
+           familyi={M\bibinitperiod},
+           given={Mojtaba},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{04fece8f8825e6a5f5a3acaec56ec51b}
+      \strng{fullhash}{baef9a7fe48cca9605c72030dfc2e1c1}
+      \strng{bibnamehash}{04fece8f8825e6a5f5a3acaec56ec51b}
+      \strng{authorbibnamehash}{04fece8f8825e6a5f5a3acaec56ec51b}
+      \strng{authornamehash}{04fece8f8825e6a5f5a3acaec56ec51b}
+      \strng{authorfullhash}{baef9a7fe48cca9605c72030dfc2e1c1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers \& Human Behavior}
+      \field{title}{A review of human-drone interaction: Methods and applications}
+      \field{volume}{106}
+      \field{year}{2020}
+      \field{pages}{106270}
+      \range{pages}{1}
+    \endentry
+    \entry{drone_me}{article}{}
+      \name{author}{2}{}{%
+        {{hash=31f58c0e97bf11cdd298510cfd2b4efa}{%
+           family={Cauchard},
+           familyi={C\bibinitperiod},
+           given={Jessica\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{1fdcf39c2c1da279b294c794400bc22e}
+      \strng{fullhash}{1fdcf39c2c1da279b294c794400bc22e}
+      \strng{bibnamehash}{1fdcf39c2c1da279b294c794400bc22e}
+      \strng{authorbibnamehash}{1fdcf39c2c1da279b294c794400bc22e}
+      \strng{authornamehash}{1fdcf39c2c1da279b294c794400bc22e}
+      \strng{authorfullhash}{1fdcf39c2c1da279b294c794400bc22e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies}
+      \field{title}{Drone \& Me: An Exploration Into Natural Human-Drone Interaction}
+      \field{year}{2015}
+    \endentry
+    \entry{ju_safety}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=a42e961d8aed66d083edc0f0f5b12fb8}{%
+           family={Ju},
+           familyi={J\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
+      \strng{fullhash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
+      \strng{bibnamehash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
+      \strng{authorbibnamehash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
+      \strng{authornamehash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
+      \strng{authorfullhash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Human-Robot Interaction}
+      \field{title}{Safe human-drone interaction in indoor environments}
+      \field{year}{2017}
+    \endentry
+    \entry{cai_human_drone}{article}{}
+      \name{author}{2}{}{%
+        {{hash=408557faac3d5186a3a222d0f46c3f50}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{a11495f09df3fd628cd5449fe2b53c19}
+      \strng{fullhash}{a11495f09df3fd628cd5449fe2b53c19}
+      \strng{bibnamehash}{a11495f09df3fd628cd5449fe2b53c19}
+      \strng{authorbibnamehash}{a11495f09df3fd628cd5449fe2b53c19}
+      \strng{authornamehash}{a11495f09df3fd628cd5449fe2b53c19}
+      \strng{authorfullhash}{a11495f09df3fd628cd5449fe2b53c19}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Intelligent \& Robotic Systems}
+      \field{title}{Human-drone interaction based on posture recognition with monocular vision}
+      \field{year}{2019}
+    \endentry
+    \entry{kilobot}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=e9d2670c082ddd9e0b5c1a5f5463c45a}{%
+           family={Rubenstein},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b891ed111a8544c60ceac9f60801e20}
+      \strng{fullhash}{6b891ed111a8544c60ceac9f60801e20}
+      \strng{bibnamehash}{6b891ed111a8544c60ceac9f60801e20}
+      \strng{authorbibnamehash}{6b891ed111a8544c60ceac9f60801e20}
+      \strng{authornamehash}{6b891ed111a8544c60ceac9f60801e20}
+      \strng{authorfullhash}{6b891ed111a8544c60ceac9f60801e20}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2012 IEEE International Conference on Robotics and Automation}
+      \field{title}{Kilobot: A low-cost scalable robot system for collective behaviors}
+      \field{year}{2012}
+    \endentry
+    \entry{modquad}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=185dc828fa9adb35c5f9c73785d92abc}{%
+           family={Saldana},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d1b9400eb0e67095a865b112306f0a52}{%
+           family={Gabrich},
+           familyi={G\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=db6286f0d1e1fe51357736e3287cdf31}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Guanrui},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3e097fdd54c521b3b8f2321bd045bd74}{%
+           family={Yim},
+           familyi={Y\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Brisbane, QLD}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9b359c1e6284020fb988ea5d25c1d61a}
+      \strng{fullhash}{a6a83ca1ea2929f64a2e435ca189c949}
+      \strng{bibnamehash}{9b359c1e6284020fb988ea5d25c1d61a}
+      \strng{authorbibnamehash}{9b359c1e6284020fb988ea5d25c1d61a}
+      \strng{authornamehash}{9b359c1e6284020fb988ea5d25c1d61a}
+      \strng{authorfullhash}{a6a83ca1ea2929f64a2e435ca189c949}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We introduce ModQuad, a novel ﬂying modular robotic structure that is able to self-assemble in midair and cooperatively ﬂy. The structure is composed by agile ﬂying modules that can easily move in a three dimensional environment. The module is based on a quadrotor platform within a cuboid frame which allows it to attach to other modules by matching vertical faces. Using this mechanism, a ModQuad swarm is able to rapidly assemble ﬂying structures in midair using the robot bodies as building units. In this paper, we focus on two important tasks for modular ﬂying structures. First, we propose a decentralized modular attitude controller to allow a team of physically connected modules to ﬂy cooperatively. Second, we develop a docking method that drives pairs of structures to be attached in midair. Our method precisely aligns, and corrects motion errors during the docking process. In our experiments, we tested and analyzed the performance of the cooperative ﬂying method for multiple conﬁgurations. We also tested the docking method with successful results.}
+      \field{booktitle}{2018 {IEEE} {International} {Conference} on {Robotics} and {Automation} ({ICRA})}
+      \field{isbn}{978-1-5386-3081-5}
+      \field{month}{5}
+      \field{shorttitle}{{ModQuad}}
+      \field{title}{{ModQuad}: {The} {Flying} {Modular} {Structure} that {Self}-{Assembles} in {Midair}}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{691\bibrangedash 698}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ICRA.2018.8461014
+      \endverb
+      \verb{file}
+      \verb Saldana et al. - 2018 - ModQuad The Flying Modular Structure that Self-As.pdf:/home/nicos/Zotero/storage/QNYC56IM/Saldana et al. - 2018 - ModQuad The Flying Modular Structure that Self-As.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/8461014/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/8461014/
+      \endverb
+    \endentry
+    \entry{crazychoir}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=ce84d694472675529cfcc28e0c2cb047}{%
+           family={Sanchez-Lopez},
+           familyi={S\bibinithyphendelim L\bibinitperiod},
+           given={J.\bibnamedelimi L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f8c4a3c994d57a3883ee878044f3695c}
+      \strng{fullhash}{f8c4a3c994d57a3883ee878044f3695c}
+      \strng{bibnamehash}{f8c4a3c994d57a3883ee878044f3695c}
+      \strng{authorbibnamehash}{f8c4a3c994d57a3883ee878044f3695c}
+      \strng{authornamehash}{f8c4a3c994d57a3883ee878044f3695c}
+      \strng{authorfullhash}{f8c4a3c994d57a3883ee878044f3695c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{CrazyChoir: Artistic performance with multiple Crazyflie drones}
+      \field{year}{2022}
+    \endentry
+    \entry{preiss2017crazyswarm}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=19b68b1560247695c557ee3fb79377e5}{%
+           family={Preiss},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5ceaefe872a46541be830c920bebeb24}{%
+           family={Honig},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
+           family={Sukhatme},
+           familyi={S\bibinitperiod},
+           given={Gaurav\bibnamedelima S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1c307d9b859cf07f7eb1337ae5ac9f78}{%
+           family={Ayanian},
+           familyi={A\bibinitperiod},
+           given={Nora},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c290118771db9d4032a26970d218e470}
+      \strng{fullhash}{31c7bffc0b61e48ff0e65696bc0bf1c6}
+      \strng{bibnamehash}{c290118771db9d4032a26970d218e470}
+      \strng{authorbibnamehash}{c290118771db9d4032a26970d218e470}
+      \strng{authornamehash}{c290118771db9d4032a26970d218e470}
+      \strng{authorfullhash}{31c7bffc0b61e48ff0e65696bc0bf1c6}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{Crazyswarm: A large nano-quadcopter swarm}
+      \field{year}{2017}
+      \field{pages}{3299\bibrangedash 3304}
+      \range{pages}{6}
+    \endentry
+    \entry{carstens_intelligent_nodate}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8484ddcc1475f03e4b7218841ed650cd}{%
+           family={Carstens},
+           familyi={C\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{8484ddcc1475f03e4b7218841ed650cd}
+      \strng{fullhash}{8484ddcc1475f03e4b7218841ed650cd}
+      \strng{bibnamehash}{8484ddcc1475f03e4b7218841ed650cd}
+      \strng{authorbibnamehash}{8484ddcc1475f03e4b7218841ed650cd}
+      \strng{authornamehash}{8484ddcc1475f03e4b7218841ed650cd}
+      \strng{authorfullhash}{8484ddcc1475f03e4b7218841ed650cd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Intelligent {Systems} for {Next} {Generation} {Drone} {Functionality}}
+      \verb{file}
+      \verb Carstens - Intelligent Systems for Next Generation Drone Func.pdf:files/361/Carstens - Intelligent Systems for Next Generation Drone Func.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{leap_motion}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0be1ff7082704a9a70b50726bd29d6d5}{%
+           family={Tayebi},
+           familyi={T\bibinitperiod},
+           given={Amine},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0be1ff7082704a9a70b50726bd29d6d5}
+      \strng{fullhash}{0be1ff7082704a9a70b50726bd29d6d5}
+      \strng{bibnamehash}{0be1ff7082704a9a70b50726bd29d6d5}
+      \strng{authorbibnamehash}{0be1ff7082704a9a70b50726bd29d6d5}
+      \strng{authornamehash}{0be1ff7082704a9a70b50726bd29d6d5}
+      \strng{authorfullhash}{0be1ff7082704a9a70b50726bd29d6d5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Research in Computer Science}
+      \field{title}{Gesture-based drone control with Leap Motion and Arduino}
+      \field{year}{2020}
+    \endentry
+    \entry{noauthor_lighthouse_nodate}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Lighthouse positioning methods {|} {Bitcraze}}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Lighthouse positioning methods | Bitcraze:files/364/positioning_methods.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.bitcraze.io/documentation/repository/crazyflie-firmware/master/functional-areas/lighthouse/positioning_methods/
+      \endverb
+      \verb{url}
+      \verb https://www.bitcraze.io/documentation/repository/crazyflie-firmware/master/functional-areas/lighthouse/positioning_methods/
+      \endverb
+    \endentry
+    \entry{asyncio}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9688a568902e4b07b60557b566bdd820}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={Python\bibnamedelima Software},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9688a568902e4b07b60557b566bdd820}
+      \strng{fullhash}{9688a568902e4b07b60557b566bdd820}
+      \strng{bibnamehash}{9688a568902e4b07b60557b566bdd820}
+      \strng{authorbibnamehash}{9688a568902e4b07b60557b566bdd820}
+      \strng{authornamehash}{9688a568902e4b07b60557b566bdd820}
+      \strng{authorfullhash}{9688a568902e4b07b60557b566bdd820}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2024-10-10}
+      \field{title}{asyncio: Asynchronous I/O, event loop, coroutines and tasks}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://docs.python.org/3/library/asyncio.html
+      \endverb
+      \verb{url}
+      \verb https://docs.python.org/3/library/asyncio.html
+      \endverb
+    \endentry
+    \entry{mediapipe2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5b9e27c341713586dafd7304f6db987d}{%
+           family={Research},
+           familyi={R\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{fullhash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{bibnamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authorbibnamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authornamehash}{5b9e27c341713586dafd7304f6db987d}
+      \strng{authorfullhash}{5b9e27c341713586dafd7304f6db987d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://google.github.io/mediapipe/}}
+      \field{note}{Accessed: 2024-10-10}
+      \field{title}{MediaPipe: A Framework for Building Perception Pipelines}
+      \field{year}{2020}
+    \endentry
+    \entry{max}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=984b22da6474359c029896ab46aa06bc}{%
+           family={Menesguen},
+           familyi={M\bibinitperiod},
+           given={Maximilien},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{984b22da6474359c029896ab46aa06bc}
+      \strng{fullhash}{984b22da6474359c029896ab46aa06bc}
+      \strng{bibnamehash}{984b22da6474359c029896ab46aa06bc}
+      \strng{authorbibnamehash}{984b22da6474359c029896ab46aa06bc}
+      \strng{authornamehash}{984b22da6474359c029896ab46aa06bc}
+      \strng{authorfullhash}{984b22da6474359c029896ab46aa06bc}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ift.devinci.fr/member/maximilien-menesguen}}
+      \field{note}{Accessed: 2024-10-10}
+      \field{title}{Maximilien Menesguen}
+      \field{year}{2023}
+    \endentry
+    \entry{reynolds1987boids}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c565938772b0a9629e74a8f8f657693b}{%
+           family={Reynolds},
+           familyi={R\bibinitperiod},
+           given={Craig\bibnamedelima W.},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{c565938772b0a9629e74a8f8f657693b}
+      \strng{fullhash}{c565938772b0a9629e74a8f8f657693b}
+      \strng{bibnamehash}{c565938772b0a9629e74a8f8f657693b}
+      \strng{authorbibnamehash}{c565938772b0a9629e74a8f8f657693b}
+      \strng{authornamehash}{c565938772b0a9629e74a8f8f657693b}
+      \strng{authorfullhash}{c565938772b0a9629e74a8f8f657693b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Graphics}
+      \field{number}{4}
+      \field{title}{Flocks, Herds, and Schools: A Distributed Behavioral Model}
+      \field{volume}{21}
+      \field{year}{1987}
+      \field{pages}{25\bibrangedash 34}
+      \range{pages}{10}
+    \endentry
+    \entry{noauthor_dvic_nodate}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{{DVIC} - {De} {Vinci} {Innovation} {Center}}
+      \field{urlday}{7}
+      \field{urlmonth}{9}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb DVIC - De Vinci Innovation Center:/home/nicos/Zotero/storage/3D6GPNDI/lighthouse-positioning.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://dvic.devinci.fr/tutorial/lighthouse-positioning
+      \endverb
+      \verb{url}
+      \verb https://dvic.devinci.fr/tutorial/lighthouse-positioning
+      \endverb
+      \keyw{site}
+    \endentry
+  \enddatalist
+  \missing{cflib}
+  \missing{crazyswarm}
+\endrefsection
+\endinput
+

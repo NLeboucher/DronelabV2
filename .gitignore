@@ -76,8 +76,12 @@ Tutorials/
 API/temp/
 venv/
 mlvenv/
+<<<<<<< HEAD
 myenv/
 masterthesis/
+=======
+# masterthesis/
+>>>>>>> 2998f946f513e7d8db704d9b30cdd76d6a9ee007
 *log.txt
 Nicolas-Leboucher.pdf
 logD.txt
@@ -86,6 +90,18 @@ logH.txt
 Programmed Movement with Keyboard backup.py
 
 masterthesis.md
-*log*
+# *log*
 
 .vscode
+*.aux
+*.bbl
+*.blg
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.mw

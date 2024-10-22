@@ -1,0 +1,392 @@
+\glsdefs@newdocentry{RGB}%
+{%
+name={RGB},%
+sort={RGB},%
+type={main},%
+first={RGB},%
+firstplural={RGBs},%
+text={RGB},%
+plural={RGBs},%
+description={Red, Green, Blue (standard color model for digital images)},%
+descriptionplural={Red, Green, Blue (standard color model for digital images)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{RGB-D}%
+{%
+name={RGB-D},%
+sort={RGB-D},%
+type={main},%
+first={RGB-D},%
+firstplural={RGB-Ds},%
+text={RGB-D},%
+plural={RGB-Ds},%
+description={Red, Green, Blue with Depth (imaging that captures depth along with standard color)},%
+descriptionplural={Red, Green, Blue with Depth (imaging that captures depth along with standard color)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{PnP}%
+{%
+name={PnP},%
+sort={PnP},%
+type={main},%
+first={PnP},%
+firstplural={PnPs},%
+text={PnP},%
+plural={PnPs},%
+description={Perspective-n-Point (pose estimation algorithm used in computer vision)},%
+descriptionplural={Perspective-n-Point (pose estimation algorithm used in computer vision)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{API}%
+{%
+name={API},%
+sort={API},%
+type={main},%
+first={API},%
+firstplural={APIs},%
+text={API},%
+plural={APIs},%
+description={Application Programming Interface (a set of tools for building software)},%
+descriptionplural={Application Programming Interface (a set of tools for building software)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{3D}%
+{%
+name={3D},%
+sort={3D},%
+type={main},%
+first={3D},%
+firstplural={3Ds},%
+text={3D},%
+plural={3Ds},%
+description={Three Dimensional},%
+descriptionplural={Three Dimensional},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ROS}%
+{%
+name={ROS},%
+sort={ROS},%
+type={main},%
+first={ROS},%
+firstplural={ROSs},%
+text={ROS},%
+plural={ROSs},%
+description={Robot Operating System (a flexible framework for writing robot software)},%
+descriptionplural={Robot Operating System (a flexible framework for writing robot software)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cflib}%
+{%
+name={cflib},%
+sort={cflib},%
+type={main},%
+first={cflib},%
+firstplural={cflibs},%
+text={cflib},%
+plural={cflibs},%
+description={Crazyflie Library (Python-based library for drone control)},%
+descriptionplural={Crazyflie Library (Python-based library for drone control)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{MediaPipe}%
+{%
+name={MediaPipe},%
+sort={MediaPipe},%
+type={main},%
+first={MediaPipe},%
+firstplural={MediaPipes},%
+text={MediaPipe},%
+plural={MediaPipes},%
+description={A cross-platform library for real-time computer vision tasks},%
+descriptionplural={A cross-platform library for real-time computer vision tasks},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{RealSense}%
+{%
+name={RealSense},%
+sort={RealSense},%
+type={main},%
+first={RealSense},%
+firstplural={RealSenses},%
+text={RealSense},%
+plural={RealSenses},%
+description={Intel's line of depth-sensing cameras},%
+descriptionplural={Intel's line of depth-sensing cameras},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OpenCV}%
+{%
+name={OpenCV},%
+sort={OpenCV},%
+type={main},%
+first={OpenCV},%
+firstplural={OpenCVs},%
+text={OpenCV},%
+plural={OpenCVs},%
+description={Open Source Computer Vision Library},%
+descriptionplural={Open Source Computer Vision Library},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{Holistic}%
+{%
+name={Holistic},%
+sort={Holistic},%
+type={main},%
+first={Holistic},%
+firstplural={Holistics},%
+text={Holistic},%
+plural={Holistics},%
+description={A pose estimation algorithm from MediaPipe for full body tracking},%
+descriptionplural={A pose estimation algorithm from MediaPipe for full body tracking},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ML}%
+{%
+name={ML},%
+sort={ML},%
+type={main},%
+first={ML},%
+firstplural={MLs},%
+text={ML},%
+plural={MLs},%
+description={Machine Learning},%
+descriptionplural={Machine Learning},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{UV}%
+{%
+name={UV},%
+sort={UV},%
+type={main},%
+first={UV},%
+firstplural={UVs},%
+text={UV},%
+plural={UVs},%
+description={Unmanned Vehicle (any type of vehicle capable of operating autonomously without a human pilot)},%
+descriptionplural={Unmanned Vehicle (any type of vehicle capable of operating autonomously without a human pilot)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{JS}%
+{%
+name={\acronymfont {\glsentryshort {JS}}},%
+sort={JS},%
+type={main},%
+first={JS},%
+firstplural={JSs},%
+text={JS},%
+plural={JSs},%
+description={JavaScript (a programming language used for web development)},%
+descriptionplural={JavaScript (a programming language used for web development)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JavaScript (a programming language used for web development)},%
+longplural={JavaScript (a programming language used for web development)s},%
+short={JS},%
+shortplural={JSs},%
+counter={page},%
+parent={},%
+%
+}%
+
