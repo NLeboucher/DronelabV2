@@ -136,11 +136,11 @@ async def posWebsocket(websocket: WebSocket):
 
 @app.get("/getestimatedpositionsUDPstart/")
 async def GetEstimatedPositions():
-    threading.Thread(target=send_estimated_positions, daemon=True).start()
+    Thread(target=send_estimated_positions, daemon=True).start()
     return {"status": "Thread started"}
 
 async def send_estimated_positions():
-    while true:
+    while True:
         UDPClient.send_message(s.All_GetEstimatedPositions())
         with(stop_lock):
             if stop:
