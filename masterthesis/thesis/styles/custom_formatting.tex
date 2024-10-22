@@ -1,0 +1,475 @@
+%!TEX root = ../thesis.tex
+
+%\hypersetup{colorlinks,linktocpage,urlcolor=red}
+%
+%\definecolor{myGreen}{HTML}{05C18E} 
+%\definecolor{myGreenDarker}{HTML}{178C6C} \colorlet{mylinkcolor}{green!50!black}
+
+\definecolor{webbrown}{rgb}{.6,0,0}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black, %myGreenDarker
+%  urlcolor=myGreenDarker,
+  citecolor = webbrown,
+  urlcolor=webbrown,
+  hyperfootnotes=false,
+  hypertexnames,
+  bookmarks=true}
+  
+%\setsidenotefont{\color{black}\footnotesize}   <-- set the color and font here
+%\setmarginnotefont{\color{black}\footnotesize} <-- and here
+%
+%\renewcommand{\maketitlepage}[0]{%
+%  \cleardoublepage%
+%  {%
+%  \sffamily%
+%  \begin{fullwidth}%
+%  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
+%  \vspace{11.5pc}%
+%  \fontsize{24}{45}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}
+%  \fontsize{17.4}{25}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{For Affective Touch Communication}}%
+%  \fontsize{10.0}{17}\selectfont\par\noindent\textcolor{Gray}{\allcaps{Devices that touch to convey emotions and feel that contact}}%
+%
+%  \vfill%
+%  \fontsize{14}{16}\selectfont\par\noindent\allcaps{\thanklesspublisher}%
+%  \end{fullwidth}%
+%  }
+ %  \thispagestyle{empty}%
+%  \clearpage%
+%}
+
+%%%% Kevin Godny's code for title page and contents from https://groups.google.com/forum/#!topic/tufte-latex/ujdzrktC1BQ
+% \makeatletter
+% \renewcommand{\maketitlepage}{%
+% \begingroup%
+% \setlength{\parindent}{0pt}
+
+% {\fontsize{24}{24}\selectfont\textit{\@author}\par}
+
+% \vspace{1.75in}{\fontsize{36}{54}\selectfont\@title\par}
+
+% % \vspace{0.5in}{\fontsize{14}{14}\selectfont\textsf{\smallcaps{\@date}}\par}
+% \vspace{0.5in}{\fontsize{14}{14}\selectfont\textsf{\sc\@date}\par}
+
+% \vfill{\fontsize{14}{14}\selectfont\textit{\@publisher}\par}
+
+% \thispagestyle{empty}
+% \endgroup
+% }
+% \makeatother
+
+%\titlecontents{part}%
+%    [0pt]% distance from left margin
+%    {\addvspace{0.25\baselineskip}}% above (global formatting of entry)
+%    {\allcaps{Part~\thecontentslabel}\allcaps}% before w/ label (label = ``Part I'')
+%    {\allcaps{Part~\thecontentslabel}\allcaps}% before w/o label
+%    {}% filler and page (leaders and page num)
+%    [\vspace*{0.5\baselineskip}]% after
+%
+%
+%\titlecontents{chapter}%
+%    [4em]% distance from left margin
+%    {}% above (global formatting of entry)
+%    {\contentslabel{2em}\textit}% before w/ label (label = ``Chapter 1'')
+%    {\hspace{0em}\textit}% before w/o label
+%    {\qquad\thecontentspage}% filler and page (leaders and page num)
+%    [\vspace*{0.5\baselineskip}]% after
+%%%%% End additional code by Kevin Godby
+
+
+%% CHANGE CITE COMMAND
+\renewcommand{\cite}[1]{%
+~\citep{#1}%
+}
+
+
+
+%%
+% If they're installed, use Bergamo and Chantilly from www.fontsite.com.
+% They're clones of Bembo and Gill Sans, respectively.
+%\IfFileExists{bergamo.sty}{\usepackage[osf]{bergamo}}{}% Bembo
+%\IfFileExists{chantill.sty}{\usepackage{chantill}}{}% Gill Sans
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% INCLUSION / EXCLUSION %%%%%%%%%%%%%%%%%%%
+\usepackage{microtype}
+\usepackage{comment}
+% !!! Comment or uncomment line under to exclude or include the content of the chapter:
+%\excludecomment{content} % exclude the content, (only get introduction and summary)
+\includecomment{content} % include the content, (get eveevolutionrything)
+\includecomment{export}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%
+% For nicely typeset tabular material
+\usepackage{booktabs}
+%%
+% For graphics / images
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+% The fancyvrb package lets us customize the formatting of verbatim environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+%%
+% Prints argument within hanging parentheses (i.e., parentheses that take
+% up no horizontal space).  Useful in tabular environments.
+% \newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}}
+
+%%
+% Prints an asterisk that takes up no horizontal space.
+% Useful in tabular environments.
+% \newcommand{\hangstar}{\makebox[0pt][l]{*}}
+
+%%
+% Prints a trailing space in a smart way.
+\usepackage{xspace}
+
+%
+%%%
+%% Some shortcuts for Tufte's book titles.  The lowercase commands will
+%% produce the initials of the book title in italics.  The all-caps commands
+%% will print out the full title of the book in italics.
+%\newcommand{\vdqi}{\textit{VDQI}\xspace}
+%\newcommand{\ei}{\textit{EI}\xspace}
+%\newcommand{\ve}{\textit{VE}\xspace}
+%\newcommand{\be}{\textit{BE}\xspace}
+%%\newcommand{\VDQI}{\textit{Visualizing dynamic social data  with rationally designed constructive systems}\xspace}
+%\newcommand{\EI}{\textit{Envisioning Information}\xspace}
+%\newcommand{\VE}{\textit{Visual Explanations}\xspace}
+%\newcommand{\BE}{\textit{Beautiful Evidence}\xspace}
+%\newcommand{\TL}{Tufte-\LaTeX\xspace}
+
+% Prints the month name (e.g., January) and the year (e.g., 2008)
+% \newcommand{\monthyear}{%
+%   \ifcase\month\or January\or February\or March\or April\or May\or June\or
+%   July\or August\or September\or October\or November\or
+%   December\fi\space\number\year
+% }
+
+
+
+
+
+% Prints an epigraph and speaker in sans serif, all-caps type.
+\newcommand{\openepigraph}[2]{%
+  %\sffamily\fontsize{14}{16}\selectfont
+  \begin{fullwidth}
+  \sffamily\large
+  \begin{doublespace}
+  \noindent\allcaps{#1}\\% epigraph
+  \noindent\allcaps{#2}% author
+  \end{doublespace}
+  \end{fullwidth}
+}
+
+% Inserts a blank page
+% \newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+\usepackage{units}
+
+% Typesets the font size, leading, and measure in the form of 10/12x26 pc.
+\newcommand{\measure}[3]{#1/#2$\times$\unit[#3]{pc}}
+
+% Macros for typesetting the documentation
+\newcommand{\hlred}[1]{\textcolor{Green}{#1}}% prints in red
+\newcommand{\hangleft}[1]{\makebox[0pt][r]{#1}}
+% \newcommand{\hairsp}{\hspace{1pt}}% hair space
+\newcommand{\hquad}{\hskip0.5em\relax}% half quad space
+\newcommand{\TODO}{\textcolor{red}{\bf TODO!}\xspace}
+% \newcommand{\ie}{\textit{i.\hairsp{}e.}\xspace}
+% \newcommand{\eg}{\textit{e.\hairsp{}g.}\xspace}
+% \newcommand{\na}{\quad--}% used in tables for N/A cells
+\providecommand{\XeLaTeX}{X\lower.5ex\hbox{\kern-0.15em\reflectbox{E}}\kern-0.1em\LaTeX}
+\newcommand{\tXeLaTeX}{\XeLaTeX\index{XeLaTeX@\protect\XeLaTeX}}
+% \index{\texttt{\textbackslash xyz}@\hangleft{\texttt{\textbackslash}}\texttt{xyz}}
+\newcommand{\tuftebs}{\symbol{'134}}% a backslash in tt type in OT1/T1
+\newcommand{\doccmdnoindex}[2][]{\texttt{\tuftebs#2}}% command name -- adds backslash automatically (and doesn't add cmd to the index)
+\newcommand{\doccmddef}[2][]{%
+  \hlred{\texttt{\tuftebs#2}}\label{cmd:#2}%
+  \ifthenelse{\isempty{#1}}%
+    {% add the command to the index
+      \index{#2 command@\protect\hangleft{\texttt{\tuftebs}}\texttt{#2}}% command name
+    }%
+    {% add the command and package to the index
+      \index{#2 command@\protect\hangleft{\texttt{\tuftebs}}\texttt{#2} (\texttt{#1} package)}% command name
+      \index{#1 package@\texttt{#1} package}\index{packages!#1@\texttt{#1}}% package name
+    }%
+}% command name -- adds backslash automatically
+\newcommand{\doccmd}[2][]{%
+  \texttt{\tuftebs#2}%
+  \ifthenelse{\isempty{#1}}%
+    {% add the command to the index
+      \index{#2 command@\protect\hangleft{\texttt{\tuftebs}}\texttt{#2}}% command name
+    }%
+    {% add the command and package to the index
+      \index{#2 command@\protect\hangleft{\texttt{\tuftebs}}\texttt{#2} (\texttt{#1} package)}% command name
+      \index{#1 package@\texttt{#1} package}\index{packages!#1@\texttt{#1}}% package name
+    }%
+}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newenvironment{docspec}{\begin{quotation}\ttfamily\parskip0pt\parindent0pt\ignorespaces}{\end{quotation}}% command specification environment
+\newcommand{\docenv}[1]{\texttt{#1}\index{#1 environment@\texttt{#1} environment}\index{environments!#1@\texttt{#1}}}% environment name
+\newcommand{\docenvdef}[1]{\hlred{\texttt{#1}}\label{env:#1}\index{#1 environment@\texttt{#1} environment}\index{environments!#1@\texttt{#1}}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}\index{#1 package@\texttt{#1} package}\index{packages!#1@\texttt{#1}}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}\index{#1 class option@\texttt{#1} class option}\index{class options!#1@\texttt{#1}}}% document class option name
+\newcommand{\docclsoptdef}[1]{\hlred{\texttt{#1}}\label{clsopt:#1}\index{#1 class option@\texttt{#1} class option}\index{class options!#1@\texttt{#1}}}% document class option name defined
+\newcommand{\docmsg}[2]{\bigskip\begin{fullwidth}\noindent\ttfamily#1\end{fullwidth}\medskip\par\noindent#2}
+\newcommand{\docfilehook}[2]{\texttt{#1}\index{file hooks!#2}\index{#1@\texttt{#1}}}
+\newcommand{\doccounter}[1]{\texttt{#1}\index{#1 counter@\texttt{#1} counter}}
+
+
+
+
+%\geometry{textwidth=.55\paperwidth}
+
+
+% Generates the index
+\usepackage{makeidx}
+\makeindex
+
+
+
+% Nomenclature
+%\usepackage{nomencl}
+%\renewcommand{\nomname}{List of Abbreviations}
+%\makenomenclature
+
+
+
+%%%%
+\makeatletter
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
+\makeatother
+
+%% change TOC
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\Bbbk\relax
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+%\usepackage{graphics} % for EPS, load graphicx instead
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{colortbl}
+\usepackage{morefloats}
+\usepackage{enumitem}
+\usepackage{rotating}
+\usepackage{comment}
+\usepackage{rotating}
+% \usepackage[sort, numbers]{natbib} 
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{bibentry}
+\usepackage{longtable}
+\usepackage{glossaries}
+\usepackage{gensymb}
+\usepackage{csvsimple}
+\usepackage{amsmath}
+\usepackage{cleveref}% Has to be loaded after hyperref
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{marginfix}
+\usepackage[export]{adjustbox}
+\usepackage{fullwidth}
+%\setkeys{Gin}{height=2cm}
+%\usepackage{float}
+\usepackage[caption=false]{subfig}
+
+\usepackage[strict]{changepage}
+
+\setlist[description]{style = multiline, labelwidth = 55pt}
+\usepackage[parfill]{parskip}
+\makeatletter
+% Paragraph indentation and separation for normal text
+% \renewcommand{\@tufte@reset@par}{%
+%   \setlength{\RaggedRightParindent}{1.0pc}%
+%   \setlength{\parindent}{1pc}%
+%   \setlength{\parskip}{8pt}%\baselineskip % default 12pt for 10pt font
+% }
+% \@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+% \renewcommand{\@tufte@margin@par}{%
+%   \setlength{\RaggedRightParindent}{0.5pc}%
+%   \setlength{\JustifyingParindent}{0.0pc}%
+%   \setlength{\parindent}{0.5pc}%
+%   \setlength{\parskip}{6pt}%
+% }
+\makeatother
+
+
+
+
+
+%% Correction
+
+%\newcommand{\Ssubsection}[1]{{\setlength{\parindent}{0cm}\normalfont{\textit{\newline#1}}}\newline}
+%\newcommand{\Ssubsection}[1]{{\setlength{\parindent}{0cm}\normalfont{\textit{#1}}}}
+
+
+
+
+\usepackage{mdframed}
+\newmdenv[
+  leftmargin = 0pt,
+  innerleftmargin = 1em,
+  innerrightmargin = 0pt,
+ innerbottommargin = 0pt,
+  innertopmargin = 0pt,
+  rightmargin = 0pt,
+  linewidth = 2pt,
+  topline = false,
+  rightline = false,
+  bottomline = false,
+  skipabove = 6pt
+  ]{leftbar}
+
+
+\newcommand{\mframe}[1]{\begin{leftbar}{#1}\end{leftbar}}
+
+
+%You can copy those commands to the preamble of your document and fill in the values that you prefer (e.g., 0pt for the indents and \baselineskip for the \parskip).
+
+
+
+
+
+
+
+
+% \titleclass{\subsubsection}{straight}
+% \titleformat{\subsubsection}%
+%   [hang]% shape
+%   {\normalfont\large\itshape}% format applied to label+text
+%   {\thesubsubsection}% label
+%   {1em}% horizontal separation between label and title body
+%   {}% before the title body
+%   []% after the title body
+  
+  
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% FANCY FRAMES
+%% https://tex.stackexchange.com/questions/348501/example-of-box-inside-box
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[margin=0.5in]{geometry}
+%\usepackage{tikz,lipsum,lmodern}
+\usepackage{tikz,lipsum}
+\usepackage[most]{tcolorbox}
+
+\tcbset{titre/.style={boxed title style={boxrule=0pt,colframe=white}}}
+
+\definecolor{gradientGreenL}{HTML}{1fe2ad} 
+\definecolor{gradientGreenR}{HTML}{d4eb6f} 
+
+
+\newtcolorbox{BoxResume}[2][]{
+                boxrule=0.5pt,
+                colback=white,
+                top=3pt,bottom=2pt,left=2pt,right=2pt,
+                colframe=webbrown,
+                fonttitle=\sffamily\small,%\bfseries
+                coltitle=black,
+                colbacktitle=white,
+                enhanced,
+                attach boxed title to top left={xshift=5mm, yshift=-2mm},
+                title=#2,#1
+                }
+
+
+\newtcolorbox{BoxIn}{
+enhanced,
+colframe=white,
+interior style={
+left color=gradientGreenL!7!white,
+right color=gradientGreenR!7!white},
+%frame style image=background\aa.jpg
+left=5mm,
+top=4mm,
+bottom=4mm,
+right=5mm,
+boxsep=0mm,
+nobeforeafter}
+
+
+
+\newtcolorbox{BoxResumeNew}[2][]{
+                boxrule=1pt,
+                colback=white,
+                top=3pt,bottom=2pt,left=2pt,right=2pt,
+                colframe=black,
+                fonttitle=\sffamily\small,%\bfseries
+                coltitle=black,
+                colbacktitle=white,
+                enhanced,
+                attach boxed title to top left={xshift=5mm, yshift=-2mm},
+                title=#2,#1
+                }
+
+
+\newtcolorbox{BoxInNew}{
+enhanced,
+colframe=white,
+colback=black!2!white,
+%frame style image=background\aa.jpg
+left=5mm,
+top=4mm,
+bottom=4mm,
+right=5mm,
+boxsep=0mm,
+nobeforeafter}
+
+
+
+\newcommand{\remember}[1]{
+\vspace*{\fill}
+\begin{BoxResumeNew}[titre]{WHAT YOU MUST REMEMBER}
+ \begin{BoxInNew}{}
+ #1
+ \end{BoxInNew}{}
+\end{BoxResumeNew}
+\vspace{0.5cm}
+} 
+
+%%%% USAGE
+
+%\remember{
+%\textit{Contributions:}\vspace{0.5em}
+%\begin{itemize}
+%\item[$-$] Design and development of a finger robotic actuator for mobile devices
+%\item[$-$] Applications and scenarios that demonstrate its use as a medium,  as a tool and as a virtual partner
+%\item[$-$] Initial evaluation of perception of the appearance and the relevance of scenarios
+%\end{itemize}
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%   QUOTE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   }
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+
+%\listfiles
