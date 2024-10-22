@@ -140,7 +140,7 @@ async def GetEstimatedPositions():
     return {"status": "Thread started"}
 
 async def send_estimated_positions():
-    while true:
+    while True:
         UDPClient.send_message(s.All_GetEstimatedPositions())
         with(stop_lock):
             if stop:

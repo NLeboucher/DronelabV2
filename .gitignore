@@ -76,7 +76,7 @@ Tutorials/
 API/temp/
 venv/
 mlvenv/
-masterthesis/
+# masterthesis/
 *log.txt
 Nicolas-Leboucher.pdf
 logD.txt
@@ -88,3 +88,15 @@ masterthesis.md
 *log*
 
 .vscode
+*.aux
+*.bbl
+*.blg
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.mw
