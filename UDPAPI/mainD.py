@@ -6,8 +6,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from threading import Thread, Lock
 
 import asyncio
-from threading import Thread, Lock
-from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 import os, sys
