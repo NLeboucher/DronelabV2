@@ -14,9 +14,15 @@ import uvicorn
 stop = False
 stop_lock = Lock()
 path = os.getcwd()
-folders = path.split("/")
+if(os.name == "nt"):
+    folders = path.split("\\")
+else:
+    folders = path.split("/")
 if("DronelabV2" in folders):
-    path = "/".join(folders[:folders.index("DronelabV2")+1])
+    if(os.name == "nt"):
+        path = "\\".join(folders[:folders.index("DronelabV2")+1])
+    elif (os.name == "posix"):
+        path = "/".join(folders[:folders.index("DronelabV2")+1])
     sys.path.insert(0, path)
 
     print("Imported Dependencies from: ",path)
