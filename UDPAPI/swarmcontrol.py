@@ -10,8 +10,16 @@ import os, sys
 import uvicorn
 path = os.getcwd()
 folders = path.split("/")
+if(os.name == "nt"):
+    folders = path.split("\\")
+else:
+    folders = path.split("/")
 if("DronelabV2" in folders):
-    path = "/".join(folders[:folders.index("DronelabV2")+1])
+    if(os.name == "nt"):
+        path = "\\".join(folders[:folders.index("DronelabV2")+1])
+    elif (os.name == "posix"):
+        path = "/".join(folders[:folders.index("DronelabV2")+1])
+    sys.path.insert(0, path)
     print("found: ",path)
     from API.logger import Logger
     from API.move import Move, Velocity

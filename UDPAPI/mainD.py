@@ -18,11 +18,6 @@ if(os.name == "nt"):
     folders = path.split("\\")
 else:
     folders = path.split("/")
-try:
-
-    from logger import Logger
-except Exception as e:
-    print("failled: ",e)
 if("DronelabV2" in folders):
     if(os.name == "nt"):
         path = "\\".join(folders[:folders.index("DronelabV2")+1])
