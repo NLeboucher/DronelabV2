@@ -1,0 +1,7 @@
+event down boolean true
+dans function animate on fait le continue
+on peut faire la meem chose pour la fonction asynch de call api
+tant que je nai pas de retour on ne fait pas de nouveau call
+on peut faire un call api pour le get et un autre pour le post
+
+pointermove

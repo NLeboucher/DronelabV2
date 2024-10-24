@@ -1,0 +1,36 @@
+<!-- AAAAAA -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drone Display</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        myButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="./static/assets/favicon.ico" />
+</head>
+<body>
+
+    <div id="scene-container"></div>
+    Here is the drone display, you can move arount and see the human pose estimation in realtime.
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/",
+                "DragControls": "https://unpkg.com/three@0.156.0/examples/jsm/controls/DragControls.js",
+                "apiclient": "./static/apiclient.js"
+            }
+        }
+    </script>
+    <!-- <canvas id="canvas"></canvas> -->
+    
+    <script src="./static/app.js" type="module"></script>
+</body>
+</html>

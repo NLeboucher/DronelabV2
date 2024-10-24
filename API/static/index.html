@@ -5,17 +5,33 @@
     <style>
         body { margin: 0; }
         canvas { display: block; }
+        myButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
     </style>
+    <link rel="icon" type="image/png" href="static/assets/favicon.ico" />
 </head>
 <body>
+    <button class="myButton" id="button1" size = 10 >Drone API Connect</button>
+    <button class="myButton" id="button2" size = 10 >Pose API Connect</button>
+
+    <input type="text" id="ip" name="name" size="10" value="localhost" />
+    <input type="text" id="NDrones"  size="5" value="NDrones" />
+    Here is the drone display, you can connect to the drone API and see the drones moving around in real time.
     <script type="importmap">
         {
             "imports": {
                 "three": "https://unpkg.com/three@0.156.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/"
+                "three/addons/": "https://unpkg.com/three@0.156.0/examples/jsm/",
+                "DragControls": "https://unpkg.com/three@0.156.0/examples/jsm/controls/DragControls.js",
+                "apiclient": "./static/apiclient.js"
             }
         }
     </script>
+    <!-- <canvas id="canvas"></canvas> -->
     
     <script src="static/app.js" type="module"></script>
 </body>

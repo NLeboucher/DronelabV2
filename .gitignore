@@ -25,6 +25,7 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
 
 # Gradle cache directory
 .gradle/
@@ -75,7 +76,36 @@ Tutorials/
 API/temp/
 venv/
 mlvenv/
+<<<<<<< HEAD
+myenv/
+masterthesis/
+=======
+# masterthesis/
+>>>>>>> 2998f946f513e7d8db704d9b30cdd76d6a9ee007
+*log.txt
+Nicolas-Leboucher.pdf
+logD.txt
+logH.txt
+*.log
+Programmed Movement with Keyboard backup.py
+
 masterthesis.md
-*log*
+# *log*
 
 .vscode
+*.aux
+*.bbl
+*.bcf
+*.bib
+*.blg
+*.glg
+*.glo
+*.gls*
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.mw
+*.nlo
+*.nls
