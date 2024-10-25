@@ -194,7 +194,7 @@ class SwarmControl:
 
             logger.info(f"GetEstimatedPosition STOP")
             # SWARM.close_links()
-        return OutputDict(self.positions,"Positions").dict
+        return OutputDict(self.positions,"Positions")
     def All_StartLinearMotion(self, args_arr : List[Velocity]):
         global DRONES, URIS, factory, SWARM
         logger.info(f"All_StartLinearMotion START with {len(args_arr)} args")

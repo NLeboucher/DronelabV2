@@ -12,7 +12,6 @@ import os, sys
 import uvicorn
 
 stop = False
-stop_lock = Lock()
 path = os.getcwd()
 if(os.name == "nt"):
     folders = path.split("\\")
@@ -51,6 +50,7 @@ class ConnectionManager:
             logger.info(f"sendCoordinates: {message}")
             await connection.send_text(message)
         
+stop_lock = Lock()
 manager = ConnectionManager()
 app = FastAPI()
 origins = ["*"]
@@ -66,6 +66,7 @@ logger = Logger("logD.txt",True)
 s = SwarmControl()
 s.OpenLinks()
 posThread = None
+UDPClient = UDPClient("127.0.0.1", 9999, 0.1)
 @app.get("/HelloWorld/")
 async def read_root():
     global s
@@ -139,24 +140,27 @@ async def posWebsocket(websocket: WebSocket):
 #     # default the new GetEstimatedPositions to the old one for now later to be deprecated
 
 @app.get("/getestimatedpositionsUDPstart/")
-async def GetEstimatedPositions():
-    Thread(target=send_estimated_positions, daemon=True).start()
-    return {"status": "Thread started"}
+async def GetEstimatedPositionsStart():
+    # Thread(target=send_estimated_positions).start()
+    t=asyncio.create_task(send_estimated_positions())
+    return {"status": f"Thread started{ t }"}
 
 async def send_estimated_positions():
+    global stop
     while True:
         UDPClient.send_message(s.All_GetEstimatedPositions())
-        with(stop_lock):
+        with stop_lock:
             if stop:
                 stop=False
                 break
 
 # stop sending estimated positions to the UDP client
 @app.get("/getestimatedpositionsUDPstop/")
-async def GetEstimatedPositions():
-    with(stop_lock):
-        if stop:
-            stop=False
+async def GetEstimatedPositionsstop():
+    global stop
+    with stop_lock:
+        if not stop:
+            stop=True
 
 # send estimated positions to the UDP client
 @app.get("/getestimatedpositions/")
@@ -165,10 +169,10 @@ async def GetEstimatedPositions():
     ret = s.All_GetEstimatedPositions()
     return ret
 
-@app.on_event("startup")
-async def start_udp_server():
-    # Start the UDP server on app startup
-    await UDPServer.startup_event(port=9999)
+# @app.on_event("startup")
+# async def start_udp_server():
+#     # Start the UDP server on app startup
+#     await UDPServer.startup_event(port=9998)
 
 @app.post("/AllSetSpeed/")
 async def AllSetSpeed(args_arr: List[Velocity] ): #: OutputDict(List[Velocity],"Drones")
