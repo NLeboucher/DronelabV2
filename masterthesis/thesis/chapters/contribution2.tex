@@ -1,45 +1,93 @@
-\section{Contribution 2: Human pose estimation Kernel}
-
-\subsection{Introduction}
-In this brief section we describe the workings of the human detection system. It was developed by Etienne Pommel for a similar use case. The system is based on the mediapipe library \cite{mediapipe2020}, which is a state-of-the-art object detection algorithm that is capable of detecting humans in real-time. \cite{realsense_mediapipe}. The system is able to detect humans with high accuracy as they move around the environment. To the standard \gls{RGB} image, the system adds depth.
+\section{Contribution 2: Human Pose Estimation System}
 
 \begin{figure}[htbp]
-    \centerline{\includegraphics[width=1.0\textwidth]{images/rgbd.jpeg}}
-    \caption{Intel Realsense D435, showing the workings of the depth camera and calibration capabilities, each pixel has been projected in the \gls{3D} space.}
-    \label{fig}
+    \centerline{\includegraphics{images/HumanLocaOverview.png}}
+    \caption{ (a) Inside the drone room. Similarly in red is the drone system and in grey the human system with the human localization kernel. In red above there is the drone localization and control system. In grey above is the human localization system. Here we focus on the human localization kernel or system. (b) Outside the room, a user is controlling and or monitoring the drones. He is able to see the drones and humans in the \gls{3D} space using the web interface. } 
+    \label{figsetting2}
+    \end{figure}
+\subsection{Introduction}
+In this brief section we describe the workings of the human detection system. It was developed by Etienne Pommel and adapted for our usecase. The system is based on the mediapipe library \cite{mediapipe2020}, which is a state-of-the-art object detection algorithm that is capable of detecting humans in real-time. \cite{realsense_mediapipe}. The system is able to detect humans with high accuracy as they move around the environment. To the standard \gls{RGB} image, the system adds depth.
+
+ 
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=\linewidth]{images/depth.png}}
+    \caption{From Figure~\ref{figdepth} in~\cite{noauthor_projection_nodate} Showing the camera in the \gls{3D} space. Note the red segment, it shows the infrared ray going to the object from the camera and estimating the distance.}
+    \label{figdepth2}
     \end{figure} 
-The difficulties of the system are to detect the objects in the image and to estimate the distance to the object. Finaly to project this distance in the \gls{3D} space.
+% \begin{marginfigure}[-5cm] % Adjust the vertical placement
+%     \centering
+%     \includegraphics[width=\linewidth]{images/depth.png}
+%     \caption{From Figure \ref{figdepth} \cite{noauthor_projection_nodate} Showing the camera in the \gls{3D} space.}
+%     \label{fig:figdepth2}
+% \end{marginfigure}
+The difficulties of the system are to detect the objects in the image and to estimate the distance to the object and finaly to project this distance in the \gls{3D} space. Figure ~\ref{figrgbd} later will show the projection of each pixel in the \gls{3D} space from Figure ~\ref{figdepth2}.
 
-Here we want to detect humans in the image this the use of mediapipe.
-
-\subsubsection{Architecture}
-The system was modified from the original algorithm as it would continuously calibrate using the chessboard.~\ref{appendix:additional_work}
+Here we want to detect humans in the image using of mediapipe and estimate the distance to the humans. Let us first look at the architecture of the system. The system is composed of the camera, the kernel and the client or the Web Interface in the \gls{FastAPI} server see Figure ~\ref{figkernel}. 
 
 \begin{figure}[htbp]
     \centerline{\includegraphics{images/objectschema.png}}
-    \caption{Object Control Kernel, showing the main components of the system.}
-    \label{fig}
+    \caption{\gls{HLK}, showing the main components of the system.}
+    \label{figkernel}
     \end{figure} 
+
+
+The Human Localization Kernel (HLK) is responsible of the logics. The camera captures the image and depth data, which is then processed by the mediapipe library to detect humans in the image. The depth data is used to estimate the distance to the humans, which is then projected in \gls{3D} space. The \gls{FastAPI} application receives the data from the mediapipe library and processes it to estimate the distance to the humans. The \gls{FastAPI} application provides access to the logic and also provides a web interface to visualize the humans in \gls{3D} space.
+\subsubsection{Camera and Mediapipe Logic}
+The camera captures the image and depth data, which is then processed by the mediapipe library to detect humans in the image. The mediapipe library uses a state-of-the-art object detection algorithm to identify humans in the image. The depth data is used to estimate the distance to the humans, which is then projected in \gls{3D} space.
+
+Let us look at the calibration process of the camera. The camera is calibrated using a chessboard pattern, which is placed in front of the camera. The camera captures images of the chessboard pattern from different angles, which are then used to calibrate the camera. The calibration process is repeated at regular intervals to ensure that the camera is properly calibrated.(cf Figure ~\ref{figchess})
+
 \begin{figure}[htbp]
-    \centerline{\includegraphics[width=0.5\textwidth]{images/ObjectRecognitionLogics.png}}
-    \caption{Object Control Kernel, inside logics.}
-    \label{fig}
+    \centerline{\includegraphics[width=0.5\textwidth]{images/Chessboard.png}}
+    \caption{Chessboard with the center of the \gls{3D} space. It shows the success calibration process of the camera.}
+    \label{figchess}
     \end{figure} 
+
+After Calibration we can project the image in the \gls{3D} space as shown in Figure ~\ref{figrgbd}.
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=1.0\textwidth]{images/rgbd.jpeg}}
+    \caption{Intel Realsense D435, showing the workings of the depth camera and calibration capabilities, each pixel has been projected in the \gls{3D} space. The camera is able to capture the image and depth data, which is then processed. The depth data is used to estimate the distance from the pixels to humans then we are able to perform a change base to real world position from the camera RGB-D system. Which is enough data to be projected in \gls{3D} space.}
+    \label{figrgbd}
+    \end{figure}
+
+\subsubsection{Architecture of the System}
+
+The \gls{FastAPI} application is responsible for providing access to our logic and providing a web interface to visualize the humans in \gls{3D} space. To allow for this we base our kernel architecture on the \gls{FastAPI} application from the original algorithm from Etienne Pommel at the Institute For Future Technologies.
+
+The system was modified from the original algorithm as it would continuously calibrate using the chessboard. See Figure \ref{figchess} and appendix ~\ref{appendix:additional_work}. We modified slithly the system by moving the chessboard pose estimation thanks to a seperate process. By that way the main process will not have to recompute the rotation and translation vectors for the change of basis which was the most costly part. We saved the rotation and translation vectors in global variables to be used in the main and calibration processes.
+
+
+To make the system \gls{stateless}, \gls{FastAPI} handles two different processes. One process is to estimate the position of the humans in the \gls{3D} space. An other process allows for calibration of the camera. See Figure ~\ref{figOLK} for more.
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=0.5\textwidth]{images/ObjectRecognitionLogics2.png}}
+    \caption{Object Control Kernel, inside logics. We have three seperate threads/processes running. The first one sends the data to the client, the second one is the calibration process and the third one is the pose estimation process. Mediapipe runs in the pose estimation process. The calibration process is run once at the beginning at the load of the system, it can also be rerun later on when the camera moves.}
+    \label{figOLK}
+    \end{figure} 
+
+Let us look at the \gls{FastAPI} application. The application receives the data from the mediapipe library and processes it to estimate the distance to the humans. It also provides a \gls{threeJS} interface to visualize the humans in \gls{3D} space. The \gls{FastAPI} application is stateless and does not require any additional resources to run. It displays the humans in \gls{3D} space using the web \gls{threeJS} interface.(cf Figure ~\ref{figfastapi}) We want to note that the \gls{FastAPI} application is able to process the data from the mediapipe library and provide the estimated distance to the humans in real-time.
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=0.5\textwidth]{images/HumanSkeleton.png}}
+    \caption{The web interface shows the positions of a human of the platform through its web interface run for a few seconds. It allows for the visualization of the humans in \gls{3D} space.}
+    \label{figfastapi}
+    \end{figure}
+
 
 \subsection{Evaluation and Results}
-Also a ThreeJS interface is provided to visualize the drones in \gls{3D} space. This interface allows users to see the humans' positions and orientations in real-time, providing a visual representation of the system's behavior. The ThreeJS interface communicates with the FastAPI application to receive updates on the humans' positions and orientations.
+A Web interface is provided to visualize the drones and humans in \gls{3D} space. This interface allows users to see the humans' positions and orientations in real-time, providing a visual representation of the system's behavior. The \gls{threeJS} interface communicates with the kernels discussed in the paper.
 
-We have evaluated the components of the human detection kernel to ensure that they meet the requirements of the system. The results of the evaluation are presented in the following sections.
+We have evaluated the components of the human detection kernel to ensure that they meet the requirements of the system. The results of the evaluation are following.
 
-We expected the measures to be accurate to at least 5\% of the real distance but expect it to be less reliable the further the subject is to the camera. The system was not able to provide this much accuracy but 10\% at 5 meters. The system though was able to provide a good estimate of the distance to the object, constant at 2\% of the real distance at less then 7m.
+We expected the measures to be as accurate as at least 5\% of the real distance but expected it to be less reliable the further the subject is to the camera. In fact the system was not able to provide this much accuracy but 10\% at 5 meters. The system though was able to provide a relatively good estimate of the distance to the object, constant at 12\% of the real distance at 7m. The system on the other hand is precise, the estimation does not change above 1.5\%. 
 \begin{figure}[htbp]
     \centerline{\includegraphics[width=0.3\textwidth]{images/humanreconitionflaw.png}}
-    \caption{Object Control Kernel Issue, further the object is from the camera and the center of the image the smaller it will be estimated. The distance to the camera does not change only the size of the object in the image plane.}
+    \caption{\gls{HLK} Issue, further the object is from the camera and the center of the image, the smaller it will be estimated. The distance to the camera does not change only the size of the object in the image does. For simplicity we have used the center of the image as the center of the camera and kept the operator parallel to the camera. Distances are expected to be less accurate with an operator not parallel to the camera.}
     \label{fig}
     \end{figure} 
-Indeed the results are less satisfying then expected but the system is still able to provide a good estimate of the distance to the object. The system is able to detect the object in the image and to estimate the distance to the object. The system is also able to project this distance in the \gls{3D} space, we will need to takee this into account in the next part of the project.
+Indeed the results are less satisfying then expected but the system is still able to provide a relatively good estimate of the distance to the object. The system is able to project this distance in the global reference with this 12\% error which will need to be taken into account in the next part of the project.
 
-Similarly to the drones kernel, the system was made as stateless as possible. So after setup no command could break it. This system does not require a lot of resources and is able to send all the 30 landmarks per frame at the rate of 30 per second to the client so \[900 \text{ landmarks per second.}\]
+Similarly to the drones kernel, the system was made as stateless as possible. So after setup no command could break it. This system does not require a lot of resources and is able to send all the 30 landmarks per frame at the rate of 30 per second to the client so 900 landmarks per second.
 
 \subsection{Conclusion} 
-The human pose estimation kernel provides a valuable system for detecting and estimating the distance of humans in real-time, using the Mediapipe library in combination with depth sensors. While the results showed a degree of inaccuracy beyond 5 meters, the system successfully achieved consistent performance within 2\% accuracy for shorter distances (less than 7 meters). Despite some limitations—such as reduced reliability at greater distances and issues with object size estimation at image boundaries—the system still delivers an effective method for projecting human positions in \gls{3D} space. Future improvements should focus on enhancing the calibration mechanisms and addressing the accuracy drop at longer ranges, which will be vital for the next phase of the project.
+The human pose estimation kernel provides a valuable system for detecting and estimating the distance of humans in real-time, using the Mediapipe library in combination with depth sensors. While the results showed a degree of inaccuracy beyond 5 meters, the system successfully achieved consistent performance within 12\% accuracy for shorter distances (less than 7 meters). Despite some limitations—such as reduced reliability at greater distances and issues with object size estimation at image boundaries, the system still delivers an effective method for projecting human positions in \gls{3D} space. Future improvements should focus on enhancing the calibration mechanisms and addressing the accuracy drop at longer ranges, which will be vital for the next phase of the project.

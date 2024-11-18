@@ -80,7 +80,7 @@
 % \titlehead{The \texttt{kaobook} class}
 \subject{Master Thesis}
 \title{Swarm Drones Control Platform}
-\subtitle{A modular and scalable platform for swarm drone control}
+\subtitle{A modular and scalable platform for swarm drones control}
 
 
 \author{Nicolas Leboucher}
@@ -89,7 +89,7 @@
 
 \titlehead{\centering\includegraphics[width=6cm]{dvic.png}}
 
-\publishers{\textbf{Supervisors}\\ Dr Xiao Xiao and Dr Marc Teyssier Professor at IFT }
+\publishers{\textbf{Supervisors}\\ Dr Xiao Xiao and Dr Marc Teyssier Professors at the Institute for Future Technologies }
 
 
 %----------------------------------------------------------------------------------------
@@ -290,59 +290,106 @@
 
 % Glossary entries (used in text with e.g. \acrfull{fpsLabel} or \acrshort{fpsLabel})
 % Define your terms
+% add a new glossary entry on stateless
+\newglossaryentry{stateless}{
+    name={stateless},
+    description={A system that does not retain information between requests.}
+}
+\newglossaryentry{FastAPI}{
+    name={FastAPI},
+    description={A modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.}
+}
+\newglossaryentry{threeJS}{
+    name={ThreeJS},
+    description={A JavaScript library used to create and display animated 3D computer graphics in a web browser.}
+}
+\newglossaryentry{DCK}{
+    name={DCK},
+    description={Drone Control Kernel (a module for swarm drones control).}
+}
+\newglossaryentry{HLK}{
+    name={HLK},
+    description={Human Localization Kernel (a module for human localization and pose estimation).}
+}
+\newglossaryentry{lighthouse}{
+    name={Lighthouse},
+    description={A base station used for tracking the position of VR devices.}
+}
+\newglossaryentry{CRPA}{
+    name={CRPA},
+    description={Crazy Radio PA (a radio dongle used to communicate with Crazyflie drones).}
+}
+
+\newglossaryentry{UAV}{
+    name={UAV},
+    description={Unmanned Aerial Vehicle (a drone).}
+}
+\newglossaryentry{drone}{
+    name={drone},
+    description={An unmanned aerial vehicle (UAV) or unmanned aircraft system (UAS).}
+}
+\newglossaryentry{fpsLabel}{
+    name={FPS},
+    description={Frames Per Second (a measure of how well a game or video can run).}
+}
+% Make a new entry for FPV
+\newglossaryentry{FPV}{
+    name={FPV},
+    description={First Person View (a method used to control drones by seeing through their cameras).}
+}
 \newglossaryentry{RGB}{
     name={RGB},
-    description={Red, Green, Blue (standard color model for digital images)}
+    description={Red, Green, Blue (standard color model for digital images).}
 }
 
 \newglossaryentry{RGB-D}{
     name={RGB-D},
-    description={Red, Green, Blue with Depth (imaging that captures depth along with standard color)}
+    description={Red, Green, Blue with Depth (imaging that captures depth along with standard color).}
 }
 
 \newglossaryentry{PnP}{
     name={PnP},
-    description={Perspective-n-Point (pose estimation algorithm used in computer vision)}
+    description={Perspective-n-Point (pose estimation algorithm used in computer vision).}
 }
 
 \newglossaryentry{API}{
     name={API},
-    description={Application Programming Interface (a set of tools for building software)}
+    description={Application Programming Interface (a set of tools for building software).}
 }
 
 \newglossaryentry{3D}{
     name={3D},
-    description={Three Dimensional}
+    description={Three Dimensional.}
 }
 
 \newglossaryentry{ROS}{
     name={ROS},
-    description={Robot Operating System (a flexible framework for writing robot software)}
+    description={Robot Operating System (a flexible framework for writing robot software).}
 }
 
 \newglossaryentry{cflib}{
     name={cflib},
-    description={Crazyflie Library (Python-based library for drone control)}
+    description={Crazyflie Library (Python-based library for drone control).}
 }
 
 \newglossaryentry{MediaPipe}{
     name={MediaPipe},
-    description={A cross-platform library for real-time computer vision tasks}
+    description={A cross-platform library for real-time computer vision tasks.}
 }
 
 \newglossaryentry{RealSense}{
     name={RealSense},
-    description={Intel's line of depth-sensing cameras}
+    description={Intel's line of depth-sensing cameras.}
 }
 
 \newglossaryentry{OpenCV}{
     name={OpenCV},
-    description={Open Source Computer Vision Library}
+    description={Open Source Computer Vision Library.}
 }
 
 \newglossaryentry{Holistic}{
     name={Holistic},
-    description={A pose estimation algorithm from MediaPipe for full body tracking}
+    description={A pose estimation algorithm from MediaPipe for full body tracking.}
 }
 
 \newglossaryentry{ML}{
@@ -352,17 +399,17 @@
 
 \newglossaryentry{UV}{
     name={UV},
-    description={Unmanned Vehicle (any type of vehicle capable of operating autonomously without a human pilot)}
+    description={Unmanned Vehicle (any type of vehicle capable of operating autonomously without a human pilot).}
 }
 
 % Define acronyms
-\newacronym{JS}{JS}{JavaScript (a programming language used for web development)}
+\newacronym{JS}{JS}{JavaScript (a programming language used for web development).}
 
 % Add acronyms to the glossary
-\newacronym{UV}{UV}{Unmanned Vehicle (vehicle operating autonomously)}
+\newacronym{UV}{UV}{Unmanned Vehicle (vehicle operating autonomously).}
 
 \setglossarystyle{listgroup} % Set the style of the glossary (see https://en.wikibooks.org/wiki/LaTeX/Glossary for a reference)
-\printglossary[title=Special Terms, toctitle=List of Terms] % Output the glossary, 'title' is the chapter heading for the glossary, toctitle is the table of contents heading
+\printglossary[title=Special Terms, toctitle=Special Terms] % Output the glossary, 'title' is the chapter heading for the glossary, toctitle is the table of contents heading
 
 %----------------------------------------------------------------------------------------
 %	INDEX

@@ -84,7 +84,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2017 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{journaltitle}{//2017 IEEE International Conference on Robotics and Automation (ICRA)}
       \field{title}{CrazySwarm: A large nano-quadcopter swarm}
       \field{year}{2017}
     \endentry
@@ -250,8 +250,8 @@
       \strng{authorbibnamehash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
       \strng{authornamehash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
       \strng{authorfullhash}{5c81876fb3c5e8f7a265f70fd22ca8dd}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Conference on Human-Robot Interaction}
@@ -475,6 +475,58 @@
       \verb Carstens - Intelligent Systems for Next Generation Drone Func.pdf:files/361/Carstens - Intelligent Systems for Next Generation Drone Func.pdf:application/pdf
       \endverb
     \endentry
+    \entry{noauthor_feels_2018}{misc}{}
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Researchers have come up with a wearable exoskeleton designed for control of a fixed wing drone. Named FlyJacket, the device is designed to help beginners control a drone while making intuitive upper body gestures, literally spreading their arms wide like wings. Coupled with a headset, FlyJacket is…}
+      \field{journaltitle}{New Atlas}
+      \field{month}{4}
+      \field{note}{Section: Drones}
+      \field{shorttitle}{Feels like flying}
+      \field{title}{Feels like flying: {FlyJacket} exosuit lets you control a drone with your body}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:files/368/54260.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://newatlas.com/flyjacket-drone-exosuit/54260/
+      \endverb
+      \verb{url}
+      \verb https://newatlas.com/flyjacket-drone-exosuit/54260/
+      \endverb
+    \endentry
+    \entry{noauthor_projection_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Authors: Sergey Dorodnicov, Anders Grunnet-Jepsen, Guoping Wen Rev 0.3}
+      \field{journaltitle}{Intel® RealSense™ Developer Documentation}
+      \field{title}{Projection, {Texture}-{Mapping} and {Occlusion} with {Intel}® {RealSense}™ {Depth} {Cameras}}
+      \field{urlday}{27}
+      \field{urlmonth}{10}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:files/366/projection-texture-mapping-and-occlusion-with-intel-realsense-depth-cameras.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://dev.intelrealsense.com/docs/projection-texture-mapping-and-occlusion-with-intel-realsense-depth-cameras
+      \endverb
+      \verb{url}
+      \verb https://dev.intelrealsense.com/docs/projection-texture-mapping-and-occlusion-with-intel-realsense-depth-cameras
+      \endverb
+    \endentry
     \entry{leap_motion}{article}{}
       \name{author}{1}{}{%
         {{hash=0be1ff7082704a9a70b50726bd29d6d5}{%
@@ -497,9 +549,28 @@
       \field{title}{Gesture-based drone control with Leap Motion and Arduino}
       \field{year}{2020}
     \endentry
+    \entry{noauthor_overview_nodate}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Overview — {Crazyswarm} 0.3 documentation}
+      \field{urlday}{14}
+      \field{urlmonth}{9}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Overview — Crazyswarm 0.3 documentation:/home/nicos/Zotero/storage/NXGVFHSK/overview.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://crazyswarm.readthedocs.io/en/latest/overview.html
+      \endverb
+      \verb{url}
+      \verb https://crazyswarm.readthedocs.io/en/latest/overview.html
+      \endverb
+    \endentry
     \entry{noauthor_lighthouse_nodate}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{Lighthouse positioning methods {|} {Bitcraze}}
       \field{urlday}{15}
@@ -620,8 +691,8 @@
       \range{pages}{10}
     \endentry
     \entry{noauthor_dvic_nodate}{misc}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{title}{{DVIC} - {De} {Vinci} {Innovation} {Center}}
       \field{urlday}{7}
@@ -640,8 +711,6 @@
       \keyw{site}
     \endentry
   \enddatalist
-  \missing{cflib}
-  \missing{crazyswarm}
 \endrefsection
 \endinput
 
